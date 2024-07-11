@@ -1,0 +1,65 @@
+[2024-07-02T05:12:34.273+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-07-02T05:12:34.281+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data-ingestion.ingest_from_mysql manual__2024-07-02T05:01:07.895376+00:00 [queued]>
+[2024-07-02T05:12:34.285+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data-ingestion.ingest_from_mysql manual__2024-07-02T05:01:07.895376+00:00 [queued]>
+[2024-07-02T05:12:34.286+0000] {taskinstance.py:2306} INFO - Starting attempt 6 of 7
+[2024-07-02T05:12:34.293+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonVirtualenvOperator): ingest_from_mysql> on 2024-07-02 05:01:07.895376+00:00
+[2024-07-02T05:12:34.299+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=964) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-07-02T05:12:34.300+0000] {standard_task_runner.py:63} INFO - Started process 965 to run task
+[2024-07-02T05:12:34.299+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'data-ingestion', 'ingest_from_mysql', 'manual__2024-07-02T05:01:07.895376+00:00', '--job-id', '27', '--raw', '--subdir', 'DAGS_FOLDER/data-ingestion.py', '--cfg-path', '/tmp/tmp09ex5c1o']
+[2024-07-02T05:12:34.301+0000] {standard_task_runner.py:91} INFO - Job 27: Subtask ingest_from_mysql
+[2024-07-02T05:12:34.310+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-07-02T05:12:34.325+0000] {task_command.py:426} INFO - Running <TaskInstance: data-ingestion.ingest_from_mysql manual__2024-07-02T05:01:07.895376+00:00 [running]> on host ***-scheduler
+[2024-07-02T05:12:34.356+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='data-ingestion' AIRFLOW_CTX_TASK_ID='ingest_from_mysql' AIRFLOW_CTX_EXECUTION_DATE='2024-07-02T05:01:07.895376+00:00' AIRFLOW_CTX_TRY_NUMBER='6' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-07-02T05:01:07.895376+00:00'
+[2024-07-02T05:12:34.571+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-07-02T05:12:34.572+0000] {baseoperator.py:400} WARNING - PythonVirtualenvOperator.execute cannot be called outside TaskInstance!
+[2024-07-02T05:12:34.574+0000] {process_utils.py:183} INFO - Executing cmd: /home/***/.local/bin/python -m virtualenv /tmp/venvwelkw_ie --python=python
+[2024-07-02T05:12:34.575+0000] {process_utils.py:187} INFO - Output:
+[2024-07-02T05:12:35.220+0000] {process_utils.py:191} INFO - created virtual environment CPython3.12.4.final.0-64 in 204ms
+[2024-07-02T05:12:35.221+0000] {process_utils.py:191} INFO -   creator CPython3Posix(dest=/tmp/venvwelkw_ie, clear=False, no_vcs_ignore=False, global=False)
+[2024-07-02T05:12:35.221+0000] {process_utils.py:191} INFO -   seeder FromAppData(download=False, pip=bundle, via=copy, app_data_dir=/home/***/.local/share/virtualenv)
+[2024-07-02T05:12:35.222+0000] {process_utils.py:191} INFO -     added seed packages: pip==24.0
+[2024-07-02T05:12:35.222+0000] {process_utils.py:191} INFO -   activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+[2024-07-02T05:12:35.237+0000] {process_utils.py:183} INFO - Executing cmd: /tmp/venvwelkw_ie/bin/pip install -r /tmp/venvwelkw_ie/requirements.txt
+[2024-07-02T05:12:35.237+0000] {process_utils.py:187} INFO - Output:
+[2024-07-02T05:12:36.503+0000] {process_utils.py:191} INFO - ERROR: Invalid requirement: 'acryl-datahub[mysql]=0.12.1.5' (from line 1 of /tmp/venvwelkw_ie/requirements.txt)
+[2024-07-02T05:12:36.504+0000] {process_utils.py:191} INFO - Hint: = is not a valid operator. Did you mean == ?
+[2024-07-02T05:12:36.575+0000] {process_utils.py:191} INFO - 
+[2024-07-02T05:12:36.576+0000] {process_utils.py:191} INFO - [notice] A new release of pip is available: 24.0 -> 24.1.1
+[2024-07-02T05:12:36.576+0000] {process_utils.py:191} INFO - [notice] To update, run: python -m pip install --upgrade pip
+[2024-07-02T05:12:36.619+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-07-02T05:12:36.716+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 437, in execute
+    return super().execute(context=serializable_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 757, in execute_callable
+    self._prepare_venv(tmp_path)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 669, in _prepare_venv
+    prepare_virtualenv(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/python_virtualenv.py", line 119, in prepare_virtualenv
+    execute_in_subprocess(pip_cmd)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/process_utils.py", line 172, in execute_in_subprocess
+    execute_in_subprocess_with_kwargs(cmd, cwd=cwd)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/process_utils.py", line 195, in execute_in_subprocess_with_kwargs
+    raise subprocess.CalledProcessError(exit_code, cmd)
+subprocess.CalledProcessError: Command '['/tmp/venvwelkw_ie/bin/pip', 'install', '-r', '/tmp/venvwelkw_ie/requirements.txt']' returned non-zero exit status 1.
+[2024-07-02T05:12:36.726+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=data-ingestion, task_id=ingest_from_mysql, run_id=manual__2024-07-02T05:01:07.895376+00:00, execution_date=20240702T050107, start_date=20240702T051234, end_date=20240702T051236
+[2024-07-02T05:12:36.734+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 27 for task ingest_from_mysql (Command '['/tmp/venvwelkw_ie/bin/pip', 'install', '-r', '/tmp/venvwelkw_ie/requirements.txt']' returned non-zero exit status 1.; 965)
+[2024-07-02T05:12:36.748+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-07-02T05:12:36.764+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-02T05:12:36.765+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

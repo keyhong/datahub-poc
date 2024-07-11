@@ -1,0 +1,556 @@
+[2024-07-02T05:25:20.202+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-07-02T05:25:20.210+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data-ingestion.ingest_task manual__2024-07-02T05:23:33.107992+00:00 [queued]>
+[2024-07-02T05:25:20.213+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data-ingestion.ingest_task manual__2024-07-02T05:23:33.107992+00:00 [queued]>
+[2024-07-02T05:25:20.214+0000] {taskinstance.py:2306} INFO - Starting attempt 2 of 3
+[2024-07-02T05:25:20.221+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonVirtualenvOperator): ingest_task> on 2024-07-02 05:23:33.107992+00:00
+[2024-07-02T05:25:20.228+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=1209) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-07-02T05:25:20.229+0000] {standard_task_runner.py:63} INFO - Started process 1210 to run task
+[2024-07-02T05:25:20.227+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'data-ingestion', 'ingest_task', 'manual__2024-07-02T05:23:33.107992+00:00', '--job-id', '31', '--raw', '--subdir', 'DAGS_FOLDER/data-ingestion.py', '--cfg-path', '/tmp/tmpqy20wife']
+[2024-07-02T05:25:20.230+0000] {standard_task_runner.py:91} INFO - Job 31: Subtask ingest_task
+[2024-07-02T05:25:20.239+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-07-02T05:25:20.274+0000] {task_command.py:426} INFO - Running <TaskInstance: data-ingestion.ingest_task manual__2024-07-02T05:23:33.107992+00:00 [running]> on host ***-scheduler
+[2024-07-02T05:25:20.311+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='data-ingestion' AIRFLOW_CTX_TASK_ID='ingest_task' AIRFLOW_CTX_EXECUTION_DATE='2024-07-02T05:23:33.107992+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-07-02T05:23:33.107992+00:00'
+[2024-07-02T05:25:20.742+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-07-02T05:25:20.743+0000] {baseoperator.py:400} WARNING - PythonVirtualenvOperator.execute cannot be called outside TaskInstance!
+[2024-07-02T05:25:20.746+0000] {process_utils.py:183} INFO - Executing cmd: /home/***/.local/bin/python -m virtualenv /tmp/venv0fsqzcif --python=python
+[2024-07-02T05:25:20.747+0000] {process_utils.py:187} INFO - Output:
+[2024-07-02T05:25:21.630+0000] {process_utils.py:191} INFO - created virtual environment CPython3.12.4.final.0-64 in 450ms
+[2024-07-02T05:25:21.644+0000] {process_utils.py:191} INFO -   creator CPython3Posix(dest=/tmp/venv0fsqzcif, clear=False, no_vcs_ignore=False, global=False)
+[2024-07-02T05:25:21.646+0000] {process_utils.py:191} INFO -   seeder FromAppData(download=False, pip=bundle, via=copy, app_data_dir=/home/***/.local/share/virtualenv)
+[2024-07-02T05:25:21.648+0000] {process_utils.py:191} INFO -     added seed packages: pip==24.0
+[2024-07-02T05:25:21.649+0000] {process_utils.py:191} INFO -   activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+[2024-07-02T05:25:21.679+0000] {process_utils.py:183} INFO - Executing cmd: /tmp/venv0fsqzcif/bin/pip install -r /tmp/venv0fsqzcif/requirements.txt
+[2024-07-02T05:25:21.681+0000] {process_utils.py:187} INFO - Output:
+[2024-07-02T05:25:23.128+0000] {process_utils.py:191} INFO - Collecting acryl-datahub[mysql] (from -r /tmp/venv0fsqzcif/requirements.txt (line 1))
+[2024-07-02T05:25:23.132+0000] {process_utils.py:191} INFO -   Using cached acryl_datahub-0.13.3-py3-none-any.whl.metadata (157 kB)
+[2024-07-02T05:25:24.088+0000] {process_utils.py:191} INFO - Collecting termcolor>=1.0.0 (from acryl-datahub[mysql]->-r /tmp/venv0fsqzcif/requirements.txt (line 1))
+[2024-07-02T05:25:24.089+0000] {process_utils.py:191} INFO -   Using cached termcolor-2.4.0-py3-none-any.whl.metadata (6.1 kB)
+[2024-07-02T05:25:24.100+0000] {process_utils.py:191} INFO - Collecting cached-property (from acryl-datahub[mysql]->-r /tmp/venv0fsqzcif/requirements.txt (line 1))
+[2024-07-02T05:25:24.101+0000] {process_utils.py:191} INFO -   Using cached cached_property-1.5.2-py2.py3-none-any.whl.metadata (11 kB)
+[2024-07-02T05:25:24.120+0000] {process_utils.py:191} INFO - Collecting click>=7.1.2 (from acryl-datahub[mysql]->-r /tmp/venv0fsqzcif/requirements.txt (line 1))
+[2024-07-02T05:25:24.121+0000] {process_utils.py:191} INFO -   Using cached click-8.1.7-py3-none-any.whl.metadata (3.0 kB)
+[2024-07-02T05:25:24.142+0000] {process_utils.py:191} INFO - Collecting jsonschema (from acryl-datahub[mysql]->-r /tmp/venv0fsqzcif/requirements.txt (line 1))
+[2024-07-02T05:25:24.143+0000] {process_utils.py:191} INFO -   Using cached jsonschema-4.22.0-py3-none-any.whl.metadata (8.2 kB)
+[2024-07-02T05:25:24.164+0000] {process_utils.py:191} INFO - Collecting progressbar2 (from acryl-datahub[mysql]->-r /tmp/venv0fsqzcif/requirements.txt (line 1))
+[2024-07-02T05:25:24.165+0000] {process_utils.py:191} INFO -   Using cached progressbar2-4.4.2-py3-none-any.whl.metadata (17 kB)
+[2024-07-02T05:25:24.177+0000] {process_utils.py:191} INFO - Collecting expandvars>=0.6.5 (from acryl-datahub[mysql]->-r /tmp/venv0fsqzcif/requirements.txt (line 1))
+[2024-07-02T05:25:24.178+0000] {process_utils.py:191} INFO -   Using cached expandvars-0.12.0-py3-none-any.whl.metadata (6.0 kB)
+[2024-07-02T05:25:24.189+0000] {process_utils.py:191} INFO - Collecting jsonref (from acryl-datahub[mysql]->-r /tmp/venv0fsqzcif/requirements.txt (line 1))
+[2024-07-02T05:25:24.190+0000] {process_utils.py:191} INFO -   Using cached jsonref-1.1.0-py3-none-any.whl.metadata (2.7 kB)
+[2024-07-02T05:25:24.199+0000] {process_utils.py:191} INFO - Collecting tabulate (from acryl-datahub[mysql]->-r /tmp/venv0fsqzcif/requirements.txt (line 1))
+[2024-07-02T05:25:24.199+0000] {process_utils.py:191} INFO -   Using cached tabulate-0.9.0-py3-none-any.whl.metadata (34 kB)
+[2024-07-02T05:25:24.214+0000] {process_utils.py:191} INFO - Collecting mixpanel>=4.9.0 (from acryl-datahub[mysql]->-r /tmp/venv0fsqzcif/requirements.txt (line 1))
+[2024-07-02T05:25:24.214+0000] {process_utils.py:191} INFO -   Using cached mixpanel-4.10.1-py2.py3-none-any.whl.metadata (3.0 kB)
+[2024-07-02T05:25:24.226+0000] {process_utils.py:191} INFO - Collecting python-dateutil>=2.8.0 (from acryl-datahub[mysql]->-r /tmp/venv0fsqzcif/requirements.txt (line 1))
+[2024-07-02T05:25:24.227+0000] {process_utils.py:191} INFO -   Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+[2024-07-02T05:25:24.271+0000] {process_utils.py:191} INFO - Collecting ijson (from acryl-datahub[mysql]->-r /tmp/venv0fsqzcif/requirements.txt (line 1))
+[2024-07-02T05:25:24.272+0000] {process_utils.py:191} INFO -   Using cached ijson-3.3.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (21 kB)
+[2024-07-02T05:25:24.349+0000] {process_utils.py:191} INFO - Collecting pydantic!=1.10.3,>=1.10.0 (from acryl-datahub[mysql]->-r /tmp/venv0fsqzcif/requirements.txt (line 1))
+[2024-07-02T05:25:24.351+0000] {process_utils.py:191} INFO -   Using cached pydantic-2.8.0-py3-none-any.whl.metadata (123 kB)
+[2024-07-02T05:25:24.467+0000] {process_utils.py:191} INFO - Collecting aiohttp<4 (from acryl-datahub[mysql]->-r /tmp/venv0fsqzcif/requirements.txt (line 1))
+[2024-07-02T05:25:24.469+0000] {process_utils.py:191} INFO -   Using cached aiohttp-3.9.5-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (7.5 kB)
+[2024-07-02T05:25:24.494+0000] {process_utils.py:191} INFO - Collecting humanfriendly (from acryl-datahub[mysql]->-r /tmp/venv0fsqzcif/requirements.txt (line 1))
+[2024-07-02T05:25:24.495+0000] {process_utils.py:191} INFO -   Using cached humanfriendly-10.0-py2.py3-none-any.whl.metadata (9.2 kB)
+[2024-07-02T05:25:24.514+0000] {process_utils.py:191} INFO - Collecting click-spinner (from acryl-datahub[mysql]->-r /tmp/venv0fsqzcif/requirements.txt (line 1))
+[2024-07-02T05:25:24.515+0000] {process_utils.py:191} INFO -   Using cached click_spinner-0.1.10-py2.py3-none-any.whl.metadata (1.5 kB)
+[2024-07-02T05:25:24.532+0000] {process_utils.py:191} INFO - Collecting packaging (from acryl-datahub[mysql]->-r /tmp/venv0fsqzcif/requirements.txt (line 1))
+[2024-07-02T05:25:24.533+0000] {process_utils.py:191} INFO -   Using cached packaging-24.1-py3-none-any.whl.metadata (3.2 kB)
+[2024-07-02T05:25:24.543+0000] {process_utils.py:191} INFO - Collecting typing-inspect (from acryl-datahub[mysql]->-r /tmp/venv0fsqzcif/requirements.txt (line 1))
+[2024-07-02T05:25:24.544+0000] {process_utils.py:191} INFO -   Using cached typing_inspect-0.9.0-py3-none-any.whl.metadata (1.5 kB)
+[2024-07-02T05:25:24.573+0000] {process_utils.py:191} INFO - Collecting sentry-sdk (from acryl-datahub[mysql]->-r /tmp/venv0fsqzcif/requirements.txt (line 1))
+[2024-07-02T05:25:24.574+0000] {process_utils.py:191} INFO -   Using cached sentry_sdk-2.7.1-py2.py3-none-any.whl.metadata (14 kB)
+[2024-07-02T05:25:24.591+0000] {process_utils.py:191} INFO - Collecting avro-gen3==0.7.13 (from acryl-datahub[mysql]->-r /tmp/venv0fsqzcif/requirements.txt (line 1))
+[2024-07-02T05:25:24.592+0000] {process_utils.py:191} INFO -   Using cached avro_gen3-0.7.13-py3-none-any.whl.metadata (8.3 kB)
+[2024-07-02T05:25:24.603+0000] {process_utils.py:191} INFO - Collecting avro<1.12,>=1.11.3 (from acryl-datahub[mysql]->-r /tmp/venv0fsqzcif/requirements.txt (line 1))
+[2024-07-02T05:25:24.604+0000] {process_utils.py:191} INFO -   Using cached avro-1.11.3-py2.py3-none-any.whl
+[2024-07-02T05:25:24.649+0000] {process_utils.py:191} INFO - Collecting PyYAML (from acryl-datahub[mysql]->-r /tmp/venv0fsqzcif/requirements.txt (line 1))
+[2024-07-02T05:25:24.653+0000] {process_utils.py:191} INFO -   Using cached PyYAML-6.0.1-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (2.1 kB)
+[2024-07-02T05:25:24.672+0000] {process_utils.py:191} INFO - Collecting Deprecated (from acryl-datahub[mysql]->-r /tmp/venv0fsqzcif/requirements.txt (line 1))
+[2024-07-02T05:25:24.675+0000] {process_utils.py:191} INFO -   Using cached Deprecated-1.2.14-py2.py3-none-any.whl.metadata (5.4 kB)
+[2024-07-02T05:25:24.706+0000] {process_utils.py:191} INFO - Collecting docker (from acryl-datahub[mysql]->-r /tmp/venv0fsqzcif/requirements.txt (line 1))
+[2024-07-02T05:25:24.707+0000] {process_utils.py:191} INFO -   Using cached docker-7.1.0-py3-none-any.whl.metadata (3.8 kB)
+[2024-07-02T05:25:24.736+0000] {process_utils.py:191} INFO - Collecting typing-extensions>=3.7.4.3 (from acryl-datahub[mysql]->-r /tmp/venv0fsqzcif/requirements.txt (line 1))
+[2024-07-02T05:25:24.738+0000] {process_utils.py:191} INFO -   Using cached typing_extensions-4.12.2-py3-none-any.whl.metadata (3.0 kB)
+[2024-07-02T05:25:24.770+0000] {process_utils.py:191} INFO - Collecting toml>=0.10.0 (from acryl-datahub[mysql]->-r /tmp/venv0fsqzcif/requirements.txt (line 1))
+[2024-07-02T05:25:24.783+0000] {process_utils.py:191} INFO -   Using cached toml-0.10.2-py2.py3-none-any.whl.metadata (7.1 kB)
+[2024-07-02T05:25:24.816+0000] {process_utils.py:191} INFO - Collecting requests-file (from acryl-datahub[mysql]->-r /tmp/venv0fsqzcif/requirements.txt (line 1))
+[2024-07-02T05:25:24.817+0000] {process_utils.py:191} INFO -   Using cached requests_file-2.1.0-py2.py3-none-any.whl.metadata (1.7 kB)
+[2024-07-02T05:25:24.936+0000] {process_utils.py:191} INFO - Collecting psutil>=5.8.0 (from acryl-datahub[mysql]->-r /tmp/venv0fsqzcif/requirements.txt (line 1))
+[2024-07-02T05:25:24.938+0000] {process_utils.py:191} INFO -   Using cached psutil-6.0.0-cp36-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (21 kB)
+[2024-07-02T05:25:25.043+0000] {process_utils.py:191} INFO - Collecting ruamel.yaml (from acryl-datahub[mysql]->-r /tmp/venv0fsqzcif/requirements.txt (line 1))
+[2024-07-02T05:25:25.044+0000] {process_utils.py:191} INFO -   Using cached ruamel.yaml-0.18.6-py3-none-any.whl.metadata (23 kB)
+[2024-07-02T05:25:25.058+0000] {process_utils.py:191} INFO - Collecting click-default-group (from acryl-datahub[mysql]->-r /tmp/venv0fsqzcif/requirements.txt (line 1))
+[2024-07-02T05:25:25.059+0000] {process_utils.py:191} INFO -   Using cached click_default_group-1.2.4-py2.py3-none-any.whl.metadata (2.8 kB)
+[2024-07-02T05:25:25.187+0000] {process_utils.py:191} INFO - Collecting greenlet (from acryl-datahub[mysql]->-r /tmp/venv0fsqzcif/requirements.txt (line 1))
+[2024-07-02T05:25:25.188+0000] {process_utils.py:191} INFO -   Using cached greenlet-3.0.3-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (3.8 kB)
+[2024-07-02T05:25:25.196+0000] {process_utils.py:191} INFO - Collecting pydantic!=1.10.3,>=1.10.0 (from acryl-datahub[mysql]->-r /tmp/venv0fsqzcif/requirements.txt (line 1))
+[2024-07-02T05:25:25.197+0000] {process_utils.py:191} INFO -   Using cached pydantic-1.10.17-py3-none-any.whl.metadata (151 kB)
+[2024-07-02T05:25:25.215+0000] {process_utils.py:191} INFO - Collecting sqlparse (from acryl-datahub[mysql]->-r /tmp/venv0fsqzcif/requirements.txt (line 1))
+[2024-07-02T05:25:25.216+0000] {process_utils.py:191} INFO -   Using cached sqlparse-0.5.0-py3-none-any.whl.metadata (3.9 kB)
+[2024-07-02T05:25:25.230+0000] {process_utils.py:191} INFO - Collecting traitlets<5.2.2 (from acryl-datahub[mysql]->-r /tmp/venv0fsqzcif/requirements.txt (line 1))
+[2024-07-02T05:25:25.231+0000] {process_utils.py:191} INFO -   Using cached traitlets-5.2.1.post0-py3-none-any.whl.metadata (10 kB)
+[2024-07-02T05:25:25.456+0000] {process_utils.py:191} INFO - Collecting acryl-datahub-classify==0.0.10 (from acryl-datahub[mysql]->-r /tmp/venv0fsqzcif/requirements.txt (line 1))
+[2024-07-02T05:25:25.458+0000] {process_utils.py:191} INFO -   Using cached acryl_datahub_classify-0.0.10-py3-none-any.whl.metadata (8.0 kB)
+[2024-07-02T05:25:25.523+0000] {process_utils.py:191} INFO - Collecting great-expectations<=0.15.50,>=0.15.12 (from acryl-datahub[mysql]->-r /tmp/venv0fsqzcif/requirements.txt (line 1))
+[2024-07-02T05:25:25.524+0000] {process_utils.py:191} INFO -   Using cached great_expectations-0.15.50-py3-none-any.whl.metadata (10 kB)
+[2024-07-02T05:25:25.780+0000] {process_utils.py:191} INFO - Collecting sqlalchemy<2,>=1.4.39 (from acryl-datahub[mysql]->-r /tmp/venv0fsqzcif/requirements.txt (line 1))
+[2024-07-02T05:25:25.782+0000] {process_utils.py:191} INFO -   Using cached SQLAlchemy-1.4.52-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (10 kB)
+[2024-07-02T05:25:25.803+0000] {process_utils.py:191} INFO - Collecting acryl-sqlglot==24.0.1.dev7 (from acryl-sqlglot[rs]==24.0.1.dev7; extra == "mysql"->acryl-datahub[mysql]->-r /tmp/venv0fsqzcif/requirements.txt (line 1))
+[2024-07-02T05:25:25.805+0000] {process_utils.py:191} INFO -   Using cached acryl_sqlglot-24.0.1.dev7-py3-none-any.whl.metadata (19 kB)
+[2024-07-02T05:25:25.907+0000] {process_utils.py:191} INFO - Collecting numpy<2 (from acryl-datahub[mysql]->-r /tmp/venv0fsqzcif/requirements.txt (line 1))
+[2024-07-02T05:25:25.910+0000] {process_utils.py:191} INFO -   Using cached numpy-1.26.4-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (62 kB)
+[2024-07-02T05:25:25.917+0000] {process_utils.py:191} INFO - Requirement already satisfied: pip in /tmp/venv0fsqzcif/lib/python3.12/site-packages (from acryl-datahub[mysql]->-r /tmp/venv0fsqzcif/requirements.txt (line 1)) (24.0)
+[2024-07-02T05:25:25.972+0000] {process_utils.py:191} INFO - Collecting scipy>=1.7.2 (from acryl-datahub[mysql]->-r /tmp/venv0fsqzcif/requirements.txt (line 1))
+[2024-07-02T05:25:25.973+0000] {process_utils.py:191} INFO -   Using cached scipy-1.14.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (113 kB)
+[2024-07-02T05:25:25.997+0000] {process_utils.py:191} INFO - Collecting pymysql>=1.0.2 (from acryl-datahub[mysql]->-r /tmp/venv0fsqzcif/requirements.txt (line 1))
+[2024-07-02T05:25:25.998+0000] {process_utils.py:191} INFO -   Using cached PyMySQL-1.1.1-py3-none-any.whl.metadata (4.4 kB)
+[2024-07-02T05:25:26.119+0000] {process_utils.py:191} INFO - Collecting spacy<=3.5.0,>=3.4.1 (from acryl-datahub-classify==0.0.10->acryl-datahub[mysql]->-r /tmp/venv0fsqzcif/requirements.txt (line 1))
+[2024-07-02T05:25:26.121+0000] {process_utils.py:191} INFO -   Using cached spacy-3.5.0.tar.gz (1.2 MB)
+[2024-07-02T05:25:26.255+0000] {process_utils.py:191} INFO -   Installing build dependencies: started
+[2024-07-02T05:25:37.883+0000] {process_utils.py:191} INFO -   Installing build dependencies: finished with status 'error'
+[2024-07-02T05:25:37.926+0000] {process_utils.py:191} INFO -   error: subprocess-exited-with-error
+[2024-07-02T05:25:37.926+0000] {process_utils.py:191} INFO - 
+[2024-07-02T05:25:37.926+0000] {process_utils.py:191} INFO -   × pip subprocess to install build dependencies did not run successfully.
+[2024-07-02T05:25:37.927+0000] {process_utils.py:191} INFO -   │ exit code: 1
+[2024-07-02T05:25:37.927+0000] {process_utils.py:191} INFO -   ╰─> [391 lines of output]
+[2024-07-02T05:25:37.927+0000] {process_utils.py:191} INFO -       Collecting setuptools
+[2024-07-02T05:25:37.927+0000] {process_utils.py:191} INFO -         Using cached setuptools-70.2.0-py3-none-any.whl.metadata (5.8 kB)
+[2024-07-02T05:25:37.927+0000] {process_utils.py:191} INFO -       Collecting cython<3.0,>=0.25
+[2024-07-02T05:25:37.928+0000] {process_utils.py:191} INFO -         Using cached Cython-0.29.37-py2.py3-none-any.whl.metadata (3.1 kB)
+[2024-07-02T05:25:37.928+0000] {process_utils.py:191} INFO -       Collecting cymem<2.1.0,>=2.0.2
+[2024-07-02T05:25:37.928+0000] {process_utils.py:191} INFO -         Using cached cymem-2.0.8-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (8.4 kB)
+[2024-07-02T05:25:37.928+0000] {process_utils.py:191} INFO -       Collecting preshed<3.1.0,>=3.0.2
+[2024-07-02T05:25:37.929+0000] {process_utils.py:191} INFO -         Using cached preshed-3.0.9-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (2.2 kB)
+[2024-07-02T05:25:37.929+0000] {process_utils.py:191} INFO -       Collecting murmurhash<1.1.0,>=0.28.0
+[2024-07-02T05:25:37.929+0000] {process_utils.py:191} INFO -         Using cached murmurhash-1.0.10-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (2.0 kB)
+[2024-07-02T05:25:37.929+0000] {process_utils.py:191} INFO -       Collecting thinc<8.2.0,>=8.1.0
+[2024-07-02T05:25:37.929+0000] {process_utils.py:191} INFO -         Using cached thinc-8.1.12.tar.gz (190 kB)
+[2024-07-02T05:25:37.930+0000] {process_utils.py:191} INFO -         Installing build dependencies: started
+[2024-07-02T05:25:37.930+0000] {process_utils.py:191} INFO -         Installing build dependencies: finished with status 'done'
+[2024-07-02T05:25:37.930+0000] {process_utils.py:191} INFO -         Getting requirements to build wheel: started
+[2024-07-02T05:25:37.930+0000] {process_utils.py:191} INFO -         Getting requirements to build wheel: finished with status 'done'
+[2024-07-02T05:25:37.930+0000] {process_utils.py:191} INFO -         Preparing metadata (pyproject.toml): started
+[2024-07-02T05:25:37.931+0000] {process_utils.py:191} INFO -         Preparing metadata (pyproject.toml): finished with status 'done'
+[2024-07-02T05:25:37.931+0000] {process_utils.py:191} INFO -       Collecting numpy>=1.15.0
+[2024-07-02T05:25:37.931+0000] {process_utils.py:191} INFO -         Using cached numpy-2.0.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (62 kB)
+[2024-07-02T05:25:37.931+0000] {process_utils.py:191} INFO -       Collecting blis<0.8.0,>=0.7.8 (from thinc<8.2.0,>=8.1.0)
+[2024-07-02T05:25:37.931+0000] {process_utils.py:191} INFO -         Using cached blis-0.7.11-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (7.4 kB)
+[2024-07-02T05:25:37.932+0000] {process_utils.py:191} INFO -       Collecting wasabi<1.2.0,>=0.8.1 (from thinc<8.2.0,>=8.1.0)
+[2024-07-02T05:25:37.932+0000] {process_utils.py:191} INFO -         Using cached wasabi-1.1.3-py3-none-any.whl.metadata (28 kB)
+[2024-07-02T05:25:37.932+0000] {process_utils.py:191} INFO -       Collecting srsly<3.0.0,>=2.4.0 (from thinc<8.2.0,>=8.1.0)
+[2024-07-02T05:25:37.932+0000] {process_utils.py:191} INFO -         Using cached srsly-2.4.8-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (20 kB)
+[2024-07-02T05:25:37.932+0000] {process_utils.py:191} INFO -       Collecting catalogue<2.1.0,>=2.0.4 (from thinc<8.2.0,>=8.1.0)
+[2024-07-02T05:25:37.932+0000] {process_utils.py:191} INFO -         Using cached catalogue-2.0.10-py3-none-any.whl.metadata (14 kB)
+[2024-07-02T05:25:37.933+0000] {process_utils.py:191} INFO -       Collecting confection<1.0.0,>=0.0.1 (from thinc<8.2.0,>=8.1.0)
+[2024-07-02T05:25:37.933+0000] {process_utils.py:191} INFO -         Using cached confection-0.1.5-py3-none-any.whl.metadata (19 kB)
+[2024-07-02T05:25:37.933+0000] {process_utils.py:191} INFO -       Collecting pydantic!=1.8,!=1.8.1,<3.0.0,>=1.7.4 (from thinc<8.2.0,>=8.1.0)
+[2024-07-02T05:25:37.933+0000] {process_utils.py:191} INFO -         Using cached pydantic-2.8.0-py3-none-any.whl.metadata (123 kB)
+[2024-07-02T05:25:37.933+0000] {process_utils.py:191} INFO -       Collecting packaging>=20.0 (from thinc<8.2.0,>=8.1.0)
+[2024-07-02T05:25:37.934+0000] {process_utils.py:191} INFO -         Using cached packaging-24.1-py3-none-any.whl.metadata (3.2 kB)
+[2024-07-02T05:25:37.934+0000] {process_utils.py:191} INFO -       Collecting annotated-types>=0.4.0 (from pydantic!=1.8,!=1.8.1,<3.0.0,>=1.7.4->thinc<8.2.0,>=8.1.0)
+[2024-07-02T05:25:37.934+0000] {process_utils.py:191} INFO -         Using cached annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+[2024-07-02T05:25:37.934+0000] {process_utils.py:191} INFO -       Collecting pydantic-core==2.20.0 (from pydantic!=1.8,!=1.8.1,<3.0.0,>=1.7.4->thinc<8.2.0,>=8.1.0)
+[2024-07-02T05:25:37.934+0000] {process_utils.py:191} INFO -         Using cached pydantic_core-2.20.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (6.6 kB)
+[2024-07-02T05:25:37.934+0000] {process_utils.py:191} INFO -       Collecting typing-extensions>=4.6.1 (from pydantic!=1.8,!=1.8.1,<3.0.0,>=1.7.4->thinc<8.2.0,>=8.1.0)
+[2024-07-02T05:25:37.935+0000] {process_utils.py:191} INFO -         Using cached typing_extensions-4.12.2-py3-none-any.whl.metadata (3.0 kB)
+[2024-07-02T05:25:37.935+0000] {process_utils.py:191} INFO -       Using cached setuptools-70.2.0-py3-none-any.whl (930 kB)
+[2024-07-02T05:25:37.935+0000] {process_utils.py:191} INFO -       Using cached Cython-0.29.37-py2.py3-none-any.whl (989 kB)
+[2024-07-02T05:25:37.935+0000] {process_utils.py:191} INFO -       Using cached cymem-2.0.8-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (44 kB)
+[2024-07-02T05:25:37.935+0000] {process_utils.py:191} INFO -       Using cached preshed-3.0.9-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (149 kB)
+[2024-07-02T05:25:37.936+0000] {process_utils.py:191} INFO -       Using cached murmurhash-1.0.10-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (28 kB)
+[2024-07-02T05:25:37.936+0000] {process_utils.py:191} INFO -       Using cached numpy-2.0.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (13.6 MB)
+[2024-07-02T05:25:37.936+0000] {process_utils.py:191} INFO -       Using cached blis-0.7.11-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (1.7 MB)
+[2024-07-02T05:25:37.936+0000] {process_utils.py:191} INFO -       Using cached catalogue-2.0.10-py3-none-any.whl (17 kB)
+[2024-07-02T05:25:37.936+0000] {process_utils.py:191} INFO -       Using cached confection-0.1.5-py3-none-any.whl (35 kB)
+[2024-07-02T05:25:37.937+0000] {process_utils.py:191} INFO -       Using cached packaging-24.1-py3-none-any.whl (53 kB)
+[2024-07-02T05:25:37.937+0000] {process_utils.py:191} INFO -       Using cached pydantic-2.8.0-py3-none-any.whl (423 kB)
+[2024-07-02T05:25:37.937+0000] {process_utils.py:191} INFO -       Using cached pydantic_core-2.20.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (1.8 MB)
+[2024-07-02T05:25:37.937+0000] {process_utils.py:191} INFO -       Using cached srsly-2.4.8-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (486 kB)
+[2024-07-02T05:25:37.938+0000] {process_utils.py:191} INFO -       Using cached wasabi-1.1.3-py3-none-any.whl (27 kB)
+[2024-07-02T05:25:37.938+0000] {process_utils.py:191} INFO -       Using cached annotated_types-0.7.0-py3-none-any.whl (13 kB)
+[2024-07-02T05:25:37.938+0000] {process_utils.py:191} INFO -       Using cached typing_extensions-4.12.2-py3-none-any.whl (37 kB)
+[2024-07-02T05:25:37.938+0000] {process_utils.py:191} INFO -       Building wheels for collected packages: thinc
+[2024-07-02T05:25:37.938+0000] {process_utils.py:191} INFO -         Building wheel for thinc (pyproject.toml): started
+[2024-07-02T05:25:37.939+0000] {process_utils.py:191} INFO -         Building wheel for thinc (pyproject.toml): finished with status 'error'
+[2024-07-02T05:25:37.939+0000] {process_utils.py:191} INFO -         error: subprocess-exited-with-error
+[2024-07-02T05:25:37.939+0000] {process_utils.py:191} INFO - 
+[2024-07-02T05:25:37.939+0000] {process_utils.py:191} INFO -         × Building wheel for thinc (pyproject.toml) did not run successfully.
+[2024-07-02T05:25:37.940+0000] {process_utils.py:191} INFO -         │ exit code: 1
+[2024-07-02T05:25:37.940+0000] {process_utils.py:191} INFO -         ╰─> [318 lines of output]
+[2024-07-02T05:25:37.940+0000] {process_utils.py:191} INFO -             Cythonizing sources
+[2024-07-02T05:25:37.940+0000] {process_utils.py:191} INFO -             running bdist_wheel
+[2024-07-02T05:25:37.940+0000] {process_utils.py:191} INFO -             running build
+[2024-07-02T05:25:37.940+0000] {process_utils.py:191} INFO -             running build_py
+[2024-07-02T05:25:37.941+0000] {process_utils.py:191} INFO -             creating build
+[2024-07-02T05:25:37.941+0000] {process_utils.py:191} INFO -             creating build/lib.linux-aarch64-cpython-312
+[2024-07-02T05:25:37.941+0000] {process_utils.py:191} INFO -             creating build/lib.linux-aarch64-cpython-312/thinc
+[2024-07-02T05:25:37.941+0000] {process_utils.py:191} INFO -             copying thinc/about.py -> build/lib.linux-aarch64-cpython-312/thinc
+[2024-07-02T05:25:37.941+0000] {process_utils.py:191} INFO -             copying thinc/schedules.py -> build/lib.linux-aarch64-cpython-312/thinc
+[2024-07-02T05:25:37.941+0000] {process_utils.py:191} INFO -             copying thinc/compat.py -> build/lib.linux-aarch64-cpython-312/thinc
+[2024-07-02T05:25:37.942+0000] {process_utils.py:191} INFO -             copying thinc/model.py -> build/lib.linux-aarch64-cpython-312/thinc
+[2024-07-02T05:25:37.942+0000] {process_utils.py:191} INFO -             copying thinc/optimizers.py -> build/lib.linux-aarch64-cpython-312/thinc
+[2024-07-02T05:25:37.942+0000] {process_utils.py:191} INFO -             copying thinc/initializers.py -> build/lib.linux-aarch64-cpython-312/thinc
+[2024-07-02T05:25:37.942+0000] {process_utils.py:191} INFO -             copying thinc/__init__.py -> build/lib.linux-aarch64-cpython-312/thinc
+[2024-07-02T05:25:37.942+0000] {process_utils.py:191} INFO -             copying thinc/mypy.py -> build/lib.linux-aarch64-cpython-312/thinc
+[2024-07-02T05:25:37.943+0000] {process_utils.py:191} INFO -             copying thinc/config.py -> build/lib.linux-aarch64-cpython-312/thinc
+[2024-07-02T05:25:37.943+0000] {process_utils.py:191} INFO -             copying thinc/util.py -> build/lib.linux-aarch64-cpython-312/thinc
+[2024-07-02T05:25:37.943+0000] {process_utils.py:191} INFO -             copying thinc/loss.py -> build/lib.linux-aarch64-cpython-312/thinc
+[2024-07-02T05:25:37.943+0000] {process_utils.py:191} INFO -             copying thinc/api.py -> build/lib.linux-aarch64-cpython-312/thinc
+[2024-07-02T05:25:37.943+0000] {process_utils.py:191} INFO -             copying thinc/types.py -> build/lib.linux-aarch64-cpython-312/thinc
+[2024-07-02T05:25:37.944+0000] {process_utils.py:191} INFO -             creating build/lib.linux-aarch64-cpython-312/thinc/shims
+[2024-07-02T05:25:37.944+0000] {process_utils.py:191} INFO -             copying thinc/shims/pytorch.py -> build/lib.linux-aarch64-cpython-312/thinc/shims
+[2024-07-02T05:25:37.944+0000] {process_utils.py:191} INFO -             copying thinc/shims/torchscript.py -> build/lib.linux-aarch64-cpython-312/thinc/shims
+[2024-07-02T05:25:37.944+0000] {process_utils.py:191} INFO -             copying thinc/shims/__init__.py -> build/lib.linux-aarch64-cpython-312/thinc/shims
+[2024-07-02T05:25:37.944+0000] {process_utils.py:191} INFO -             copying thinc/shims/mxnet.py -> build/lib.linux-aarch64-cpython-312/thinc/shims
+[2024-07-02T05:25:37.945+0000] {process_utils.py:191} INFO -             copying thinc/shims/shim.py -> build/lib.linux-aarch64-cpython-312/thinc/shims
+[2024-07-02T05:25:37.945+0000] {process_utils.py:191} INFO -             copying thinc/shims/tensorflow.py -> build/lib.linux-aarch64-cpython-312/thinc/shims
+[2024-07-02T05:25:37.945+0000] {process_utils.py:191} INFO -             copying thinc/shims/pytorch_grad_scaler.py -> build/lib.linux-aarch64-cpython-312/thinc/shims
+[2024-07-02T05:25:37.945+0000] {process_utils.py:191} INFO -             creating build/lib.linux-aarch64-cpython-312/thinc/tests
+[2024-07-02T05:25:37.945+0000] {process_utils.py:191} INFO -             copying thinc/tests/test_serialize.py -> build/lib.linux-aarch64-cpython-312/thinc/tests
+[2024-07-02T05:25:37.946+0000] {process_utils.py:191} INFO -             copying thinc/tests/test_examples.py -> build/lib.linux-aarch64-cpython-312/thinc/tests
+[2024-07-02T05:25:37.946+0000] {process_utils.py:191} INFO -             copying thinc/tests/test_loss.py -> build/lib.linux-aarch64-cpython-312/thinc/tests
+[2024-07-02T05:25:37.946+0000] {process_utils.py:191} INFO -             copying thinc/tests/test_import__all__.py -> build/lib.linux-aarch64-cpython-312/thinc/tests
+[2024-07-02T05:25:37.946+0000] {process_utils.py:191} INFO -             copying thinc/tests/test_util.py -> build/lib.linux-aarch64-cpython-312/thinc/tests
+[2024-07-02T05:25:37.946+0000] {process_utils.py:191} INFO -             copying thinc/tests/test_initializers.py -> build/lib.linux-aarch64-cpython-312/thinc/tests
+[2024-07-02T05:25:37.947+0000] {process_utils.py:191} INFO -             copying thinc/tests/test_types.py -> build/lib.linux-aarch64-cpython-312/thinc/tests
+[2024-07-02T05:25:37.947+0000] {process_utils.py:191} INFO -             copying thinc/tests/conftest.py -> build/lib.linux-aarch64-cpython-312/thinc/tests
+[2024-07-02T05:25:37.947+0000] {process_utils.py:191} INFO -             copying thinc/tests/__init__.py -> build/lib.linux-aarch64-cpython-312/thinc/tests
+[2024-07-02T05:25:37.947+0000] {process_utils.py:191} INFO -             copying thinc/tests/test_indexing.py -> build/lib.linux-aarch64-cpython-312/thinc/tests
+[2024-07-02T05:25:37.947+0000] {process_utils.py:191} INFO -             copying thinc/tests/test_optimizers.py -> build/lib.linux-aarch64-cpython-312/thinc/tests
+[2024-07-02T05:25:37.948+0000] {process_utils.py:191} INFO -             copying thinc/tests/util.py -> build/lib.linux-aarch64-cpython-312/thinc/tests
+[2024-07-02T05:25:37.948+0000] {process_utils.py:191} INFO -             copying thinc/tests/test_schedules.py -> build/lib.linux-aarch64-cpython-312/thinc/tests
+[2024-07-02T05:25:37.948+0000] {process_utils.py:191} INFO -             copying thinc/tests/strategies.py -> build/lib.linux-aarch64-cpython-312/thinc/tests
+[2024-07-02T05:25:37.948+0000] {process_utils.py:191} INFO -             copying thinc/tests/test_config.py -> build/lib.linux-aarch64-cpython-312/thinc/tests
+[2024-07-02T05:25:37.948+0000] {process_utils.py:191} INFO -             creating build/lib.linux-aarch64-cpython-312/thinc/backends
+[2024-07-02T05:25:37.948+0000] {process_utils.py:191} INFO -             copying thinc/backends/mps_ops.py -> build/lib.linux-aarch64-cpython-312/thinc/backends
+[2024-07-02T05:25:37.949+0000] {process_utils.py:191} INFO -             copying thinc/backends/cupy_ops.py -> build/lib.linux-aarch64-cpython-312/thinc/backends
+[2024-07-02T05:25:37.949+0000] {process_utils.py:191} INFO -             copying thinc/backends/_param_server.py -> build/lib.linux-aarch64-cpython-312/thinc/backends
+[2024-07-02T05:25:37.949+0000] {process_utils.py:191} INFO -             copying thinc/backends/__init__.py -> build/lib.linux-aarch64-cpython-312/thinc/backends
+[2024-07-02T05:25:37.949+0000] {process_utils.py:191} INFO -             copying thinc/backends/_custom_kernels.py -> build/lib.linux-aarch64-cpython-312/thinc/backends
+[2024-07-02T05:25:37.949+0000] {process_utils.py:191} INFO -             copying thinc/backends/ops.py -> build/lib.linux-aarch64-cpython-312/thinc/backends
+[2024-07-02T05:25:37.950+0000] {process_utils.py:191} INFO -             copying thinc/backends/_cupy_allocators.py -> build/lib.linux-aarch64-cpython-312/thinc/backends
+[2024-07-02T05:25:37.950+0000] {process_utils.py:191} INFO -             creating build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.950+0000] {process_utils.py:191} INFO -             copying thinc/layers/gelu.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.950+0000] {process_utils.py:191} INFO -             copying thinc/layers/parametricattention.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.950+0000] {process_utils.py:191} INFO -             copying thinc/layers/with_flatten.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.951+0000] {process_utils.py:191} INFO -             copying thinc/layers/with_reshape.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.951+0000] {process_utils.py:191} INFO -             copying thinc/layers/list2array.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.951+0000] {process_utils.py:191} INFO -             copying thinc/layers/bidirectional.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.951+0000] {process_utils.py:191} INFO -             copying thinc/layers/with_nvtx_range.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.951+0000] {process_utils.py:191} INFO -             copying thinc/layers/softmax_activation.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.951+0000] {process_utils.py:191} INFO -             copying thinc/layers/embed.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.952+0000] {process_utils.py:191} INFO -             copying thinc/layers/with_debug.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.952+0000] {process_utils.py:191} INFO -             copying thinc/layers/with_array2d.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.952+0000] {process_utils.py:191} INFO -             copying thinc/layers/expand_window.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.952+0000] {process_utils.py:191} INFO -             copying thinc/layers/noop.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.952+0000] {process_utils.py:191} INFO -             copying thinc/layers/ragged2list.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.953+0000] {process_utils.py:191} INFO -             copying thinc/layers/layernorm.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.953+0000] {process_utils.py:191} INFO -             copying thinc/layers/reduce_sum.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.953+0000] {process_utils.py:191} INFO -             copying thinc/layers/reduce_last.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.953+0000] {process_utils.py:191} INFO -             copying thinc/layers/dish.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.953+0000] {process_utils.py:191} INFO -             copying thinc/layers/logistic.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.954+0000] {process_utils.py:191} INFO -             copying thinc/layers/list2ragged.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.954+0000] {process_utils.py:191} INFO -             copying thinc/layers/with_array.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.954+0000] {process_utils.py:191} INFO -             copying thinc/layers/with_flatten_v2.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.954+0000] {process_utils.py:191} INFO -             copying thinc/layers/hard_swish_mobilenet.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.954+0000] {process_utils.py:191} INFO -             copying thinc/layers/swish.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.955+0000] {process_utils.py:191} INFO -             copying thinc/layers/siamese.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.955+0000] {process_utils.py:191} INFO -             copying thinc/layers/with_ragged.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.955+0000] {process_utils.py:191} INFO -             copying thinc/layers/relu.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.955+0000] {process_utils.py:191} INFO -             copying thinc/layers/__init__.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.955+0000] {process_utils.py:191} INFO -             copying thinc/layers/reduce_max.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.956+0000] {process_utils.py:191} INFO -             copying thinc/layers/padded2list.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.956+0000] {process_utils.py:191} INFO -             copying thinc/layers/multisoftmax.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.956+0000] {process_utils.py:191} INFO -             copying thinc/layers/with_cpu.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.956+0000] {process_utils.py:191} INFO -             copying thinc/layers/sigmoid_activation.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.956+0000] {process_utils.py:191} INFO -             copying thinc/layers/dropout.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.957+0000] {process_utils.py:191} INFO -             copying thinc/layers/torchscriptwrapper.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.957+0000] {process_utils.py:191} INFO -             copying thinc/layers/lstm.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.957+0000] {process_utils.py:191} INFO -             copying thinc/layers/clone.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.957+0000] {process_utils.py:191} INFO -             copying thinc/layers/uniqued.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.957+0000] {process_utils.py:191} INFO -             copying thinc/layers/residual.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.958+0000] {process_utils.py:191} INFO -             copying thinc/layers/chain.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.958+0000] {process_utils.py:191} INFO -             copying thinc/layers/pytorchwrapper.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.958+0000] {process_utils.py:191} INFO -             copying thinc/layers/strings2arrays.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.958+0000] {process_utils.py:191} INFO -             copying thinc/layers/sigmoid.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.958+0000] {process_utils.py:191} INFO -             copying thinc/layers/reduce_mean.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.959+0000] {process_utils.py:191} INFO -             copying thinc/layers/add.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.959+0000] {process_utils.py:191} INFO -             copying thinc/layers/array_getitem.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.959+0000] {process_utils.py:191} INFO -             copying thinc/layers/map_list.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.959+0000] {process_utils.py:191} INFO -             copying thinc/layers/clipped_linear.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.959+0000] {process_utils.py:191} INFO -             copying thinc/layers/hard_swish.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.960+0000] {process_utils.py:191} INFO -             copying thinc/layers/mxnetwrapper.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.960+0000] {process_utils.py:191} INFO -             copying thinc/layers/with_padded.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.960+0000] {process_utils.py:191} INFO -             copying thinc/layers/with_getitem.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.960+0000] {process_utils.py:191} INFO -             copying thinc/layers/with_list.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.960+0000] {process_utils.py:191} INFO -             copying thinc/layers/resizable.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.961+0000] {process_utils.py:191} INFO -             copying thinc/layers/concatenate.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.961+0000] {process_utils.py:191} INFO -             copying thinc/layers/cauchysimilarity.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.961+0000] {process_utils.py:191} INFO -             copying thinc/layers/linear.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.961+0000] {process_utils.py:191} INFO -             copying thinc/layers/hashembed.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.961+0000] {process_utils.py:191} INFO -             copying thinc/layers/maxout.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.962+0000] {process_utils.py:191} INFO -             copying thinc/layers/remap_ids.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.962+0000] {process_utils.py:191} INFO -             copying thinc/layers/reduce_first.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.962+0000] {process_utils.py:191} INFO -             copying thinc/layers/tuplify.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.962+0000] {process_utils.py:191} INFO -             copying thinc/layers/list2padded.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.962+0000] {process_utils.py:191} INFO -             copying thinc/layers/with_signpost_interval.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.963+0000] {process_utils.py:191} INFO -             copying thinc/layers/mish.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.963+0000] {process_utils.py:191} INFO -             copying thinc/layers/softmax.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.963+0000] {process_utils.py:191} INFO -             copying thinc/layers/tensorflowwrapper.py -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:37.963+0000] {process_utils.py:191} INFO -             creating build/lib.linux-aarch64-cpython-312/thinc/extra
+[2024-07-02T05:25:37.963+0000] {process_utils.py:191} INFO -             copying thinc/extra/__init__.py -> build/lib.linux-aarch64-cpython-312/thinc/extra
+[2024-07-02T05:25:37.964+0000] {process_utils.py:191} INFO -             creating build/lib.linux-aarch64-cpython-312/thinc/tests/shims
+[2024-07-02T05:25:37.964+0000] {process_utils.py:191} INFO -             copying thinc/tests/shims/test_pytorch_grad_scaler.py -> build/lib.linux-aarch64-cpython-312/thinc/tests/shims
+[2024-07-02T05:25:37.964+0000] {process_utils.py:191} INFO -             copying thinc/tests/shims/__init__.py -> build/lib.linux-aarch64-cpython-312/thinc/tests/shims
+[2024-07-02T05:25:37.964+0000] {process_utils.py:191} INFO -             creating build/lib.linux-aarch64-cpython-312/thinc/tests/backends
+[2024-07-02T05:25:37.964+0000] {process_utils.py:191} INFO -             copying thinc/tests/backends/test_ops.py -> build/lib.linux-aarch64-cpython-312/thinc/tests/backends
+[2024-07-02T05:25:37.965+0000] {process_utils.py:191} INFO -             copying thinc/tests/backends/__init__.py -> build/lib.linux-aarch64-cpython-312/thinc/tests/backends
+[2024-07-02T05:25:37.965+0000] {process_utils.py:191} INFO -             copying thinc/tests/backends/test_mem.py -> build/lib.linux-aarch64-cpython-312/thinc/tests/backends
+[2024-07-02T05:25:37.965+0000] {process_utils.py:191} INFO -             creating build/lib.linux-aarch64-cpython-312/thinc/tests/model
+[2024-07-02T05:25:37.965+0000] {process_utils.py:191} INFO -             copying thinc/tests/model/test_model.py -> build/lib.linux-aarch64-cpython-312/thinc/tests/model
+[2024-07-02T05:25:37.965+0000] {process_utils.py:191} INFO -             copying thinc/tests/model/test_validation.py -> build/lib.linux-aarch64-cpython-312/thinc/tests/model
+[2024-07-02T05:25:37.966+0000] {process_utils.py:191} INFO -             copying thinc/tests/model/__init__.py -> build/lib.linux-aarch64-cpython-312/thinc/tests/model
+[2024-07-02T05:25:37.966+0000] {process_utils.py:191} INFO -             creating build/lib.linux-aarch64-cpython-312/thinc/tests/regression
+[2024-07-02T05:25:37.966+0000] {process_utils.py:191} INFO -             copying thinc/tests/regression/test_issue564.py -> build/lib.linux-aarch64-cpython-312/thinc/tests/regression
+[2024-07-02T05:25:37.966+0000] {process_utils.py:191} INFO -             copying thinc/tests/regression/__init__.py -> build/lib.linux-aarch64-cpython-312/thinc/tests/regression
+[2024-07-02T05:25:37.966+0000] {process_utils.py:191} INFO -             copying thinc/tests/regression/test_issue208.py -> build/lib.linux-aarch64-cpython-312/thinc/tests/regression
+[2024-07-02T05:25:37.967+0000] {process_utils.py:191} INFO -             creating build/lib.linux-aarch64-cpython-312/thinc/tests/layers
+[2024-07-02T05:25:37.967+0000] {process_utils.py:191} INFO -             copying thinc/tests/layers/test_hash_embed.py -> build/lib.linux-aarch64-cpython-312/thinc/tests/layers
+[2024-07-02T05:25:37.967+0000] {process_utils.py:191} INFO -             copying thinc/tests/layers/test_transforms.py -> build/lib.linux-aarch64-cpython-312/thinc/tests/layers
+[2024-07-02T05:25:37.967+0000] {process_utils.py:191} INFO -             copying thinc/tests/layers/test_feed_forward.py -> build/lib.linux-aarch64-cpython-312/thinc/tests/layers
+[2024-07-02T05:25:37.967+0000] {process_utils.py:191} INFO -             copying thinc/tests/layers/test_layers_api.py -> build/lib.linux-aarch64-cpython-312/thinc/tests/layers
+[2024-07-02T05:25:37.968+0000] {process_utils.py:191} INFO -             copying thinc/tests/layers/test_tensorflow_wrapper.py -> build/lib.linux-aarch64-cpython-312/thinc/tests/layers
+[2024-07-02T05:25:37.968+0000] {process_utils.py:191} INFO -             copying thinc/tests/layers/test_linear.py -> build/lib.linux-aarch64-cpython-312/thinc/tests/layers
+[2024-07-02T05:25:37.968+0000] {process_utils.py:191} INFO -             copying thinc/tests/layers/test_sparse_linear.py -> build/lib.linux-aarch64-cpython-312/thinc/tests/layers
+[2024-07-02T05:25:37.969+0000] {process_utils.py:191} INFO -             copying thinc/tests/layers/test_combinators.py -> build/lib.linux-aarch64-cpython-312/thinc/tests/layers
+[2024-07-02T05:25:37.969+0000] {process_utils.py:191} INFO -             copying thinc/tests/layers/__init__.py -> build/lib.linux-aarch64-cpython-312/thinc/tests/layers
+[2024-07-02T05:25:37.969+0000] {process_utils.py:191} INFO -             copying thinc/tests/layers/test_mxnet_wrapper.py -> build/lib.linux-aarch64-cpython-312/thinc/tests/layers
+[2024-07-02T05:25:37.969+0000] {process_utils.py:191} INFO -             copying thinc/tests/layers/test_shim.py -> build/lib.linux-aarch64-cpython-312/thinc/tests/layers
+[2024-07-02T05:25:37.970+0000] {process_utils.py:191} INFO -             copying thinc/tests/layers/test_resizable.py -> build/lib.linux-aarch64-cpython-312/thinc/tests/layers
+[2024-07-02T05:25:37.970+0000] {process_utils.py:191} INFO -             copying thinc/tests/layers/test_with_debug.py -> build/lib.linux-aarch64-cpython-312/thinc/tests/layers
+[2024-07-02T05:25:37.970+0000] {process_utils.py:191} INFO -             copying thinc/tests/layers/test_softmax.py -> build/lib.linux-aarch64-cpython-312/thinc/tests/layers
+[2024-07-02T05:25:37.970+0000] {process_utils.py:191} INFO -             copying thinc/tests/layers/test_torchscriptwrapper.py -> build/lib.linux-aarch64-cpython-312/thinc/tests/layers
+[2024-07-02T05:25:37.971+0000] {process_utils.py:191} INFO -             copying thinc/tests/layers/test_basic_tagger.py -> build/lib.linux-aarch64-cpython-312/thinc/tests/layers
+[2024-07-02T05:25:37.971+0000] {process_utils.py:191} INFO -             copying thinc/tests/layers/test_reduce.py -> build/lib.linux-aarch64-cpython-312/thinc/tests/layers
+[2024-07-02T05:25:37.971+0000] {process_utils.py:191} INFO -             copying thinc/tests/layers/test_with_flatten.py -> build/lib.linux-aarch64-cpython-312/thinc/tests/layers
+[2024-07-02T05:25:37.971+0000] {process_utils.py:191} INFO -             copying thinc/tests/layers/test_with_transforms.py -> build/lib.linux-aarch64-cpython-312/thinc/tests/layers
+[2024-07-02T05:25:37.972+0000] {process_utils.py:191} INFO -             copying thinc/tests/layers/test_uniqued.py -> build/lib.linux-aarch64-cpython-312/thinc/tests/layers
+[2024-07-02T05:25:37.972+0000] {process_utils.py:191} INFO -             copying thinc/tests/layers/test_lstm.py -> build/lib.linux-aarch64-cpython-312/thinc/tests/layers
+[2024-07-02T05:25:37.972+0000] {process_utils.py:191} INFO -             copying thinc/tests/layers/test_mappers.py -> build/lib.linux-aarch64-cpython-312/thinc/tests/layers
+[2024-07-02T05:25:37.972+0000] {process_utils.py:191} INFO -             copying thinc/tests/layers/test_pytorch_wrapper.py -> build/lib.linux-aarch64-cpython-312/thinc/tests/layers
+[2024-07-02T05:25:37.973+0000] {process_utils.py:191} INFO -             copying thinc/tests/layers/test_mnist.py -> build/lib.linux-aarch64-cpython-312/thinc/tests/layers
+[2024-07-02T05:25:37.973+0000] {process_utils.py:191} INFO -             creating build/lib.linux-aarch64-cpython-312/thinc/tests/mypy
+[2024-07-02T05:25:37.973+0000] {process_utils.py:191} INFO -             copying thinc/tests/mypy/__init__.py -> build/lib.linux-aarch64-cpython-312/thinc/tests/mypy
+[2024-07-02T05:25:37.973+0000] {process_utils.py:191} INFO -             copying thinc/tests/mypy/test_mypy.py -> build/lib.linux-aarch64-cpython-312/thinc/tests/mypy
+[2024-07-02T05:25:37.974+0000] {process_utils.py:191} INFO -             creating build/lib.linux-aarch64-cpython-312/thinc/tests/extra
+[2024-07-02T05:25:37.974+0000] {process_utils.py:191} INFO -             copying thinc/tests/extra/__init__.py -> build/lib.linux-aarch64-cpython-312/thinc/tests/extra
+[2024-07-02T05:25:37.974+0000] {process_utils.py:191} INFO -             copying thinc/tests/extra/test_beam_search.py -> build/lib.linux-aarch64-cpython-312/thinc/tests/extra
+[2024-07-02T05:25:37.974+0000] {process_utils.py:191} INFO -             creating build/lib.linux-aarch64-cpython-312/thinc/tests/regression/issue519
+[2024-07-02T05:25:37.974+0000] {process_utils.py:191} INFO -             copying thinc/tests/regression/issue519/test_issue519.py -> build/lib.linux-aarch64-cpython-312/thinc/tests/regression/issue519
+[2024-07-02T05:25:37.975+0000] {process_utils.py:191} INFO -             copying thinc/tests/regression/issue519/program.py -> build/lib.linux-aarch64-cpython-312/thinc/tests/regression/issue519
+[2024-07-02T05:25:37.975+0000] {process_utils.py:191} INFO -             copying thinc/tests/regression/issue519/__init__.py -> build/lib.linux-aarch64-cpython-312/thinc/tests/regression/issue519
+[2024-07-02T05:25:37.975+0000] {process_utils.py:191} INFO -             creating build/lib.linux-aarch64-cpython-312/thinc/tests/mypy/modules
+[2024-07-02T05:25:37.975+0000] {process_utils.py:191} INFO -             copying thinc/tests/mypy/modules/success_plugin.py -> build/lib.linux-aarch64-cpython-312/thinc/tests/mypy/modules
+[2024-07-02T05:25:37.976+0000] {process_utils.py:191} INFO -             copying thinc/tests/mypy/modules/fail_plugin.py -> build/lib.linux-aarch64-cpython-312/thinc/tests/mypy/modules
+[2024-07-02T05:25:37.976+0000] {process_utils.py:191} INFO -             copying thinc/tests/mypy/modules/success_no_plugin.py -> build/lib.linux-aarch64-cpython-312/thinc/tests/mypy/modules
+[2024-07-02T05:25:37.976+0000] {process_utils.py:191} INFO -             copying thinc/tests/mypy/modules/__init__.py -> build/lib.linux-aarch64-cpython-312/thinc/tests/mypy/modules
+[2024-07-02T05:25:37.977+0000] {process_utils.py:191} INFO -             copying thinc/tests/mypy/modules/fail_no_plugin.py -> build/lib.linux-aarch64-cpython-312/thinc/tests/mypy/modules
+[2024-07-02T05:25:37.977+0000] {process_utils.py:191} INFO -             creating build/lib.linux-aarch64-cpython-312/thinc/extra/tests
+[2024-07-02T05:25:37.977+0000] {process_utils.py:191} INFO -             copying thinc/extra/tests/__init__.py -> build/lib.linux-aarch64-cpython-312/thinc/extra/tests
+[2024-07-02T05:25:37.977+0000] {process_utils.py:191} INFO -             running egg_info
+[2024-07-02T05:25:37.977+0000] {process_utils.py:191} INFO -             writing thinc.egg-info/PKG-INFO
+[2024-07-02T05:25:37.978+0000] {process_utils.py:191} INFO -             writing dependency_links to thinc.egg-info/dependency_links.txt
+[2024-07-02T05:25:37.978+0000] {process_utils.py:191} INFO -             writing entry points to thinc.egg-info/entry_points.txt
+[2024-07-02T05:25:37.978+0000] {process_utils.py:191} INFO -             writing requirements to thinc.egg-info/requires.txt
+[2024-07-02T05:25:37.978+0000] {process_utils.py:191} INFO -             writing top-level names to thinc.egg-info/top_level.txt
+[2024-07-02T05:25:37.979+0000] {process_utils.py:191} INFO -             dependency /tmp/pip-build-env-zfmkl93d/overlay/lib/python3.12/site-packages/numpy/_core/include/numpy/arrayobject.h won't be automatically included in the manifest: the path must be relative
+[2024-07-02T05:25:37.979+0000] {process_utils.py:191} INFO -             dependency /tmp/pip-build-env-zfmkl93d/overlay/lib/python3.12/site-packages/numpy/_core/include/numpy/arrayscalars.h won't be automatically included in the manifest: the path must be relative
+[2024-07-02T05:25:37.979+0000] {process_utils.py:191} INFO -             dependency /tmp/pip-build-env-zfmkl93d/overlay/lib/python3.12/site-packages/numpy/_core/include/numpy/ndarrayobject.h won't be automatically included in the manifest: the path must be relative
+[2024-07-02T05:25:37.979+0000] {process_utils.py:191} INFO -             dependency /tmp/pip-build-env-zfmkl93d/overlay/lib/python3.12/site-packages/numpy/_core/include/numpy/ndarraytypes.h won't be automatically included in the manifest: the path must be relative
+[2024-07-02T05:25:37.980+0000] {process_utils.py:191} INFO -             dependency /tmp/pip-build-env-zfmkl93d/overlay/lib/python3.12/site-packages/numpy/_core/include/numpy/ufuncobject.h won't be automatically included in the manifest: the path must be relative
+[2024-07-02T05:25:37.980+0000] {process_utils.py:191} INFO -             dependency /usr/local/include/python3.12/Python.h won't be automatically included in the manifest: the path must be relative
+[2024-07-02T05:25:37.980+0000] {process_utils.py:191} INFO -             dependency /tmp/pip-build-env-zfmkl93d/overlay/lib/python3.12/site-packages/numpy/_core/include/numpy/arrayobject.h won't be automatically included in the manifest: the path must be relative
+[2024-07-02T05:25:37.980+0000] {process_utils.py:191} INFO -             dependency /tmp/pip-build-env-zfmkl93d/overlay/lib/python3.12/site-packages/numpy/_core/include/numpy/arrayscalars.h won't be automatically included in the manifest: the path must be relative
+[2024-07-02T05:25:37.981+0000] {process_utils.py:191} INFO -             dependency /tmp/pip-build-env-zfmkl93d/overlay/lib/python3.12/site-packages/numpy/_core/include/numpy/ndarrayobject.h won't be automatically included in the manifest: the path must be relative
+[2024-07-02T05:25:37.981+0000] {process_utils.py:191} INFO -             dependency /tmp/pip-build-env-zfmkl93d/overlay/lib/python3.12/site-packages/numpy/_core/include/numpy/ndarraytypes.h won't be automatically included in the manifest: the path must be relative
+[2024-07-02T05:25:37.981+0000] {process_utils.py:191} INFO -             dependency /tmp/pip-build-env-zfmkl93d/overlay/lib/python3.12/site-packages/numpy/_core/include/numpy/ufuncobject.h won't be automatically included in the manifest: the path must be relative
+[2024-07-02T05:25:37.981+0000] {process_utils.py:191} INFO -             dependency /usr/local/include/python3.12/Python.h won't be automatically included in the manifest: the path must be relative
+[2024-07-02T05:25:37.981+0000] {process_utils.py:191} INFO -             reading manifest file 'thinc.egg-info/SOURCES.txt'
+[2024-07-02T05:25:37.982+0000] {process_utils.py:191} INFO -             reading manifest template 'MANIFEST.in'
+[2024-07-02T05:25:37.982+0000] {process_utils.py:191} INFO -             no previously-included directories found matching 'tmp/'
+[2024-07-02T05:25:37.982+0000] {process_utils.py:191} INFO -             adding license file 'LICENSE'
+[2024-07-02T05:25:37.982+0000] {process_utils.py:191} INFO -             writing manifest file 'thinc.egg-info/SOURCES.txt'
+[2024-07-02T05:25:37.982+0000] {process_utils.py:191} INFO -             /tmp/pip-build-env-zfmkl93d/overlay/lib/python3.12/site-packages/setuptools/command/build_py.py:215: _Warning: Package 'thinc.tests.mypy.configs' is absent from the `packages` configuration.
+[2024-07-02T05:25:37.982+0000] {process_utils.py:191} INFO -             !!
+[2024-07-02T05:25:37.983+0000] {process_utils.py:191} INFO - 
+[2024-07-02T05:25:37.983+0000] {process_utils.py:191} INFO -                     ********************************************************************************
+[2024-07-02T05:25:37.983+0000] {process_utils.py:191} INFO -                     ############################
+[2024-07-02T05:25:37.983+0000] {process_utils.py:191} INFO -                     # Package would be ignored #
+[2024-07-02T05:25:37.983+0000] {process_utils.py:191} INFO -                     ############################
+[2024-07-02T05:25:37.984+0000] {process_utils.py:191} INFO -                     Python recognizes 'thinc.tests.mypy.configs' as an importable package[^1],
+[2024-07-02T05:25:37.984+0000] {process_utils.py:191} INFO -                     but it is absent from setuptools' `packages` configuration.
+[2024-07-02T05:25:37.984+0000] {process_utils.py:191} INFO - 
+[2024-07-02T05:25:37.984+0000] {process_utils.py:191} INFO -                     This leads to an ambiguous overall configuration. If you want to distribute this
+[2024-07-02T05:25:37.984+0000] {process_utils.py:191} INFO -                     package, please make sure that 'thinc.tests.mypy.configs' is explicitly added
+[2024-07-02T05:25:37.985+0000] {process_utils.py:191} INFO -                     to the `packages` configuration field.
+[2024-07-02T05:25:37.985+0000] {process_utils.py:191} INFO - 
+[2024-07-02T05:25:37.985+0000] {process_utils.py:191} INFO -                     Alternatively, you can also rely on setuptools' discovery methods
+[2024-07-02T05:25:37.985+0000] {process_utils.py:191} INFO -                     (for example by using `find_namespace_packages(...)`/`find_namespace:`
+[2024-07-02T05:25:37.986+0000] {process_utils.py:191} INFO -                     instead of `find_packages(...)`/`find:`).
+[2024-07-02T05:25:37.986+0000] {process_utils.py:191} INFO - 
+[2024-07-02T05:25:37.986+0000] {process_utils.py:191} INFO -                     You can read more about "package discovery" on setuptools documentation page:
+[2024-07-02T05:25:37.986+0000] {process_utils.py:191} INFO - 
+[2024-07-02T05:25:37.986+0000] {process_utils.py:191} INFO -                     - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+[2024-07-02T05:25:37.987+0000] {process_utils.py:191} INFO - 
+[2024-07-02T05:25:37.987+0000] {process_utils.py:191} INFO -                     If you don't want 'thinc.tests.mypy.configs' to be distributed and are
+[2024-07-02T05:25:37.987+0000] {process_utils.py:191} INFO -                     already explicitly excluding 'thinc.tests.mypy.configs' via
+[2024-07-02T05:25:37.987+0000] {process_utils.py:191} INFO -                     `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+[2024-07-02T05:25:37.988+0000] {process_utils.py:191} INFO -                     you can try to use `exclude_package_data`, or `include-package-data=False` in
+[2024-07-02T05:25:37.988+0000] {process_utils.py:191} INFO -                     combination with a more fine grained `package-data` configuration.
+[2024-07-02T05:25:37.988+0000] {process_utils.py:191} INFO - 
+[2024-07-02T05:25:37.988+0000] {process_utils.py:191} INFO -                     You can read more about "package data files" on setuptools documentation page:
+[2024-07-02T05:25:37.988+0000] {process_utils.py:191} INFO - 
+[2024-07-02T05:25:37.989+0000] {process_utils.py:191} INFO -                     - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+[2024-07-02T05:25:37.989+0000] {process_utils.py:191} INFO - 
+[2024-07-02T05:25:37.989+0000] {process_utils.py:191} INFO - 
+[2024-07-02T05:25:37.989+0000] {process_utils.py:191} INFO -                     [^1]: For Python, any directory (with suitable naming) can be imported,
+[2024-07-02T05:25:37.990+0000] {process_utils.py:191} INFO -                           even if it does not contain any `.py` files.
+[2024-07-02T05:25:37.990+0000] {process_utils.py:191} INFO -                           On the other hand, currently there is no concept of package data
+[2024-07-02T05:25:37.990+0000] {process_utils.py:191} INFO -                           directory, all directories are treated like packages.
+[2024-07-02T05:25:37.990+0000] {process_utils.py:191} INFO -                     ********************************************************************************
+[2024-07-02T05:25:37.991+0000] {process_utils.py:191} INFO - 
+[2024-07-02T05:25:37.991+0000] {process_utils.py:191} INFO -             !!
+[2024-07-02T05:25:37.991+0000] {process_utils.py:191} INFO -               check.warn(importable)
+[2024-07-02T05:25:37.991+0000] {process_utils.py:191} INFO -             /tmp/pip-build-env-zfmkl93d/overlay/lib/python3.12/site-packages/setuptools/command/build_py.py:215: _Warning: Package 'thinc.tests.mypy.outputs' is absent from the `packages` configuration.
+[2024-07-02T05:25:37.991+0000] {process_utils.py:191} INFO -             !!
+[2024-07-02T05:25:37.992+0000] {process_utils.py:191} INFO - 
+[2024-07-02T05:25:37.992+0000] {process_utils.py:191} INFO -                     ********************************************************************************
+[2024-07-02T05:25:37.992+0000] {process_utils.py:191} INFO -                     ############################
+[2024-07-02T05:25:37.992+0000] {process_utils.py:191} INFO -                     # Package would be ignored #
+[2024-07-02T05:25:37.993+0000] {process_utils.py:191} INFO -                     ############################
+[2024-07-02T05:25:37.993+0000] {process_utils.py:191} INFO -                     Python recognizes 'thinc.tests.mypy.outputs' as an importable package[^1],
+[2024-07-02T05:25:37.993+0000] {process_utils.py:191} INFO -                     but it is absent from setuptools' `packages` configuration.
+[2024-07-02T05:25:37.993+0000] {process_utils.py:191} INFO - 
+[2024-07-02T05:25:37.994+0000] {process_utils.py:191} INFO -                     This leads to an ambiguous overall configuration. If you want to distribute this
+[2024-07-02T05:25:37.994+0000] {process_utils.py:191} INFO -                     package, please make sure that 'thinc.tests.mypy.outputs' is explicitly added
+[2024-07-02T05:25:37.994+0000] {process_utils.py:191} INFO -                     to the `packages` configuration field.
+[2024-07-02T05:25:37.994+0000] {process_utils.py:191} INFO - 
+[2024-07-02T05:25:37.994+0000] {process_utils.py:191} INFO -                     Alternatively, you can also rely on setuptools' discovery methods
+[2024-07-02T05:25:37.995+0000] {process_utils.py:191} INFO -                     (for example by using `find_namespace_packages(...)`/`find_namespace:`
+[2024-07-02T05:25:37.995+0000] {process_utils.py:191} INFO -                     instead of `find_packages(...)`/`find:`).
+[2024-07-02T05:25:37.995+0000] {process_utils.py:191} INFO - 
+[2024-07-02T05:25:37.995+0000] {process_utils.py:191} INFO -                     You can read more about "package discovery" on setuptools documentation page:
+[2024-07-02T05:25:37.996+0000] {process_utils.py:191} INFO - 
+[2024-07-02T05:25:37.996+0000] {process_utils.py:191} INFO -                     - https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+[2024-07-02T05:25:37.996+0000] {process_utils.py:191} INFO - 
+[2024-07-02T05:25:37.996+0000] {process_utils.py:191} INFO -                     If you don't want 'thinc.tests.mypy.outputs' to be distributed and are
+[2024-07-02T05:25:37.997+0000] {process_utils.py:191} INFO -                     already explicitly excluding 'thinc.tests.mypy.outputs' via
+[2024-07-02T05:25:37.997+0000] {process_utils.py:191} INFO -                     `find_namespace_packages(...)/find_namespace` or `find_packages(...)/find`,
+[2024-07-02T05:25:37.997+0000] {process_utils.py:191} INFO -                     you can try to use `exclude_package_data`, or `include-package-data=False` in
+[2024-07-02T05:25:37.997+0000] {process_utils.py:191} INFO -                     combination with a more fine grained `package-data` configuration.
+[2024-07-02T05:25:37.997+0000] {process_utils.py:191} INFO - 
+[2024-07-02T05:25:37.998+0000] {process_utils.py:191} INFO -                     You can read more about "package data files" on setuptools documentation page:
+[2024-07-02T05:25:37.998+0000] {process_utils.py:191} INFO - 
+[2024-07-02T05:25:37.998+0000] {process_utils.py:191} INFO -                     - https://setuptools.pypa.io/en/latest/userguide/datafiles.html
+[2024-07-02T05:25:37.998+0000] {process_utils.py:191} INFO - 
+[2024-07-02T05:25:37.999+0000] {process_utils.py:191} INFO - 
+[2024-07-02T05:25:37.999+0000] {process_utils.py:191} INFO -                     [^1]: For Python, any directory (with suitable naming) can be imported,
+[2024-07-02T05:25:37.999+0000] {process_utils.py:191} INFO -                           even if it does not contain any `.py` files.
+[2024-07-02T05:25:37.999+0000] {process_utils.py:191} INFO -                           On the other hand, currently there is no concept of package data
+[2024-07-02T05:25:37.999+0000] {process_utils.py:191} INFO -                           directory, all directories are treated like packages.
+[2024-07-02T05:25:38.000+0000] {process_utils.py:191} INFO -                     ********************************************************************************
+[2024-07-02T05:25:38.000+0000] {process_utils.py:191} INFO - 
+[2024-07-02T05:25:38.000+0000] {process_utils.py:191} INFO -             !!
+[2024-07-02T05:25:38.000+0000] {process_utils.py:191} INFO -               check.warn(importable)
+[2024-07-02T05:25:38.001+0000] {process_utils.py:191} INFO -             copying thinc/__init__.pxd -> build/lib.linux-aarch64-cpython-312/thinc
+[2024-07-02T05:25:38.001+0000] {process_utils.py:191} INFO -             copying thinc/py.typed -> build/lib.linux-aarch64-cpython-312/thinc
+[2024-07-02T05:25:38.001+0000] {process_utils.py:191} INFO -             copying thinc/backends/__init__.pxd -> build/lib.linux-aarch64-cpython-312/thinc/backends
+[2024-07-02T05:25:38.001+0000] {process_utils.py:191} INFO -             copying thinc/backends/_custom_kernels.cu -> build/lib.linux-aarch64-cpython-312/thinc/backends
+[2024-07-02T05:25:38.002+0000] {process_utils.py:191} INFO -             copying thinc/backends/_murmur3.cu -> build/lib.linux-aarch64-cpython-312/thinc/backends
+[2024-07-02T05:25:38.002+0000] {process_utils.py:191} INFO -             copying thinc/backends/cblas.pxd -> build/lib.linux-aarch64-cpython-312/thinc/backends
+[2024-07-02T05:25:38.002+0000] {process_utils.py:191} INFO -             copying thinc/backends/cblas.pyx -> build/lib.linux-aarch64-cpython-312/thinc/backends
+[2024-07-02T05:25:38.003+0000] {process_utils.py:191} INFO -             copying thinc/backends/cpu_kernels.hh -> build/lib.linux-aarch64-cpython-312/thinc/backends
+[2024-07-02T05:25:38.003+0000] {process_utils.py:191} INFO -             copying thinc/backends/linalg.pxd -> build/lib.linux-aarch64-cpython-312/thinc/backends
+[2024-07-02T05:25:38.003+0000] {process_utils.py:191} INFO -             copying thinc/backends/linalg.pyx -> build/lib.linux-aarch64-cpython-312/thinc/backends
+[2024-07-02T05:25:38.003+0000] {process_utils.py:191} INFO -             copying thinc/backends/numpy_ops.pxd -> build/lib.linux-aarch64-cpython-312/thinc/backends
+[2024-07-02T05:25:38.003+0000] {process_utils.py:191} INFO -             copying thinc/backends/numpy_ops.pyx -> build/lib.linux-aarch64-cpython-312/thinc/backends
+[2024-07-02T05:25:38.007+0000] {process_utils.py:191} INFO -             copying thinc/layers/premap_ids.pyx -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:38.007+0000] {process_utils.py:191} INFO -             copying thinc/layers/sparselinear.pyx -> build/lib.linux-aarch64-cpython-312/thinc/layers
+[2024-07-02T05:25:38.007+0000] {process_utils.py:191} INFO -             copying thinc/extra/__init__.pxd -> build/lib.linux-aarch64-cpython-312/thinc/extra
+[2024-07-02T05:25:38.007+0000] {process_utils.py:191} INFO -             copying thinc/extra/search.pxd -> build/lib.linux-aarch64-cpython-312/thinc/extra
+[2024-07-02T05:25:38.007+0000] {process_utils.py:191} INFO -             copying thinc/extra/search.pyx -> build/lib.linux-aarch64-cpython-312/thinc/extra
+[2024-07-02T05:25:38.008+0000] {process_utils.py:191} INFO -             creating build/lib.linux-aarch64-cpython-312/thinc/tests/mypy/configs
+[2024-07-02T05:25:38.008+0000] {process_utils.py:191} INFO -             copying thinc/tests/mypy/configs/mypy-default.ini -> build/lib.linux-aarch64-cpython-312/thinc/tests/mypy/configs
+[2024-07-02T05:25:38.008+0000] {process_utils.py:191} INFO -             copying thinc/tests/mypy/configs/mypy-plugin.ini -> build/lib.linux-aarch64-cpython-312/thinc/tests/mypy/configs
+[2024-07-02T05:25:38.008+0000] {process_utils.py:191} INFO -             creating build/lib.linux-aarch64-cpython-312/thinc/tests/mypy/outputs
+[2024-07-02T05:25:38.009+0000] {process_utils.py:191} INFO -             copying thinc/tests/mypy/outputs/fail-no-plugin.txt -> build/lib.linux-aarch64-cpython-312/thinc/tests/mypy/outputs
+[2024-07-02T05:25:38.009+0000] {process_utils.py:191} INFO -             copying thinc/tests/mypy/outputs/fail-plugin.txt -> build/lib.linux-aarch64-cpython-312/thinc/tests/mypy/outputs
+[2024-07-02T05:25:38.009+0000] {process_utils.py:191} INFO -             copying thinc/tests/mypy/outputs/success-no-plugin.txt -> build/lib.linux-aarch64-cpython-312/thinc/tests/mypy/outputs
+[2024-07-02T05:25:38.009+0000] {process_utils.py:191} INFO -             copying thinc/tests/mypy/outputs/success-plugin.txt -> build/lib.linux-aarch64-cpython-312/thinc/tests/mypy/outputs
+[2024-07-02T05:25:38.009+0000] {process_utils.py:191} INFO -             copying thinc/extra/tests/c_test_search.pyx -> build/lib.linux-aarch64-cpython-312/thinc/extra/tests
+[2024-07-02T05:25:38.010+0000] {process_utils.py:191} INFO -             running build_ext
+[2024-07-02T05:25:38.010+0000] {process_utils.py:191} INFO -             building 'thinc.backends.cblas' extension
+[2024-07-02T05:25:38.010+0000] {process_utils.py:191} INFO -             creating build/temp.linux-aarch64-cpython-312
+[2024-07-02T05:25:38.010+0000] {process_utils.py:191} INFO -             creating build/temp.linux-aarch64-cpython-312/thinc
+[2024-07-02T05:25:38.010+0000] {process_utils.py:191} INFO -             creating build/temp.linux-aarch64-cpython-312/thinc/backends
+[2024-07-02T05:25:38.011+0000] {process_utils.py:191} INFO -             gcc -fno-strict-overflow -Wsign-compare -DNDEBUG -g -O3 -Wall -fPIC -I/tmp/pip-build-env-zfmkl93d/overlay/lib/python3.12/site-packages/numpy/_core/include -I/usr/local/include/python3.12 -I/tmp/venv0fsqzcif/include -I/usr/local/include/python3.12 -c thinc/backends/cblas.cpp -o build/temp.linux-aarch64-cpython-312/thinc/backends/cblas.o -O3 -Wno-strict-prototypes -Wno-unused-function -std=c++11
+[2024-07-02T05:25:38.011+0000] {process_utils.py:191} INFO -             error: command 'gcc' failed: Permission denied
+[2024-07-02T05:25:38.011+0000] {process_utils.py:191} INFO -             [end of output]
+[2024-07-02T05:25:38.011+0000] {process_utils.py:191} INFO - 
+[2024-07-02T05:25:38.012+0000] {process_utils.py:191} INFO -         note: This error originates from a subprocess, and is likely not a problem with pip.
+[2024-07-02T05:25:38.012+0000] {process_utils.py:191} INFO -         ERROR: Failed building wheel for thinc
+[2024-07-02T05:25:38.012+0000] {process_utils.py:191} INFO -       Failed to build thinc
+[2024-07-02T05:25:38.012+0000] {process_utils.py:191} INFO -       ERROR: Could not build wheels for thinc, which is required to install pyproject.toml-based projects
+[2024-07-02T05:25:38.012+0000] {process_utils.py:191} INFO - 
+[2024-07-02T05:25:38.013+0000] {process_utils.py:191} INFO -       [notice] A new release of pip is available: 24.0 -> 24.1.1
+[2024-07-02T05:25:38.013+0000] {process_utils.py:191} INFO -       [notice] To update, run: python -m pip install --upgrade pip
+[2024-07-02T05:25:38.013+0000] {process_utils.py:191} INFO -       [end of output]
+[2024-07-02T05:25:38.013+0000] {process_utils.py:191} INFO - 
+[2024-07-02T05:25:38.013+0000] {process_utils.py:191} INFO -   note: This error originates from a subprocess, and is likely not a problem with pip.
+[2024-07-02T05:25:38.014+0000] {process_utils.py:191} INFO - error: subprocess-exited-with-error
+[2024-07-02T05:25:38.014+0000] {process_utils.py:191} INFO - 
+[2024-07-02T05:25:38.014+0000] {process_utils.py:191} INFO - × pip subprocess to install build dependencies did not run successfully.
+[2024-07-02T05:25:38.014+0000] {process_utils.py:191} INFO - │ exit code: 1
+[2024-07-02T05:25:38.014+0000] {process_utils.py:191} INFO - ╰─> See above for output.
+[2024-07-02T05:25:38.014+0000] {process_utils.py:191} INFO - 
+[2024-07-02T05:25:38.015+0000] {process_utils.py:191} INFO - note: This error originates from a subprocess, and is likely not a problem with pip.
+[2024-07-02T05:25:38.015+0000] {process_utils.py:191} INFO - 
+[2024-07-02T05:25:38.015+0000] {process_utils.py:191} INFO - [notice] A new release of pip is available: 24.0 -> 24.1.1
+[2024-07-02T05:25:38.015+0000] {process_utils.py:191} INFO - [notice] To update, run: python -m pip install --upgrade pip
+[2024-07-02T05:25:38.404+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-07-02T05:25:38.518+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 437, in execute
+    return super().execute(context=serializable_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 757, in execute_callable
+    self._prepare_venv(tmp_path)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 669, in _prepare_venv
+    prepare_virtualenv(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/python_virtualenv.py", line 119, in prepare_virtualenv
+    execute_in_subprocess(pip_cmd)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/process_utils.py", line 172, in execute_in_subprocess
+    execute_in_subprocess_with_kwargs(cmd, cwd=cwd)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/process_utils.py", line 195, in execute_in_subprocess_with_kwargs
+    raise subprocess.CalledProcessError(exit_code, cmd)
+subprocess.CalledProcessError: Command '['/tmp/venv0fsqzcif/bin/pip', 'install', '-r', '/tmp/venv0fsqzcif/requirements.txt']' returned non-zero exit status 1.
+[2024-07-02T05:25:38.550+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=data-ingestion, task_id=ingest_task, run_id=manual__2024-07-02T05:23:33.107992+00:00, execution_date=20240702T052333, start_date=20240702T052520, end_date=20240702T052538
+[2024-07-02T05:25:38.564+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 31 for task ingest_task (Command '['/tmp/venv0fsqzcif/bin/pip', 'install', '-r', '/tmp/venv0fsqzcif/requirements.txt']' returned non-zero exit status 1.; 1210)
+[2024-07-02T05:25:38.580+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-07-02T05:25:38.608+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-02T05:25:38.609+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

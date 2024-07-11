@@ -1,0 +1,220 @@
+[2024-07-02T05:27:31.471+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-07-02T05:27:31.479+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data-ingestion.ingest_task manual__2024-07-02T05:23:33.107992+00:00 [queued]>
+[2024-07-02T05:27:31.483+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data-ingestion.ingest_task manual__2024-07-02T05:23:33.107992+00:00 [queued]>
+[2024-07-02T05:27:31.483+0000] {taskinstance.py:2306} INFO - Starting attempt 3 of 4
+[2024-07-02T05:27:31.496+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonVirtualenvOperator): ingest_task> on 2024-07-02 05:23:33.107992+00:00
+[2024-07-02T05:27:31.502+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=1323) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-07-02T05:27:31.505+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'data-ingestion', 'ingest_task', 'manual__2024-07-02T05:23:33.107992+00:00', '--job-id', '32', '--raw', '--subdir', 'DAGS_FOLDER/data-ingestion.py', '--cfg-path', '/tmp/tmpyv91x7qu']
+[2024-07-02T05:27:31.507+0000] {standard_task_runner.py:63} INFO - Started process 1324 to run task
+[2024-07-02T05:27:31.507+0000] {standard_task_runner.py:91} INFO - Job 32: Subtask ingest_task
+[2024-07-02T05:27:31.517+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-07-02T05:27:31.546+0000] {task_command.py:426} INFO - Running <TaskInstance: data-ingestion.ingest_task manual__2024-07-02T05:23:33.107992+00:00 [running]> on host ***-scheduler
+[2024-07-02T05:27:31.615+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='data-ingestion' AIRFLOW_CTX_TASK_ID='ingest_task' AIRFLOW_CTX_EXECUTION_DATE='2024-07-02T05:23:33.107992+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-07-02T05:23:33.107992+00:00'
+[2024-07-02T05:27:31.812+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-07-02T05:27:31.813+0000] {baseoperator.py:400} WARNING - PythonVirtualenvOperator.execute cannot be called outside TaskInstance!
+[2024-07-02T05:27:31.814+0000] {process_utils.py:183} INFO - Executing cmd: /home/***/.local/bin/python -m virtualenv /tmp/venvlpvjg24t --python=python
+[2024-07-02T05:27:31.815+0000] {process_utils.py:187} INFO - Output:
+[2024-07-02T05:27:32.308+0000] {process_utils.py:191} INFO - created virtual environment CPython3.12.4.final.0-64 in 170ms
+[2024-07-02T05:27:32.308+0000] {process_utils.py:191} INFO -   creator CPython3Posix(dest=/tmp/venvlpvjg24t, clear=False, no_vcs_ignore=False, global=False)
+[2024-07-02T05:27:32.308+0000] {process_utils.py:191} INFO -   seeder FromAppData(download=False, pip=bundle, via=copy, app_data_dir=/home/***/.local/share/virtualenv)
+[2024-07-02T05:27:32.309+0000] {process_utils.py:191} INFO -     added seed packages: pip==24.0
+[2024-07-02T05:27:32.309+0000] {process_utils.py:191} INFO -   activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+[2024-07-02T05:27:32.323+0000] {process_utils.py:183} INFO - Executing cmd: /tmp/venvlpvjg24t/bin/pip install -r /tmp/venvlpvjg24t/requirements.txt
+[2024-07-02T05:27:32.324+0000] {process_utils.py:187} INFO - Output:
+[2024-07-02T05:27:33.433+0000] {process_utils.py:191} INFO - Collecting acryl-datahub (from -r /tmp/venvlpvjg24t/requirements.txt (line 1))
+[2024-07-02T05:27:33.434+0000] {process_utils.py:191} INFO -   Using cached acryl_datahub-0.13.3-py3-none-any.whl.metadata (157 kB)
+[2024-07-02T05:27:34.742+0000] {process_utils.py:191} INFO - Collecting termcolor>=1.0.0 (from acryl-datahub->-r /tmp/venvlpvjg24t/requirements.txt (line 1))
+[2024-07-02T05:27:34.744+0000] {process_utils.py:191} INFO -   Using cached termcolor-2.4.0-py3-none-any.whl.metadata (6.1 kB)
+[2024-07-02T05:27:34.756+0000] {process_utils.py:191} INFO - Collecting cached-property (from acryl-datahub->-r /tmp/venvlpvjg24t/requirements.txt (line 1))
+[2024-07-02T05:27:34.756+0000] {process_utils.py:191} INFO -   Using cached cached_property-1.5.2-py2.py3-none-any.whl.metadata (11 kB)
+[2024-07-02T05:27:34.777+0000] {process_utils.py:191} INFO - Collecting click>=7.1.2 (from acryl-datahub->-r /tmp/venvlpvjg24t/requirements.txt (line 1))
+[2024-07-02T05:27:34.778+0000] {process_utils.py:191} INFO -   Using cached click-8.1.7-py3-none-any.whl.metadata (3.0 kB)
+[2024-07-02T05:27:34.802+0000] {process_utils.py:191} INFO - Collecting jsonschema (from acryl-datahub->-r /tmp/venvlpvjg24t/requirements.txt (line 1))
+[2024-07-02T05:27:34.804+0000] {process_utils.py:191} INFO -   Using cached jsonschema-4.22.0-py3-none-any.whl.metadata (8.2 kB)
+[2024-07-02T05:27:34.828+0000] {process_utils.py:191} INFO - Collecting progressbar2 (from acryl-datahub->-r /tmp/venvlpvjg24t/requirements.txt (line 1))
+[2024-07-02T05:27:34.830+0000] {process_utils.py:191} INFO -   Using cached progressbar2-4.4.2-py3-none-any.whl.metadata (17 kB)
+[2024-07-02T05:27:34.848+0000] {process_utils.py:191} INFO - Collecting expandvars>=0.6.5 (from acryl-datahub->-r /tmp/venvlpvjg24t/requirements.txt (line 1))
+[2024-07-02T05:27:34.849+0000] {process_utils.py:191} INFO -   Using cached expandvars-0.12.0-py3-none-any.whl.metadata (6.0 kB)
+[2024-07-02T05:27:34.863+0000] {process_utils.py:191} INFO - Collecting jsonref (from acryl-datahub->-r /tmp/venvlpvjg24t/requirements.txt (line 1))
+[2024-07-02T05:27:34.864+0000] {process_utils.py:191} INFO -   Using cached jsonref-1.1.0-py3-none-any.whl.metadata (2.7 kB)
+[2024-07-02T05:27:34.878+0000] {process_utils.py:191} INFO - Collecting tabulate (from acryl-datahub->-r /tmp/venvlpvjg24t/requirements.txt (line 1))
+[2024-07-02T05:27:34.879+0000] {process_utils.py:191} INFO -   Using cached tabulate-0.9.0-py3-none-any.whl.metadata (34 kB)
+[2024-07-02T05:27:34.892+0000] {process_utils.py:191} INFO - Collecting mixpanel>=4.9.0 (from acryl-datahub->-r /tmp/venvlpvjg24t/requirements.txt (line 1))
+[2024-07-02T05:27:34.892+0000] {process_utils.py:191} INFO -   Using cached mixpanel-4.10.1-py2.py3-none-any.whl.metadata (3.0 kB)
+[2024-07-02T05:27:34.905+0000] {process_utils.py:191} INFO - Collecting python-dateutil>=2.8.0 (from acryl-datahub->-r /tmp/venvlpvjg24t/requirements.txt (line 1))
+[2024-07-02T05:27:34.906+0000] {process_utils.py:191} INFO -   Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+[2024-07-02T05:27:34.941+0000] {process_utils.py:191} INFO - Collecting ijson (from acryl-datahub->-r /tmp/venvlpvjg24t/requirements.txt (line 1))
+[2024-07-02T05:27:34.942+0000] {process_utils.py:191} INFO -   Using cached ijson-3.3.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (21 kB)
+[2024-07-02T05:27:35.043+0000] {process_utils.py:191} INFO - Collecting pydantic!=1.10.3,>=1.10.0 (from acryl-datahub->-r /tmp/venvlpvjg24t/requirements.txt (line 1))
+[2024-07-02T05:27:35.044+0000] {process_utils.py:191} INFO -   Using cached pydantic-2.8.0-py3-none-any.whl.metadata (123 kB)
+[2024-07-02T05:27:35.162+0000] {process_utils.py:191} INFO - Collecting aiohttp<4 (from acryl-datahub->-r /tmp/venvlpvjg24t/requirements.txt (line 1))
+[2024-07-02T05:27:35.163+0000] {process_utils.py:191} INFO -   Using cached aiohttp-3.9.5-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (7.5 kB)
+[2024-07-02T05:27:35.211+0000] {process_utils.py:191} INFO - Collecting humanfriendly (from acryl-datahub->-r /tmp/venvlpvjg24t/requirements.txt (line 1))
+[2024-07-02T05:27:35.212+0000] {process_utils.py:191} INFO -   Using cached humanfriendly-10.0-py2.py3-none-any.whl.metadata (9.2 kB)
+[2024-07-02T05:27:35.223+0000] {process_utils.py:191} INFO - Collecting click-spinner (from acryl-datahub->-r /tmp/venvlpvjg24t/requirements.txt (line 1))
+[2024-07-02T05:27:35.224+0000] {process_utils.py:191} INFO -   Using cached click_spinner-0.1.10-py2.py3-none-any.whl.metadata (1.5 kB)
+[2024-07-02T05:27:35.239+0000] {process_utils.py:191} INFO - Collecting packaging (from acryl-datahub->-r /tmp/venvlpvjg24t/requirements.txt (line 1))
+[2024-07-02T05:27:35.239+0000] {process_utils.py:191} INFO -   Using cached packaging-24.1-py3-none-any.whl.metadata (3.2 kB)
+[2024-07-02T05:27:35.250+0000] {process_utils.py:191} INFO - Collecting typing-inspect (from acryl-datahub->-r /tmp/venvlpvjg24t/requirements.txt (line 1))
+[2024-07-02T05:27:35.250+0000] {process_utils.py:191} INFO -   Using cached typing_inspect-0.9.0-py3-none-any.whl.metadata (1.5 kB)
+[2024-07-02T05:27:35.279+0000] {process_utils.py:191} INFO - Collecting sentry-sdk (from acryl-datahub->-r /tmp/venvlpvjg24t/requirements.txt (line 1))
+[2024-07-02T05:27:35.280+0000] {process_utils.py:191} INFO -   Using cached sentry_sdk-2.7.1-py2.py3-none-any.whl.metadata (14 kB)
+[2024-07-02T05:27:35.294+0000] {process_utils.py:191} INFO - Collecting avro-gen3==0.7.13 (from acryl-datahub->-r /tmp/venvlpvjg24t/requirements.txt (line 1))
+[2024-07-02T05:27:35.295+0000] {process_utils.py:191} INFO -   Using cached avro_gen3-0.7.13-py3-none-any.whl.metadata (8.3 kB)
+[2024-07-02T05:27:35.306+0000] {process_utils.py:191} INFO - Collecting avro<1.12,>=1.11.3 (from acryl-datahub->-r /tmp/venvlpvjg24t/requirements.txt (line 1))
+[2024-07-02T05:27:35.306+0000] {process_utils.py:191} INFO -   Using cached avro-1.11.3-py2.py3-none-any.whl
+[2024-07-02T05:27:35.329+0000] {process_utils.py:191} INFO - Collecting PyYAML (from acryl-datahub->-r /tmp/venvlpvjg24t/requirements.txt (line 1))
+[2024-07-02T05:27:35.330+0000] {process_utils.py:191} INFO -   Using cached PyYAML-6.0.1-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (2.1 kB)
+[2024-07-02T05:27:35.344+0000] {process_utils.py:191} INFO - Collecting Deprecated (from acryl-datahub->-r /tmp/venvlpvjg24t/requirements.txt (line 1))
+[2024-07-02T05:27:35.345+0000] {process_utils.py:191} INFO -   Using cached Deprecated-1.2.14-py2.py3-none-any.whl.metadata (5.4 kB)
+[2024-07-02T05:27:35.371+0000] {process_utils.py:191} INFO - Collecting docker (from acryl-datahub->-r /tmp/venvlpvjg24t/requirements.txt (line 1))
+[2024-07-02T05:27:35.372+0000] {process_utils.py:191} INFO -   Using cached docker-7.1.0-py3-none-any.whl.metadata (3.8 kB)
+[2024-07-02T05:27:35.386+0000] {process_utils.py:191} INFO - Collecting typing-extensions>=3.7.4.3 (from acryl-datahub->-r /tmp/venvlpvjg24t/requirements.txt (line 1))
+[2024-07-02T05:27:35.387+0000] {process_utils.py:191} INFO -   Using cached typing_extensions-4.12.2-py3-none-any.whl.metadata (3.0 kB)
+[2024-07-02T05:27:35.402+0000] {process_utils.py:191} INFO - Collecting toml>=0.10.0 (from acryl-datahub->-r /tmp/venvlpvjg24t/requirements.txt (line 1))
+[2024-07-02T05:27:35.402+0000] {process_utils.py:191} INFO -   Using cached toml-0.10.2-py2.py3-none-any.whl.metadata (7.1 kB)
+[2024-07-02T05:27:35.412+0000] {process_utils.py:191} INFO - Collecting requests-file (from acryl-datahub->-r /tmp/venvlpvjg24t/requirements.txt (line 1))
+[2024-07-02T05:27:35.413+0000] {process_utils.py:191} INFO -   Using cached requests_file-2.1.0-py2.py3-none-any.whl.metadata (1.7 kB)
+[2024-07-02T05:27:35.455+0000] {process_utils.py:191} INFO - Collecting psutil>=5.8.0 (from acryl-datahub->-r /tmp/venvlpvjg24t/requirements.txt (line 1))
+[2024-07-02T05:27:35.456+0000] {process_utils.py:191} INFO -   Using cached psutil-6.0.0-cp36-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (21 kB)
+[2024-07-02T05:27:35.572+0000] {process_utils.py:191} INFO - Collecting ruamel.yaml (from acryl-datahub->-r /tmp/venvlpvjg24t/requirements.txt (line 1))
+[2024-07-02T05:27:35.573+0000] {process_utils.py:191} INFO -   Using cached ruamel.yaml-0.18.6-py3-none-any.whl.metadata (23 kB)
+[2024-07-02T05:27:35.588+0000] {process_utils.py:191} INFO - Collecting click-default-group (from acryl-datahub->-r /tmp/venvlpvjg24t/requirements.txt (line 1))
+[2024-07-02T05:27:35.588+0000] {process_utils.py:191} INFO -   Using cached click_default_group-1.2.4-py2.py3-none-any.whl.metadata (2.8 kB)
+[2024-07-02T05:27:35.603+0000] {process_utils.py:191} INFO - Collecting six (from avro-gen3==0.7.13->acryl-datahub->-r /tmp/venvlpvjg24t/requirements.txt (line 1))
+[2024-07-02T05:27:35.604+0000] {process_utils.py:191} INFO -   Using cached six-1.16.0-py2.py3-none-any.whl.metadata (1.8 kB)
+[2024-07-02T05:27:35.619+0000] {process_utils.py:191} INFO - Collecting aiosignal>=1.1.2 (from aiohttp<4->acryl-datahub->-r /tmp/venvlpvjg24t/requirements.txt (line 1))
+[2024-07-02T05:27:35.620+0000] {process_utils.py:191} INFO -   Using cached aiosignal-1.3.1-py3-none-any.whl.metadata (4.0 kB)
+[2024-07-02T05:27:35.633+0000] {process_utils.py:191} INFO - Collecting attrs>=17.3.0 (from aiohttp<4->acryl-datahub->-r /tmp/venvlpvjg24t/requirements.txt (line 1))
+[2024-07-02T05:27:35.633+0000] {process_utils.py:191} INFO -   Using cached attrs-23.2.0-py3-none-any.whl.metadata (9.5 kB)
+[2024-07-02T05:27:35.661+0000] {process_utils.py:191} INFO - Collecting frozenlist>=1.1.1 (from aiohttp<4->acryl-datahub->-r /tmp/venvlpvjg24t/requirements.txt (line 1))
+[2024-07-02T05:27:35.661+0000] {process_utils.py:191} INFO -   Using cached frozenlist-1.4.1-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (12 kB)
+[2024-07-02T05:27:35.816+0000] {process_utils.py:191} INFO - Collecting multidict<7.0,>=4.5 (from aiohttp<4->acryl-datahub->-r /tmp/venvlpvjg24t/requirements.txt (line 1))
+[2024-07-02T05:27:35.818+0000] {process_utils.py:191} INFO -   Using cached multidict-6.0.5-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (4.2 kB)
+[2024-07-02T05:27:35.923+0000] {process_utils.py:191} INFO - Collecting yarl<2.0,>=1.0 (from aiohttp<4->acryl-datahub->-r /tmp/venvlpvjg24t/requirements.txt (line 1))
+[2024-07-02T05:27:35.924+0000] {process_utils.py:191} INFO -   Using cached yarl-1.9.4-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (31 kB)
+[2024-07-02T05:27:35.957+0000] {process_utils.py:191} INFO - Collecting requests>=2.4.2 (from mixpanel>=4.9.0->acryl-datahub->-r /tmp/venvlpvjg24t/requirements.txt (line 1))
+[2024-07-02T05:27:35.958+0000] {process_utils.py:191} INFO -   Using cached requests-2.32.3-py3-none-any.whl.metadata (4.6 kB)
+[2024-07-02T05:27:35.981+0000] {process_utils.py:191} INFO - Collecting urllib3 (from mixpanel>=4.9.0->acryl-datahub->-r /tmp/venvlpvjg24t/requirements.txt (line 1))
+[2024-07-02T05:27:36.044+0000] {process_utils.py:191} INFO -   Downloading urllib3-2.2.2-py3-none-any.whl.metadata (6.4 kB)
+[2024-07-02T05:27:36.070+0000] {process_utils.py:191} INFO - Collecting annotated-types>=0.4.0 (from pydantic!=1.10.3,>=1.10.0->acryl-datahub->-r /tmp/venvlpvjg24t/requirements.txt (line 1))
+[2024-07-02T05:27:36.070+0000] {process_utils.py:191} INFO -   Using cached annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+[2024-07-02T05:27:36.338+0000] {process_utils.py:191} INFO - Collecting pydantic-core==2.20.0 (from pydantic!=1.10.3,>=1.10.0->acryl-datahub->-r /tmp/venvlpvjg24t/requirements.txt (line 1))
+[2024-07-02T05:27:36.339+0000] {process_utils.py:191} INFO -   Using cached pydantic_core-2.20.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (6.6 kB)
+[2024-07-02T05:27:36.445+0000] {process_utils.py:191} INFO - Collecting wrapt<2,>=1.10 (from Deprecated->acryl-datahub->-r /tmp/venvlpvjg24t/requirements.txt (line 1))
+[2024-07-02T05:27:36.446+0000] {process_utils.py:191} INFO -   Using cached wrapt-1.16.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (6.6 kB)
+[2024-07-02T05:27:36.483+0000] {process_utils.py:191} INFO - Collecting jsonschema-specifications>=2023.03.6 (from jsonschema->acryl-datahub->-r /tmp/venvlpvjg24t/requirements.txt (line 1))
+[2024-07-02T05:27:36.484+0000] {process_utils.py:191} INFO -   Using cached jsonschema_specifications-2023.12.1-py3-none-any.whl.metadata (3.0 kB)
+[2024-07-02T05:27:36.505+0000] {process_utils.py:191} INFO - Collecting referencing>=0.28.4 (from jsonschema->acryl-datahub->-r /tmp/venvlpvjg24t/requirements.txt (line 1))
+[2024-07-02T05:27:36.508+0000] {process_utils.py:191} INFO -   Using cached referencing-0.35.1-py3-none-any.whl.metadata (2.8 kB)
+[2024-07-02T05:27:36.623+0000] {process_utils.py:191} INFO - Collecting rpds-py>=0.7.1 (from jsonschema->acryl-datahub->-r /tmp/venvlpvjg24t/requirements.txt (line 1))
+[2024-07-02T05:27:36.624+0000] {process_utils.py:191} INFO -   Using cached rpds_py-0.18.1-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (4.1 kB)
+[2024-07-02T05:27:36.660+0000] {process_utils.py:191} INFO - Collecting python-utils>=3.8.1 (from progressbar2->acryl-datahub->-r /tmp/venvlpvjg24t/requirements.txt (line 1))
+[2024-07-02T05:27:36.661+0000] {process_utils.py:191} INFO -   Using cached python_utils-3.8.2-py2.py3-none-any.whl.metadata (9.7 kB)
+[2024-07-02T05:27:36.694+0000] {process_utils.py:191} INFO - Collecting ruamel.yaml.clib>=0.2.7 (from ruamel.yaml->acryl-datahub->-r /tmp/venvlpvjg24t/requirements.txt (line 1))
+[2024-07-02T05:27:36.696+0000] {process_utils.py:191} INFO -   Using cached ruamel.yaml.clib-0.2.8-cp312-cp312-manylinux_2_24_aarch64.whl.metadata (2.2 kB)
+[2024-07-02T05:27:36.739+0000] {process_utils.py:191} INFO - Collecting certifi (from sentry-sdk->acryl-datahub->-r /tmp/venvlpvjg24t/requirements.txt (line 1))
+[2024-07-02T05:27:36.739+0000] {process_utils.py:191} INFO -   Using cached certifi-2024.6.2-py3-none-any.whl.metadata (2.2 kB)
+[2024-07-02T05:27:36.757+0000] {process_utils.py:191} INFO - Collecting mypy-extensions>=0.3.0 (from typing-inspect->acryl-datahub->-r /tmp/venvlpvjg24t/requirements.txt (line 1))
+[2024-07-02T05:27:36.757+0000] {process_utils.py:191} INFO -   Using cached mypy_extensions-1.0.0-py3-none-any.whl.metadata (1.1 kB)
+[2024-07-02T05:27:36.861+0000] {process_utils.py:191} INFO - Collecting charset-normalizer<4,>=2 (from requests>=2.4.2->mixpanel>=4.9.0->acryl-datahub->-r /tmp/venvlpvjg24t/requirements.txt (line 1))
+[2024-07-02T05:27:36.863+0000] {process_utils.py:191} INFO -   Using cached charset_normalizer-3.3.2-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (33 kB)
+[2024-07-02T05:27:36.894+0000] {process_utils.py:191} INFO - Collecting idna<4,>=2.5 (from requests>=2.4.2->mixpanel>=4.9.0->acryl-datahub->-r /tmp/venvlpvjg24t/requirements.txt (line 1))
+[2024-07-02T05:27:36.895+0000] {process_utils.py:191} INFO -   Using cached idna-3.7-py3-none-any.whl.metadata (9.9 kB)
+[2024-07-02T05:27:36.943+0000] {process_utils.py:191} INFO - Using cached acryl_datahub-0.13.3-py3-none-any.whl (1.8 MB)
+[2024-07-02T05:27:36.948+0000] {process_utils.py:191} INFO - Using cached avro_gen3-0.7.13-py3-none-any.whl (27 kB)
+[2024-07-02T05:27:36.949+0000] {process_utils.py:191} INFO - Using cached aiohttp-3.9.5-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (1.3 MB)
+[2024-07-02T05:27:36.953+0000] {process_utils.py:191} INFO - Using cached click-8.1.7-py3-none-any.whl (97 kB)
+[2024-07-02T05:27:36.954+0000] {process_utils.py:191} INFO - Using cached expandvars-0.12.0-py3-none-any.whl (7.3 kB)
+[2024-07-02T05:27:36.955+0000] {process_utils.py:191} INFO - Using cached mixpanel-4.10.1-py2.py3-none-any.whl (9.0 kB)
+[2024-07-02T05:27:36.956+0000] {process_utils.py:191} INFO - Using cached psutil-6.0.0-cp36-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (292 kB)
+[2024-07-02T05:27:36.957+0000] {process_utils.py:191} INFO - Using cached pydantic-2.8.0-py3-none-any.whl (423 kB)
+[2024-07-02T05:27:36.958+0000] {process_utils.py:191} INFO - Using cached pydantic_core-2.20.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (1.8 MB)
+[2024-07-02T05:27:36.962+0000] {process_utils.py:191} INFO - Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+[2024-07-02T05:27:36.963+0000] {process_utils.py:191} INFO - Using cached termcolor-2.4.0-py3-none-any.whl (7.7 kB)
+[2024-07-02T05:27:36.964+0000] {process_utils.py:191} INFO - Using cached toml-0.10.2-py2.py3-none-any.whl (16 kB)
+[2024-07-02T05:27:36.964+0000] {process_utils.py:191} INFO - Using cached typing_extensions-4.12.2-py3-none-any.whl (37 kB)
+[2024-07-02T05:27:36.965+0000] {process_utils.py:191} INFO - Using cached cached_property-1.5.2-py2.py3-none-any.whl (7.6 kB)
+[2024-07-02T05:27:36.966+0000] {process_utils.py:191} INFO - Using cached click_default_group-1.2.4-py2.py3-none-any.whl (4.1 kB)
+[2024-07-02T05:27:36.966+0000] {process_utils.py:191} INFO - Using cached click_spinner-0.1.10-py2.py3-none-any.whl (4.0 kB)
+[2024-07-02T05:27:36.967+0000] {process_utils.py:191} INFO - Using cached Deprecated-1.2.14-py2.py3-none-any.whl (9.6 kB)
+[2024-07-02T05:27:36.967+0000] {process_utils.py:191} INFO - Using cached docker-7.1.0-py3-none-any.whl (147 kB)
+[2024-07-02T05:27:36.968+0000] {process_utils.py:191} INFO - Using cached humanfriendly-10.0-py2.py3-none-any.whl (86 kB)
+[2024-07-02T05:27:36.969+0000] {process_utils.py:191} INFO - Using cached ijson-3.3.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (127 kB)
+[2024-07-02T05:27:36.969+0000] {process_utils.py:191} INFO - Using cached jsonref-1.1.0-py3-none-any.whl (9.4 kB)
+[2024-07-02T05:27:36.970+0000] {process_utils.py:191} INFO - Using cached jsonschema-4.22.0-py3-none-any.whl (88 kB)
+[2024-07-02T05:27:36.971+0000] {process_utils.py:191} INFO - Using cached packaging-24.1-py3-none-any.whl (53 kB)
+[2024-07-02T05:27:36.971+0000] {process_utils.py:191} INFO - Using cached progressbar2-4.4.2-py3-none-any.whl (56 kB)
+[2024-07-02T05:27:36.972+0000] {process_utils.py:191} INFO - Using cached PyYAML-6.0.1-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (696 kB)
+[2024-07-02T05:27:36.973+0000] {process_utils.py:191} INFO - Using cached requests_file-2.1.0-py2.py3-none-any.whl (4.2 kB)
+[2024-07-02T05:27:36.975+0000] {process_utils.py:191} INFO - Using cached ruamel.yaml-0.18.6-py3-none-any.whl (117 kB)
+[2024-07-02T05:27:36.976+0000] {process_utils.py:191} INFO - Using cached sentry_sdk-2.7.1-py2.py3-none-any.whl (300 kB)
+[2024-07-02T05:27:36.978+0000] {process_utils.py:191} INFO - Using cached tabulate-0.9.0-py3-none-any.whl (35 kB)
+[2024-07-02T05:27:36.979+0000] {process_utils.py:191} INFO - Using cached typing_inspect-0.9.0-py3-none-any.whl (8.8 kB)
+[2024-07-02T05:27:36.980+0000] {process_utils.py:191} INFO - Using cached aiosignal-1.3.1-py3-none-any.whl (7.6 kB)
+[2024-07-02T05:27:36.980+0000] {process_utils.py:191} INFO - Using cached annotated_types-0.7.0-py3-none-any.whl (13 kB)
+[2024-07-02T05:27:36.981+0000] {process_utils.py:191} INFO - Using cached attrs-23.2.0-py3-none-any.whl (60 kB)
+[2024-07-02T05:27:36.982+0000] {process_utils.py:191} INFO - Using cached frozenlist-1.4.1-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (280 kB)
+[2024-07-02T05:27:36.984+0000] {process_utils.py:191} INFO - Using cached jsonschema_specifications-2023.12.1-py3-none-any.whl (18 kB)
+[2024-07-02T05:27:36.985+0000] {process_utils.py:191} INFO - Using cached multidict-6.0.5-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (129 kB)
+[2024-07-02T05:27:36.987+0000] {process_utils.py:191} INFO - Using cached mypy_extensions-1.0.0-py3-none-any.whl (4.7 kB)
+[2024-07-02T05:27:36.988+0000] {process_utils.py:191} INFO - Using cached python_utils-3.8.2-py2.py3-none-any.whl (27 kB)
+[2024-07-02T05:27:36.988+0000] {process_utils.py:191} INFO - Using cached referencing-0.35.1-py3-none-any.whl (26 kB)
+[2024-07-02T05:27:36.989+0000] {process_utils.py:191} INFO - Using cached requests-2.32.3-py3-none-any.whl (64 kB)
+[2024-07-02T05:27:36.989+0000] {process_utils.py:191} INFO - Using cached certifi-2024.6.2-py3-none-any.whl (164 kB)
+[2024-07-02T05:27:36.990+0000] {process_utils.py:191} INFO - Using cached rpds_py-0.18.1-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (1.1 MB)
+[2024-07-02T05:27:36.993+0000] {process_utils.py:191} INFO - Using cached ruamel.yaml.clib-0.2.8-cp312-cp312-manylinux_2_24_aarch64.whl (643 kB)
+[2024-07-02T05:27:36.997+0000] {process_utils.py:191} INFO - Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
+[2024-07-02T05:27:37.012+0000] {process_utils.py:191} INFO - Downloading urllib3-2.2.2-py3-none-any.whl (121 kB)
+[2024-07-02T05:27:37.090+0000] {process_utils.py:191} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 121.4/121.4 kB 1.8 MB/s eta 0:00:00
+[2024-07-02T05:27:37.097+0000] {process_utils.py:191} INFO - Using cached wrapt-1.16.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (86 kB)
+[2024-07-02T05:27:37.099+0000] {process_utils.py:191} INFO - Using cached yarl-1.9.4-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (317 kB)
+[2024-07-02T05:27:37.104+0000] {process_utils.py:191} INFO - Using cached charset_normalizer-3.3.2-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (137 kB)
+[2024-07-02T05:27:37.118+0000] {process_utils.py:191} INFO - Using cached idna-3.7-py3-none-any.whl (66 kB)
+[2024-07-02T05:27:38.761+0000] {process_utils.py:191} INFO - Installing collected packages: ijson, click-spinner, cached-property, wrapt, urllib3, typing-extensions, toml, termcolor, tabulate, six, ruamel.yaml.clib, rpds-py, PyYAML, psutil, packaging, mypy-extensions, multidict, jsonref, idna, humanfriendly, frozenlist, expandvars, click, charset-normalizer, certifi, avro, attrs, annotated-types, yarl, typing-inspect, sentry-sdk, ruamel.yaml, requests, referencing, python-utils, python-dateutil, pydantic-core, Deprecated, click-default-group, avro-gen3, aiosignal, requests-file, pydantic, progressbar2, mixpanel, jsonschema-specifications, docker, aiohttp, jsonschema, acryl-datahub
+[2024-07-02T05:27:42.039+0000] {process_utils.py:191} INFO - Successfully installed Deprecated-1.2.14 PyYAML-6.0.1 acryl-datahub-0.13.3 aiohttp-3.9.5 aiosignal-1.3.1 annotated-types-0.7.0 attrs-23.2.0 avro-1.11.3 avro-gen3-0.7.13 cached-property-1.5.2 certifi-2024.6.2 charset-normalizer-3.3.2 click-8.1.7 click-default-group-1.2.4 click-spinner-0.1.10 docker-7.1.0 expandvars-0.12.0 frozenlist-1.4.1 humanfriendly-10.0 idna-3.7 ijson-3.3.0 jsonref-1.1.0 jsonschema-4.22.0 jsonschema-specifications-2023.12.1 mixpanel-4.10.1 multidict-6.0.5 mypy-extensions-1.0.0 packaging-24.1 progressbar2-4.4.2 psutil-6.0.0 pydantic-2.8.0 pydantic-core-2.20.0 python-dateutil-2.9.0.post0 python-utils-3.8.2 referencing-0.35.1 requests-2.32.3 requests-file-2.1.0 rpds-py-0.18.1 ruamel.yaml-0.18.6 ruamel.yaml.clib-0.2.8 sentry-sdk-2.7.1 six-1.16.0 tabulate-0.9.0 termcolor-2.4.0 toml-0.10.2 typing-extensions-4.12.2 typing-inspect-0.9.0 urllib3-2.2.2 wrapt-1.16.0 yarl-1.9.4
+[2024-07-02T05:27:42.167+0000] {process_utils.py:191} INFO - 
+[2024-07-02T05:27:42.167+0000] {process_utils.py:191} INFO - [notice] A new release of pip is available: 24.0 -> 24.1.1
+[2024-07-02T05:27:42.168+0000] {process_utils.py:191} INFO - [notice] To update, run: python -m pip install --upgrade pip
+[2024-07-02T05:27:42.716+0000] {process_utils.py:183} INFO - Executing cmd: /tmp/venvlpvjg24t/bin/python /tmp/venv-call043hq7io/script.py /tmp/venv-call043hq7io/script.in /tmp/venv-call043hq7io/script.out /tmp/venv-call043hq7io/string_args.txt /tmp/venv-call043hq7io/termination.log
+[2024-07-02T05:27:42.718+0000] {process_utils.py:187} INFO - Output:
+[2024-07-02T05:27:42.732+0000] {process_utils.py:191} INFO -   File "/tmp/venv-call043hq7io/script.py", line 49
+[2024-07-02T05:27:42.732+0000] {process_utils.py:191} INFO -     unusual_prefix_50923f202a1be2ffe879bd287c2681623b93c2bb_data-ingestion  = types.ModuleType("unusual_prefix_50923f202a1be2ffe879bd287c2681623b93c2bb_data-ingestion")
+[2024-07-02T05:27:42.733+0000] {process_utils.py:191} INFO -     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[2024-07-02T05:27:42.733+0000] {process_utils.py:191} INFO - SyntaxError: cannot assign to expression here. Maybe you meant '==' instead of '='?
+[2024-07-02T05:27:42.802+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-07-02T05:27:43.043+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 437, in execute
+    return super().execute(context=serializable_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 759, in execute_callable
+    result = self._execute_python_callable_in_subprocess(python_path)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 497, in _execute_python_callable_in_subprocess
+    execute_in_subprocess(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/process_utils.py", line 172, in execute_in_subprocess
+    execute_in_subprocess_with_kwargs(cmd, cwd=cwd)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/process_utils.py", line 195, in execute_in_subprocess_with_kwargs
+    raise subprocess.CalledProcessError(exit_code, cmd)
+subprocess.CalledProcessError: Command '['/tmp/venvlpvjg24t/bin/python', '/tmp/venv-call043hq7io/script.py', '/tmp/venv-call043hq7io/script.in', '/tmp/venv-call043hq7io/script.out', '/tmp/venv-call043hq7io/string_args.txt', '/tmp/venv-call043hq7io/termination.log']' returned non-zero exit status 1.
+[2024-07-02T05:27:43.062+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=data-ingestion, task_id=ingest_task, run_id=manual__2024-07-02T05:23:33.107992+00:00, execution_date=20240702T052333, start_date=20240702T052731, end_date=20240702T052743
+[2024-07-02T05:27:43.076+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 32 for task ingest_task (Command '['/tmp/venvlpvjg24t/bin/python', '/tmp/venv-call043hq7io/script.py', '/tmp/venv-call043hq7io/script.in', '/tmp/venv-call043hq7io/script.out', '/tmp/venv-call043hq7io/string_args.txt', '/tmp/venv-call043hq7io/termination.log']' returned non-zero exit status 1.; 1324)
+[2024-07-02T05:27:43.103+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 1
+[2024-07-02T05:27:43.126+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-02T05:27:43.128+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
