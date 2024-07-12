@@ -52,7 +52,6 @@ ALTER TABLE test_schema.bank_markerting MODIFY y VARCHAR(50) COMMENT '컬럼19';
 
 ANALYZE TABLE test_schema.bank_markerting;
 
-
 ALTER TABLE test_schema.bank_markerting DROP COLUMN IF EXISTS cust_id;
 ALTER TABLE test_schema.bank_markerting ADD COLUMN cust_id INT AUTO_INCREMENT, ADD CONSTRAINT cust_pkey PRIMARY KEY (cust_id);
 ALTER TABLE test_schema.bank_markerting MODIFY COLUMN cust_id INT AUTO_INCREMENT AFTER age;

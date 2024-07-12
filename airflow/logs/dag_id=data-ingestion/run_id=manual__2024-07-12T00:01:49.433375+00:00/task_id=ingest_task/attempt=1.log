@@ -1,0 +1,48 @@
+[2024-07-12T00:01:50.918+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data-ingestion.ingest_task manual__2024-07-12T00:01:49.433375+00:00 [queued]>
+[2024-07-12T00:01:50.923+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data-ingestion.ingest_task manual__2024-07-12T00:01:49.433375+00:00 [queued]>
+[2024-07-12T00:01:50.924+0000] {taskinstance.py:2193} INFO - Starting attempt 1 of 2
+[2024-07-12T00:01:50.931+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonVirtualenvOperator): ingest_task> on 2024-07-12 00:01:49.433375+00:00
+[2024-07-12T00:01:50.935+0000] {standard_task_runner.py:60} INFO - Started process 380 to run task
+[2024-07-12T00:01:50.940+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'data-ingestion', 'ingest_task', 'manual__2024-07-12T00:01:49.433375+00:00', '--job-id', '2', '--raw', '--subdir', 'DAGS_FOLDER/data-ingestion.py', '--cfg-path', '/tmp/tmp8y_siek4']
+[2024-07-12T00:01:50.946+0000] {standard_task_runner.py:88} INFO - Job 2: Subtask ingest_task
+[2024-07-12T00:01:50.965+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:194 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-07-12T00:01:51.006+0000] {task_command.py:423} INFO - Running <TaskInstance: data-ingestion.ingest_task manual__2024-07-12T00:01:49.433375+00:00 [running]> on host ***-scheduler
+[2024-07-12T00:01:51.039+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='data-ingestion' AIRFLOW_CTX_TASK_ID='ingest_task' AIRFLOW_CTX_EXECUTION_DATE='2024-07-12T00:01:49.433375+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-07-12T00:01:49.433375+00:00'
+[2024-07-12T00:01:51.041+0000] {process_utils.py:182} INFO - Executing cmd: /usr/local/bin/python -m virtualenv /tmp/venvtwger_yt --python=python
+[2024-07-12T00:01:51.047+0000] {process_utils.py:186} INFO - Output:
+[2024-07-12T00:01:51.797+0000] {process_utils.py:190} INFO - created virtual environment CPython3.8.19.final.0-64 in 384ms
+[2024-07-12T00:01:51.798+0000] {process_utils.py:190} INFO -   creator CPython3Posix(dest=/tmp/venvtwger_yt, clear=False, no_vcs_ignore=False, global=False)
+[2024-07-12T00:01:51.799+0000] {process_utils.py:190} INFO -   seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=/home/***/.local/share/virtualenv)
+[2024-07-12T00:01:51.799+0000] {process_utils.py:190} INFO -     added seed packages: pip==24.0, setuptools==69.1.0, wheel==0.42.0
+[2024-07-12T00:01:51.800+0000] {process_utils.py:190} INFO -   activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+[2024-07-12T00:01:51.821+0000] {process_utils.py:182} INFO - Executing cmd: /tmp/venvtwger_yt/bin/pip install -r /tmp/venvtwger_yt/requirements.txt
+[2024-07-12T00:01:51.825+0000] {process_utils.py:186} INFO - Output:
+[2024-07-12T00:01:52.378+0000] {process_utils.py:190} INFO - ERROR: Can not perform a '--user' install. User site-packages are not visible in this virtualenv.
+[2024-07-12T00:01:52.508+0000] {process_utils.py:190} INFO - 
+[2024-07-12T00:01:52.511+0000] {process_utils.py:190} INFO - [notice] A new release of pip is available: 24.0 -> 24.1.2
+[2024-07-12T00:01:52.511+0000] {process_utils.py:190} INFO - [notice] To update, run: python -m pip install --upgrade pip
+[2024-07-12T00:01:52.596+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 401, in execute
+    return super().execute(context=serializable_context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 721, in execute_callable
+    self._prepare_venv(tmp_path)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 633, in _prepare_venv
+    prepare_virtualenv(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/python_virtualenv.py", line 118, in prepare_virtualenv
+    execute_in_subprocess(pip_cmd)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/process_utils.py", line 171, in execute_in_subprocess
+    execute_in_subprocess_with_kwargs(cmd, cwd=cwd)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/process_utils.py", line 194, in execute_in_subprocess_with_kwargs
+    raise subprocess.CalledProcessError(exit_code, cmd)
+subprocess.CalledProcessError: Command '['/tmp/venvtwger_yt/bin/pip', 'install', '-r', '/tmp/venvtwger_yt/requirements.txt']' returned non-zero exit status 1.
+[2024-07-12T00:01:52.612+0000] {taskinstance.py:1149} INFO - Marking task as UP_FOR_RETRY. dag_id=data-ingestion, task_id=ingest_task, execution_date=20240712T000149, start_date=20240712T000150, end_date=20240712T000152
+[2024-07-12T00:01:52.632+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 2 for task ingest_task (Command '['/tmp/venvtwger_yt/bin/pip', 'install', '-r', '/tmp/venvtwger_yt/requirements.txt']' returned non-zero exit status 1.; 380)
+[2024-07-12T00:01:52.647+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-12T00:01:52.656+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

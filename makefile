@@ -3,18 +3,21 @@ TAG = "MAKE"
 help:
 	@echo "The following make targets are available:"
 	@echo ""
-	@echo "	 datahub.cli\t		Execute datahub-cli"
-	@echo "	 datahub.shell\t\t 	Access airflow-coordinator"
-	@echo "	 airflow.shell\t\t 	Access airflow-cli"
+	@echo "	 datahub.cli\t\t		Execute datahub-cli"
+	@echo "	 datahub.shell\t\t\t 	Access airflow-coordinator"
+	@echo "	 airflow.shell\t\t\t 	Access airflow-cli"
 	@echo ""
-	@echo "	 compose.datahub\t\tRun datahub-related containers"
-	@echo "	 compose.datahub.daemon\t\tRun datahub-related containers with daemon"
-	@echo "	 compose.airflow\t\tRun airflow-related containers"
-	@echo "	 compose.airflow.daemon\t\tRun airflow-related containers with daemon"
-	@echo "	 compose.airflow.down\t\tRun airflow-related containers down"
+	@echo "	 compose.datahub\t\\t\tRun datahub-related containers"
+	@echo "	 compose.datahub.daemon\t\t\tRun datahub-related containers with daemon"
+	@echo "	 compose.datahub.down\t\t\tRun datahub-related containers down"
+	@echo "	 compose.datahub.down.v\t\t\tRun datahub-related containers with volume"
 	@echo ""
-	@echo "	 check\t			Execute pre-commit hooks"
-	@echo "	 changelog\t	 	Update 'CHANGELOG.md'"
+	@echo "	 compose.airflow\t\t\tRun airflow-related containers"
+	@echo "	 compose.airflow.daemon\t\t\tRun airflow-related containers with daemon"
+	@echo "	 compose.airflow.down\t\t\tRun airflow-related containers down"
+	@echo ""
+	@echo "	 check\t\t\t\t\tExecute pre-commit hooks"
+	@echo "	 changelog\t\t\t\tUpdate 'CHANGELOG.md'"
 	@echo ""
 
 .PHONY: datahub.cli
@@ -35,11 +38,19 @@ mysql.shell:
 
 .PHONY: compose.datahub
 compose.datahub:
-	COMPOSE_PROFILES=datahub docker-compose up
+	COMPOSE_PROFILES=datahub docker-compose up	
 
 .PHONY: compose.datahub.daemon
 compose.datahub.daemon:
 	COMPOSE_PROFILES=datahub docker-compose up -d
+
+.PHONY: compose.datahub.down
+compose.datahub.down:
+	COMPOSE_PROFILES=datahub docker-compose down
+
+.PHONY: compose.datahub.down.v
+compose.datahub.down.v:
+	COMPOSE_PROFILES=datahub docker-compose down -v
 
 .PHONY: compose.airflow
 compose.airflow:

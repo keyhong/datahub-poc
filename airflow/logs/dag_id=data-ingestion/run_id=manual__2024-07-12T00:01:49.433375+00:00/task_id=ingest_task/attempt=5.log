@@ -1,0 +1,106 @@
+[2024-07-12T00:09:18.790+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data-ingestion.ingest_task manual__2024-07-12T00:01:49.433375+00:00 [queued]>
+[2024-07-12T00:09:18.795+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data-ingestion.ingest_task manual__2024-07-12T00:01:49.433375+00:00 [queued]>
+[2024-07-12T00:09:18.796+0000] {taskinstance.py:2193} INFO - Starting attempt 5 of 6
+[2024-07-12T00:09:18.803+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonVirtualenvOperator): ingest_task> on 2024-07-12 00:01:49.433375+00:00
+[2024-07-12T00:09:18.806+0000] {standard_task_runner.py:60} INFO - Started process 350 to run task
+[2024-07-12T00:09:18.808+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'data-ingestion', 'ingest_task', 'manual__2024-07-12T00:01:49.433375+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/data-ingestion.py', '--cfg-path', '/tmp/tmp7farbd1q']
+[2024-07-12T00:09:18.809+0000] {standard_task_runner.py:88} INFO - Job 7: Subtask ingest_task
+[2024-07-12T00:09:18.820+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:194 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-07-12T00:09:18.834+0000] {task_command.py:423} INFO - Running <TaskInstance: data-ingestion.ingest_task manual__2024-07-12T00:01:49.433375+00:00 [running]> on host ***-scheduler
+[2024-07-12T00:09:18.861+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='data-ingestion' AIRFLOW_CTX_TASK_ID='ingest_task' AIRFLOW_CTX_EXECUTION_DATE='2024-07-12T00:01:49.433375+00:00' AIRFLOW_CTX_TRY_NUMBER='5' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-07-12T00:01:49.433375+00:00'
+[2024-07-12T00:09:19.319+0000] {process_utils.py:182} INFO - Executing cmd: /usr/local/bin/python -m virtualenv /tmp/venvb4m59fz_ --system-site-packages --python=python
+[2024-07-12T00:09:19.326+0000] {process_utils.py:186} INFO - Output:
+[2024-07-12T00:09:19.644+0000] {process_utils.py:190} INFO - created virtual environment CPython3.8.19.final.0-64 in 112ms
+[2024-07-12T00:09:19.645+0000] {process_utils.py:190} INFO -   creator CPython3Posix(dest=/tmp/venvb4m59fz_, clear=False, no_vcs_ignore=False, global=True)
+[2024-07-12T00:09:19.645+0000] {process_utils.py:190} INFO -   seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=/home/***/.local/share/virtualenv)
+[2024-07-12T00:09:19.646+0000] {process_utils.py:190} INFO -     added seed packages: pip==24.0, setuptools==69.1.0, wheel==0.42.0
+[2024-07-12T00:09:19.646+0000] {process_utils.py:190} INFO -   activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+[2024-07-12T00:09:19.666+0000] {process_utils.py:182} INFO - Executing cmd: /tmp/venvb4m59fz_/bin/pip install -r /tmp/venvb4m59fz_/requirements.txt
+[2024-07-12T00:09:19.671+0000] {process_utils.py:186} INFO - Output:
+[2024-07-12T00:09:20.217+0000] {process_utils.py:190} INFO - Requirement already satisfied: acryl-datahub==0.12.1.5 in /home/***/.local/lib/python3.8/site-packages (from -r /tmp/venvb4m59fz_/requirements.txt (line 1)) (0.12.1.5)
+[2024-07-12T00:09:21.980+0000] {process_utils.py:190} INFO - Requirement already satisfied: tabulate in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (0.9.0)
+[2024-07-12T00:09:21.981+0000] {process_utils.py:190} INFO - Requirement already satisfied: progressbar2 in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (4.4.2)
+[2024-07-12T00:09:21.981+0000] {process_utils.py:190} INFO - Requirement already satisfied: termcolor>=1.0.0 in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (2.4.0)
+[2024-07-12T00:09:21.982+0000] {process_utils.py:190} INFO - Requirement already satisfied: jsonref in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (1.1.0)
+[2024-07-12T00:09:21.982+0000] {process_utils.py:190} INFO - Requirement already satisfied: psutil>=5.8.0 in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (5.9.8)
+[2024-07-12T00:09:21.982+0000] {process_utils.py:190} INFO - Requirement already satisfied: Deprecated in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (1.2.14)
+[2024-07-12T00:09:21.982+0000] {process_utils.py:190} INFO - Requirement already satisfied: cached-property in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (1.5.2)
+[2024-07-12T00:09:21.983+0000] {process_utils.py:190} INFO - Requirement already satisfied: PyYAML in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (6.0.1)
+[2024-07-12T00:09:21.983+0000] {process_utils.py:190} INFO - Requirement already satisfied: pydantic!=1.10.3,>=1.10.0 in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (2.8.2)
+[2024-07-12T00:09:21.983+0000] {process_utils.py:190} INFO - Requirement already satisfied: requests-file in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (2.1.0)
+[2024-07-12T00:09:21.983+0000] {process_utils.py:190} INFO - Requirement already satisfied: avro<1.12,>=1.11.3 in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (1.11.3)
+[2024-07-12T00:09:21.984+0000] {process_utils.py:190} INFO - Requirement already satisfied: packaging in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (24.0)
+[2024-07-12T00:09:21.984+0000] {process_utils.py:190} INFO - Requirement already satisfied: ijson in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (3.2.3)
+[2024-07-12T00:09:21.984+0000] {process_utils.py:190} INFO - Requirement already satisfied: docker in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (7.0.0)
+[2024-07-12T00:09:21.984+0000] {process_utils.py:190} INFO - Requirement already satisfied: sentry-sdk in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (2.9.0)
+[2024-07-12T00:09:21.985+0000] {process_utils.py:190} INFO - Requirement already satisfied: click-spinner in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (0.1.10)
+[2024-07-12T00:09:21.985+0000] {process_utils.py:190} INFO - Requirement already satisfied: mixpanel>=4.9.0 in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (4.10.1)
+[2024-07-12T00:09:21.985+0000] {process_utils.py:190} INFO - Requirement already satisfied: typing-inspect in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (0.9.0)
+[2024-07-12T00:09:21.985+0000] {process_utils.py:190} INFO - Requirement already satisfied: toml>=0.10.0 in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (0.10.2)
+[2024-07-12T00:09:21.985+0000] {process_utils.py:190} INFO - Requirement already satisfied: click>=7.1.2 in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (8.1.7)
+[2024-07-12T00:09:21.986+0000] {process_utils.py:190} INFO - Requirement already satisfied: python-dateutil>=2.8.0 in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (2.9.0.post0)
+[2024-07-12T00:09:21.986+0000] {process_utils.py:190} INFO - Requirement already satisfied: humanfriendly in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (10.0)
+[2024-07-12T00:09:21.986+0000] {process_utils.py:190} INFO - Requirement already satisfied: click-default-group in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (1.2.4)
+[2024-07-12T00:09:21.986+0000] {process_utils.py:190} INFO - Requirement already satisfied: typing-extensions>=3.7.4.3 in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (4.10.0)
+[2024-07-12T00:09:21.987+0000] {process_utils.py:190} INFO - Requirement already satisfied: expandvars>=0.6.5 in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (0.12.0)
+[2024-07-12T00:09:21.987+0000] {process_utils.py:190} INFO - Requirement already satisfied: aiohttp<4 in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (3.9.3)
+[2024-07-12T00:09:21.987+0000] {process_utils.py:190} INFO - Requirement already satisfied: ruamel.yaml in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (0.18.6)
+[2024-07-12T00:09:21.988+0000] {process_utils.py:190} INFO - Requirement already satisfied: jsonschema in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (4.21.1)
+[2024-07-12T00:09:21.988+0000] {process_utils.py:190} INFO - Requirement already satisfied: avro-gen3==0.7.11 in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (0.7.11)
+[2024-07-12T00:09:21.988+0000] {process_utils.py:190} INFO - Requirement already satisfied: importlib-metadata>=4.0.0 in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (6.11.0)
+[2024-07-12T00:09:21.990+0000] {process_utils.py:190} INFO - Requirement already satisfied: six in /home/***/.local/lib/python3.8/site-packages (from avro-gen3==0.7.11->acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (1.16.0)
+[2024-07-12T00:09:21.995+0000] {process_utils.py:190} INFO - Requirement already satisfied: aiosignal>=1.1.2 in /home/***/.local/lib/python3.8/site-packages (from aiohttp<4->acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (1.3.1)
+[2024-07-12T00:09:21.995+0000] {process_utils.py:190} INFO - Requirement already satisfied: attrs>=17.3.0 in /home/***/.local/lib/python3.8/site-packages (from aiohttp<4->acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (23.2.0)
+[2024-07-12T00:09:21.995+0000] {process_utils.py:190} INFO - Requirement already satisfied: frozenlist>=1.1.1 in /home/***/.local/lib/python3.8/site-packages (from aiohttp<4->acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (1.4.1)
+[2024-07-12T00:09:21.996+0000] {process_utils.py:190} INFO - Requirement already satisfied: multidict<7.0,>=4.5 in /home/***/.local/lib/python3.8/site-packages (from aiohttp<4->acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (6.0.5)
+[2024-07-12T00:09:21.996+0000] {process_utils.py:190} INFO - Requirement already satisfied: yarl<2.0,>=1.0 in /home/***/.local/lib/python3.8/site-packages (from aiohttp<4->acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (1.9.4)
+[2024-07-12T00:09:21.996+0000] {process_utils.py:190} INFO - Requirement already satisfied: async-timeout<5.0,>=4.0 in /home/***/.local/lib/python3.8/site-packages (from aiohttp<4->acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (4.0.3)
+[2024-07-12T00:09:22.010+0000] {process_utils.py:190} INFO - Requirement already satisfied: zipp>=0.5 in /home/***/.local/lib/python3.8/site-packages (from importlib-metadata>=4.0.0->acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (3.18.1)
+[2024-07-12T00:09:22.012+0000] {process_utils.py:190} INFO - Requirement already satisfied: requests>=2.4.2 in /home/***/.local/lib/python3.8/site-packages (from mixpanel>=4.9.0->acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (2.31.0)
+[2024-07-12T00:09:22.012+0000] {process_utils.py:190} INFO - Requirement already satisfied: urllib3 in /home/***/.local/lib/python3.8/site-packages (from mixpanel>=4.9.0->acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (1.26.18)
+[2024-07-12T00:09:22.020+0000] {process_utils.py:190} INFO - Requirement already satisfied: annotated-types>=0.4.0 in /home/***/.local/lib/python3.8/site-packages (from pydantic!=1.10.3,>=1.10.0->acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (0.7.0)
+[2024-07-12T00:09:22.020+0000] {process_utils.py:190} INFO - Requirement already satisfied: pydantic-core==2.20.1 in /home/***/.local/lib/python3.8/site-packages (from pydantic!=1.10.3,>=1.10.0->acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (2.20.1)
+[2024-07-12T00:09:22.039+0000] {process_utils.py:190} INFO - Requirement already satisfied: wrapt<2,>=1.10 in /home/***/.local/lib/python3.8/site-packages (from Deprecated->acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (1.16.0)
+[2024-07-12T00:09:22.056+0000] {process_utils.py:190} INFO - Requirement already satisfied: importlib-resources>=1.4.0 in /home/***/.local/lib/python3.8/site-packages (from jsonschema->acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (5.13.0)
+[2024-07-12T00:09:22.056+0000] {process_utils.py:190} INFO - Requirement already satisfied: jsonschema-specifications>=2023.03.6 in /home/***/.local/lib/python3.8/site-packages (from jsonschema->acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (2023.12.1)
+[2024-07-12T00:09:22.057+0000] {process_utils.py:190} INFO - Requirement already satisfied: pkgutil-resolve-name>=1.3.10 in /home/***/.local/lib/python3.8/site-packages (from jsonschema->acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (1.3.10)
+[2024-07-12T00:09:22.057+0000] {process_utils.py:190} INFO - Requirement already satisfied: referencing>=0.28.4 in /home/***/.local/lib/python3.8/site-packages (from jsonschema->acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (0.34.0)
+[2024-07-12T00:09:22.057+0000] {process_utils.py:190} INFO - Requirement already satisfied: rpds-py>=0.7.1 in /home/***/.local/lib/python3.8/site-packages (from jsonschema->acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (0.18.0)
+[2024-07-12T00:09:22.063+0000] {process_utils.py:190} INFO - Requirement already satisfied: python-utils>=3.8.1 in /home/***/.local/lib/python3.8/site-packages (from progressbar2->acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (3.8.2)
+[2024-07-12T00:09:22.069+0000] {process_utils.py:190} INFO - Requirement already satisfied: ruamel.yaml.clib>=0.2.7 in /home/***/.local/lib/python3.8/site-packages (from ruamel.yaml->acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (0.2.8)
+[2024-07-12T00:09:22.124+0000] {process_utils.py:190} INFO - Requirement already satisfied: certifi in /home/***/.local/lib/python3.8/site-packages (from sentry-sdk->acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (2024.2.2)
+[2024-07-12T00:09:22.128+0000] {process_utils.py:190} INFO - Requirement already satisfied: mypy-extensions>=0.3.0 in /home/***/.local/lib/python3.8/site-packages (from typing-inspect->acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (1.0.0)
+[2024-07-12T00:09:22.170+0000] {process_utils.py:190} INFO - Requirement already satisfied: charset-normalizer<4,>=2 in /home/***/.local/lib/python3.8/site-packages (from requests>=2.4.2->mixpanel>=4.9.0->acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (3.3.2)
+[2024-07-12T00:09:22.170+0000] {process_utils.py:190} INFO - Requirement already satisfied: idna<4,>=2.5 in /home/***/.local/lib/python3.8/site-packages (from requests>=2.4.2->mixpanel>=4.9.0->acryl-datahub==0.12.1.5->-r /tmp/venvb4m59fz_/requirements.txt (line 1)) (3.6)
+[2024-07-12T00:09:23.975+0000] {process_utils.py:190} INFO - 
+[2024-07-12T00:09:23.976+0000] {process_utils.py:190} INFO - [notice] A new release of pip is available: 24.0 -> 24.1.2
+[2024-07-12T00:09:23.976+0000] {process_utils.py:190} INFO - [notice] To update, run: python -m pip install --upgrade pip
+[2024-07-12T00:09:24.067+0000] {process_utils.py:182} INFO - Executing cmd: /tmp/venvb4m59fz_/bin/python /tmp/venv-calla9qk66_s/script.py /tmp/venv-calla9qk66_s/script.in /tmp/venv-calla9qk66_s/script.out /tmp/venv-calla9qk66_s/string_args.txt /tmp/venv-calla9qk66_s/termination.log
+[2024-07-12T00:09:24.076+0000] {process_utils.py:186} INFO - Output:
+[2024-07-12T00:09:24.093+0000] {process_utils.py:190} INFO -   File "/tmp/venv-calla9qk66_s/script.py", line 49
+[2024-07-12T00:09:24.093+0000] {process_utils.py:190} INFO -     unusual_prefix_50923f202a1be2ffe879bd287c2681623b93c2bb_data-ingestion  = types.ModuleType("unusual_prefix_50923f202a1be2ffe879bd287c2681623b93c2bb_data-ingestion")
+[2024-07-12T00:09:24.093+0000] {process_utils.py:190} INFO -     ^
+[2024-07-12T00:09:24.094+0000] {process_utils.py:190} INFO - SyntaxError: cannot assign to operator
+[2024-07-12T00:09:24.245+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 401, in execute
+    return super().execute(context=serializable_context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 723, in execute_callable
+    result = self._execute_python_callable_in_subprocess(python_path)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 461, in _execute_python_callable_in_subprocess
+    execute_in_subprocess(
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/process_utils.py", line 171, in execute_in_subprocess
+    execute_in_subprocess_with_kwargs(cmd, cwd=cwd)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/utils/process_utils.py", line 194, in execute_in_subprocess_with_kwargs
+    raise subprocess.CalledProcessError(exit_code, cmd)
+subprocess.CalledProcessError: Command '['/tmp/venvb4m59fz_/bin/python', '/tmp/venv-calla9qk66_s/script.py', '/tmp/venv-calla9qk66_s/script.in', '/tmp/venv-calla9qk66_s/script.out', '/tmp/venv-calla9qk66_s/string_args.txt', '/tmp/venv-calla9qk66_s/termination.log']' returned non-zero exit status 1.
+[2024-07-12T00:09:24.255+0000] {taskinstance.py:1149} INFO - Marking task as UP_FOR_RETRY. dag_id=data-ingestion, task_id=ingest_task, execution_date=20240712T000149, start_date=20240712T000918, end_date=20240712T000924
+[2024-07-12T00:09:24.275+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 7 for task ingest_task (Command '['/tmp/venvb4m59fz_/bin/python', '/tmp/venv-calla9qk66_s/script.py', '/tmp/venv-calla9qk66_s/script.in', '/tmp/venv-calla9qk66_s/script.out', '/tmp/venv-calla9qk66_s/string_args.txt', '/tmp/venv-calla9qk66_s/termination.log']' returned non-zero exit status 1.; 350)
+[2024-07-12T00:09:24.320+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-12T00:09:24.328+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check

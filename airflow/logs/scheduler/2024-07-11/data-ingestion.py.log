@@ -1,0 +1,782 @@
+[2024-07-11T23:29:38.294+0000] {processor.py:161} INFO - Started process (PID=169) to work on /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:29:38.295+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data-ingestion.py for tasks to queue
+[2024-07-11T23:29:38.296+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:29:38.295+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:29:38.306+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:29:38.305+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/data-ingestion.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data-ingestion.py", line 15, in <module>
+    from config.dag import build_default_args
+  File "/opt/airflow/dags/config/dag.py", line 9, in <module>
+    def build_default_args(custom_args: dict[Any, Any] | None = None) -> dict[Any, Any]:
+TypeError: 'type' object is not subscriptable
+[2024-07-11T23:29:38.306+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:29:38.321+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data-ingestion.py took 0.030 seconds
+[2024-07-11T23:30:28.739+0000] {processor.py:161} INFO - Started process (PID=169) to work on /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:30:28.742+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data-ingestion.py for tasks to queue
+[2024-07-11T23:30:28.742+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:30:28.742+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:30:28.746+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:30:28.745+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/data-ingestion.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data-ingestion.py", line 15, in <module>
+    from config.dag import build_default_args
+  File "/opt/airflow/dags/config/dag.py", line 9, in <module>
+    def build_default_args(custom_args: dict[Any, Any] | None = None) -> dict[Any, Any]:
+TypeError: 'type' object is not subscriptable
+[2024-07-11T23:30:28.746+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:30:28.756+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data-ingestion.py took 0.019 seconds
+[2024-07-11T23:30:59.010+0000] {processor.py:161} INFO - Started process (PID=174) to work on /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:30:59.011+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data-ingestion.py for tasks to queue
+[2024-07-11T23:30:59.012+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:30:59.012+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:30:59.018+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:30:59.017+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/data-ingestion.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data-ingestion.py", line 15, in <module>
+    from config.dag import build_default_args
+  File "/opt/airflow/dags/config/dag.py", line 9, in <module>
+    def build_default_args(custom_args: dict[Any, Any] | None = None) -> dict[Any, Any]:
+TypeError: 'type' object is not subscriptable
+[2024-07-11T23:30:59.018+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:30:59.030+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data-ingestion.py took 0.023 seconds
+[2024-07-11T23:31:29.288+0000] {processor.py:161} INFO - Started process (PID=179) to work on /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:31:29.289+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data-ingestion.py for tasks to queue
+[2024-07-11T23:31:29.290+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:31:29.290+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:31:29.295+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:31:29.294+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/data-ingestion.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data-ingestion.py", line 15, in <module>
+    from config.dag import build_default_args
+  File "/opt/airflow/dags/config/dag.py", line 9, in <module>
+    def build_default_args(custom_args: dict[Any, Any] | None = None) -> dict[Any, Any]:
+TypeError: 'type' object is not subscriptable
+[2024-07-11T23:31:29.295+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:31:29.307+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data-ingestion.py took 0.022 seconds
+[2024-07-11T23:31:59.560+0000] {processor.py:161} INFO - Started process (PID=184) to work on /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:31:59.561+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data-ingestion.py for tasks to queue
+[2024-07-11T23:31:59.562+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:31:59.562+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:31:59.568+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:31:59.567+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/data-ingestion.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data-ingestion.py", line 15, in <module>
+    from config.dag import build_default_args
+  File "/opt/airflow/dags/config/dag.py", line 9, in <module>
+    def build_default_args(custom_args: dict[Any, Any] | None = None) -> dict[Any, Any]:
+TypeError: 'type' object is not subscriptable
+[2024-07-11T23:31:59.568+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:31:59.580+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data-ingestion.py took 0.023 seconds
+[2024-07-11T23:32:29.837+0000] {processor.py:161} INFO - Started process (PID=189) to work on /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:32:29.838+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data-ingestion.py for tasks to queue
+[2024-07-11T23:32:29.839+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:32:29.839+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:32:29.845+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:32:29.844+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/data-ingestion.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data-ingestion.py", line 15, in <module>
+    from config.dag import build_default_args
+  File "/opt/airflow/dags/config/dag.py", line 9, in <module>
+    def build_default_args(custom_args: dict[Any, Any] | None = None) -> dict[Any, Any]:
+TypeError: 'type' object is not subscriptable
+[2024-07-11T23:32:29.845+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:32:29.858+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data-ingestion.py took 0.024 seconds
+[2024-07-11T23:33:00.078+0000] {processor.py:161} INFO - Started process (PID=194) to work on /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:33:00.079+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data-ingestion.py for tasks to queue
+[2024-07-11T23:33:00.080+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:33:00.080+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:33:00.085+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:33:00.084+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/data-ingestion.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data-ingestion.py", line 15, in <module>
+    from config.dag import build_default_args
+  File "/opt/airflow/dags/config/dag.py", line 9, in <module>
+    def build_default_args(custom_args: dict[Any, Any] | None = None) -> dict[Any, Any]:
+TypeError: 'type' object is not subscriptable
+[2024-07-11T23:33:00.085+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:33:00.098+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data-ingestion.py took 0.023 seconds
+[2024-07-11T23:33:30.313+0000] {processor.py:161} INFO - Started process (PID=199) to work on /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:33:30.315+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data-ingestion.py for tasks to queue
+[2024-07-11T23:33:30.318+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:33:30.317+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:33:30.327+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:33:30.327+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/data-ingestion.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data-ingestion.py", line 15, in <module>
+    from config.dag import build_default_args
+  File "/opt/airflow/dags/config/dag.py", line 9, in <module>
+    def build_default_args(custom_args: dict[Any, Any] | None = None) -> dict[Any, Any]:
+TypeError: 'type' object is not subscriptable
+[2024-07-11T23:33:30.328+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:33:30.340+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data-ingestion.py took 0.035 seconds
+[2024-07-11T23:37:32.377+0000] {processor.py:161} INFO - Started process (PID=157) to work on /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:37:32.378+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data-ingestion.py for tasks to queue
+[2024-07-11T23:37:32.379+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:37:32.379+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:37:32.400+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:37:32.398+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/data-ingestion.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/data-ingestion.py", line 131, in <module>
+    dag_object = generate_dag()
+                 ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4081, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/data-ingestion.py", line 105, in generate_dag
+    datahub_conn = BaseHook.get_connection("datahub_rest_default")
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/hooks/base.py", line 83, in get_connection
+    conn = Connection.get_connection_from_secrets(conn_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/connection.py", line 519, in get_connection_from_secrets
+    raise AirflowNotFoundException(f"The conn_id `{conn_id}` isn't defined")
+airflow.exceptions.AirflowNotFoundException: The conn_id `datahub_rest_default` isn't defined
+[2024-07-11T23:37:32.400+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:37:32.405+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data-ingestion.py took 0.032 seconds
+[2024-07-11T23:38:02.625+0000] {processor.py:161} INFO - Started process (PID=162) to work on /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:38:02.626+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data-ingestion.py for tasks to queue
+[2024-07-11T23:38:02.630+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:38:02.629+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:38:02.662+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:38:02.660+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/data-ingestion.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/data-ingestion.py", line 131, in <module>
+    dag_object = generate_dag()
+                 ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4081, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/data-ingestion.py", line 105, in generate_dag
+    datahub_conn = BaseHook.get_connection("datahub_rest_default")
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/hooks/base.py", line 83, in get_connection
+    conn = Connection.get_connection_from_secrets(conn_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/connection.py", line 519, in get_connection_from_secrets
+    raise AirflowNotFoundException(f"The conn_id `{conn_id}` isn't defined")
+airflow.exceptions.AirflowNotFoundException: The conn_id `datahub_rest_default` isn't defined
+[2024-07-11T23:38:02.663+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:38:02.669+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data-ingestion.py took 0.050 seconds
+[2024-07-11T23:38:14.726+0000] {processor.py:161} INFO - Started process (PID=167) to work on /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:38:14.727+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data-ingestion.py for tasks to queue
+[2024-07-11T23:38:14.729+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:38:14.728+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:38:14.749+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:38:14.746+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/data-ingestion.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/data-ingestion.py", line 131, in <module>
+    dag_object = generate_dag()
+                 ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4081, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/data-ingestion.py", line 105, in generate_dag
+    datahub_conn = BaseHook.get_connection("datahub_rest_default")
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/hooks/base.py", line 83, in get_connection
+    conn = Connection.get_connection_from_secrets(conn_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/connection.py", line 519, in get_connection_from_secrets
+    raise AirflowNotFoundException(f"The conn_id `{conn_id}` isn't defined")
+airflow.exceptions.AirflowNotFoundException: The conn_id `datahub_rest_default` isn't defined
+[2024-07-11T23:38:14.749+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:38:14.759+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data-ingestion.py took 0.036 seconds
+[2024-07-11T23:38:44.990+0000] {processor.py:161} INFO - Started process (PID=172) to work on /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:38:44.992+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data-ingestion.py for tasks to queue
+[2024-07-11T23:38:44.995+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:38:44.994+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:38:45.029+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:38:45.025+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/data-ingestion.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/opt/airflow/dags/data-ingestion.py", line 131, in <module>
+    dag_object = generate_dag()
+                 ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/dag.py", line 4081, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/data-ingestion.py", line 105, in generate_dag
+    datahub_conn = BaseHook.get_connection("datahub_rest_default")
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/hooks/base.py", line 83, in get_connection
+    conn = Connection.get_connection_from_secrets(conn_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/connection.py", line 519, in get_connection_from_secrets
+    raise AirflowNotFoundException(f"The conn_id `{conn_id}` isn't defined")
+airflow.exceptions.AirflowNotFoundException: The conn_id `datahub_rest_default` isn't defined
+[2024-07-11T23:38:45.030+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:38:45.039+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data-ingestion.py took 0.056 seconds
+[2024-07-11T23:41:56.540+0000] {processor.py:161} INFO - Started process (PID=169) to work on /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:41:56.542+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data-ingestion.py for tasks to queue
+[2024-07-11T23:41:56.542+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:41:56.542+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:41:56.547+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:41:56.546+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/data-ingestion.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data-ingestion.py", line 15, in <module>
+    from config.dag import build_default_args
+  File "/opt/airflow/dags/config/dag.py", line 9, in <module>
+    def build_default_args(custom_args: dict[Any, Any] | None = None) -> dict[Any, Any]:
+TypeError: 'type' object is not subscriptable
+[2024-07-11T23:41:56.547+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:41:56.565+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data-ingestion.py took 0.027 seconds
+[2024-07-11T23:42:26.788+0000] {processor.py:161} INFO - Started process (PID=174) to work on /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:42:26.789+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data-ingestion.py for tasks to queue
+[2024-07-11T23:42:26.790+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:42:26.789+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:42:26.795+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:42:26.794+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/data-ingestion.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data-ingestion.py", line 15, in <module>
+    from config.dag import build_default_args
+  File "/opt/airflow/dags/config/dag.py", line 9, in <module>
+    def build_default_args(custom_args: dict[Any, Any] | None = None) -> dict[Any, Any]:
+TypeError: 'type' object is not subscriptable
+[2024-07-11T23:42:26.796+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:42:26.814+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data-ingestion.py took 0.029 seconds
+[2024-07-11T23:42:57.190+0000] {processor.py:161} INFO - Started process (PID=179) to work on /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:42:57.191+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data-ingestion.py for tasks to queue
+[2024-07-11T23:42:57.192+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:42:57.192+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:42:57.198+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:42:57.197+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/data-ingestion.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data-ingestion.py", line 15, in <module>
+    from config.dag import build_default_args
+  File "/opt/airflow/dags/config/dag.py", line 9, in <module>
+    def build_default_args(custom_args: dict[Any, Any] | None = None) -> dict[Any, Any]:
+TypeError: 'type' object is not subscriptable
+[2024-07-11T23:42:57.199+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:42:57.210+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data-ingestion.py took 0.023 seconds
+[2024-07-11T23:43:27.502+0000] {processor.py:161} INFO - Started process (PID=184) to work on /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:43:27.504+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data-ingestion.py for tasks to queue
+[2024-07-11T23:43:27.505+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:43:27.504+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:43:27.510+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:43:27.509+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/data-ingestion.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data-ingestion.py", line 15, in <module>
+    from config.dag import build_default_args
+  File "/opt/airflow/dags/config/dag.py", line 9, in <module>
+    def build_default_args(custom_args: dict[Any, Any] | None = None) -> dict[Any, Any]:
+TypeError: 'type' object is not subscriptable
+[2024-07-11T23:43:27.510+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:43:27.523+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data-ingestion.py took 0.024 seconds
+[2024-07-11T23:43:57.755+0000] {processor.py:161} INFO - Started process (PID=189) to work on /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:43:57.756+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data-ingestion.py for tasks to queue
+[2024-07-11T23:43:57.757+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:43:57.757+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:43:57.762+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:43:57.762+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/data-ingestion.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data-ingestion.py", line 15, in <module>
+    from config.dag import build_default_args
+  File "/opt/airflow/dags/config/dag.py", line 9, in <module>
+    def build_default_args(custom_args: dict[Any, Any] | None = None) -> dict[Any, Any]:
+TypeError: 'type' object is not subscriptable
+[2024-07-11T23:43:57.763+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:43:57.777+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data-ingestion.py took 0.024 seconds
+[2024-07-11T23:44:28.051+0000] {processor.py:161} INFO - Started process (PID=194) to work on /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:44:28.052+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data-ingestion.py for tasks to queue
+[2024-07-11T23:44:28.053+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:44:28.052+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:44:28.058+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:44:28.057+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/data-ingestion.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data-ingestion.py", line 15, in <module>
+    from config.dag import build_default_args
+  File "/opt/airflow/dags/config/dag.py", line 9, in <module>
+    def build_default_args(custom_args: dict[Any, Any] | None = None) -> dict[Any, Any]:
+TypeError: 'type' object is not subscriptable
+[2024-07-11T23:44:28.059+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:44:28.071+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data-ingestion.py took 0.024 seconds
+[2024-07-11T23:44:58.395+0000] {processor.py:161} INFO - Started process (PID=199) to work on /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:44:58.396+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data-ingestion.py for tasks to queue
+[2024-07-11T23:44:58.397+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:44:58.397+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:44:58.404+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:44:58.403+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/data-ingestion.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data-ingestion.py", line 15, in <module>
+    from config.dag import build_default_args
+  File "/opt/airflow/dags/config/dag.py", line 9, in <module>
+    def build_default_args(custom_args: dict[Any, Any] | None = None) -> dict[Any, Any]:
+TypeError: 'type' object is not subscriptable
+[2024-07-11T23:44:58.404+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:44:58.417+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data-ingestion.py took 0.026 seconds
+[2024-07-11T23:45:28.681+0000] {processor.py:161} INFO - Started process (PID=204) to work on /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:45:28.682+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data-ingestion.py for tasks to queue
+[2024-07-11T23:45:28.683+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:45:28.683+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:45:28.689+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:45:28.688+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/data-ingestion.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data-ingestion.py", line 15, in <module>
+    from config.dag import build_default_args
+  File "/opt/airflow/dags/config/dag.py", line 9, in <module>
+    def build_default_args(custom_args: dict[Any, Any] | None = None) -> dict[Any, Any]:
+TypeError: 'type' object is not subscriptable
+[2024-07-11T23:45:28.689+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:45:28.703+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data-ingestion.py took 0.025 seconds
+[2024-07-11T23:45:59.000+0000] {processor.py:161} INFO - Started process (PID=209) to work on /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:45:59.001+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data-ingestion.py for tasks to queue
+[2024-07-11T23:45:59.003+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:45:59.002+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:45:59.018+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:45:59.016+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/data-ingestion.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data-ingestion.py", line 15, in <module>
+    from config.dag import build_default_args
+  File "/opt/airflow/dags/config/dag.py", line 9, in <module>
+    def build_default_args(custom_args: dict[Any, Any] | None = None) -> dict[Any, Any]:
+TypeError: 'type' object is not subscriptable
+[2024-07-11T23:45:59.022+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:45:59.136+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data-ingestion.py took 0.139 seconds
+[2024-07-11T23:46:29.341+0000] {processor.py:161} INFO - Started process (PID=214) to work on /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:46:29.342+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data-ingestion.py for tasks to queue
+[2024-07-11T23:46:29.344+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:46:29.343+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:46:29.356+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:46:29.354+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/data-ingestion.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data-ingestion.py", line 15, in <module>
+    from config.dag import build_default_args
+  File "/opt/airflow/dags/config/dag.py", line 9, in <module>
+    def build_default_args(custom_args: dict[Any, Any] | None = None) -> dict[Any, Any]:
+TypeError: 'type' object is not subscriptable
+[2024-07-11T23:46:29.356+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:46:29.371+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data-ingestion.py took 0.042 seconds
+[2024-07-11T23:46:36.445+0000] {processor.py:161} INFO - Started process (PID=219) to work on /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:46:36.446+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data-ingestion.py for tasks to queue
+[2024-07-11T23:46:36.448+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:46:36.447+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:46:36.461+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:46:36.459+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/data-ingestion.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data-ingestion.py", line 15, in <module>
+    from config.dag import build_default_args
+  File "/opt/airflow/dags/config/dag.py", line 9, in <module>
+    def build_default_args(custom_args: dict[Any, Any] | None = None) -> dict[Any, Any]:
+TypeError: 'type' object is not subscriptable
+[2024-07-11T23:46:36.461+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:46:36.482+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data-ingestion.py took 0.040 seconds
+[2024-07-11T23:47:06.804+0000] {processor.py:161} INFO - Started process (PID=224) to work on /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:47:06.805+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data-ingestion.py for tasks to queue
+[2024-07-11T23:47:06.806+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:47:06.806+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:47:06.814+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:47:06.813+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/data-ingestion.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data-ingestion.py", line 15, in <module>
+    from config.dag import build_default_args
+  File "/opt/airflow/dags/config/dag.py", line 9, in <module>
+    def build_default_args(custom_args: dict[Any, Any] | None = None) -> dict[Any, Any]:
+TypeError: 'type' object is not subscriptable
+[2024-07-11T23:47:06.814+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:47:06.841+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data-ingestion.py took 0.041 seconds
+[2024-07-11T23:47:37.143+0000] {processor.py:161} INFO - Started process (PID=229) to work on /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:47:37.144+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data-ingestion.py for tasks to queue
+[2024-07-11T23:47:37.145+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:47:37.145+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:47:37.154+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:47:37.152+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/data-ingestion.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data-ingestion.py", line 15, in <module>
+    from config.dag import build_default_args
+  File "/opt/airflow/dags/config/dag.py", line 9, in <module>
+    def build_default_args(custom_args: dict[Any, Any] | None = None) -> dict[Any, Any]:
+TypeError: 'type' object is not subscriptable
+[2024-07-11T23:47:37.154+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:47:37.171+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data-ingestion.py took 0.033 seconds
+[2024-07-11T23:48:07.539+0000] {processor.py:161} INFO - Started process (PID=234) to work on /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:48:07.541+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data-ingestion.py for tasks to queue
+[2024-07-11T23:48:07.542+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:48:07.541+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:48:07.550+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:48:07.549+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/data-ingestion.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data-ingestion.py", line 15, in <module>
+    from config.dag import build_default_args
+  File "/opt/airflow/dags/config/dag.py", line 9, in <module>
+    def build_default_args(custom_args: Dict[Any, Any] | None = None) -> Dict[Any, Any]:
+TypeError: unsupported operand type(s) for |: '_GenericAlias' and 'NoneType'
+[2024-07-11T23:48:07.550+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:48:07.567+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data-ingestion.py took 0.032 seconds
+[2024-07-11T23:48:37.835+0000] {processor.py:161} INFO - Started process (PID=239) to work on /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:48:37.837+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data-ingestion.py for tasks to queue
+[2024-07-11T23:48:37.838+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:48:37.837+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:48:37.854+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:48:37.847+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/data-ingestion.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data-ingestion.py", line 15, in <module>
+    from config.dag import build_default_args
+  File "/opt/airflow/dags/config/dag.py", line 10, in <module>
+    custom_args: Dict[Hashable, Any] | None = None
+TypeError: unsupported operand type(s) for |: '_GenericAlias' and 'NoneType'
+[2024-07-11T23:48:37.858+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:48:37.878+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data-ingestion.py took 0.047 seconds
+[2024-07-11T23:49:08.156+0000] {processor.py:161} INFO - Started process (PID=244) to work on /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:49:08.158+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data-ingestion.py for tasks to queue
+[2024-07-11T23:49:08.159+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:49:08.159+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:49:08.193+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:49:08.190+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/data-ingestion.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data-ingestion.py", line 131, in <module>
+    dag_object = generate_dag()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3955, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/data-ingestion.py", line 105, in generate_dag
+    datahub_conn = BaseHook.get_connection("datahub_rest_default")
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/hooks/base.py", line 82, in get_connection
+    conn = Connection.get_connection_from_secrets(conn_id)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/connection.py", line 514, in get_connection_from_secrets
+    raise AirflowNotFoundException(f"The conn_id `{conn_id}` isn't defined")
+airflow.exceptions.AirflowNotFoundException: The conn_id `datahub_rest_default` isn't defined
+[2024-07-11T23:49:08.193+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:49:08.199+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data-ingestion.py took 0.047 seconds
+[2024-07-11T23:49:38.431+0000] {processor.py:161} INFO - Started process (PID=249) to work on /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:49:38.432+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data-ingestion.py for tasks to queue
+[2024-07-11T23:49:38.433+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:49:38.433+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:49:38.458+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:49:38.457+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/data-ingestion.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data-ingestion.py", line 131, in <module>
+    dag_object = generate_dag()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3955, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/data-ingestion.py", line 105, in generate_dag
+    datahub_conn = BaseHook.get_connection("datahub_rest_default")
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/hooks/base.py", line 82, in get_connection
+    conn = Connection.get_connection_from_secrets(conn_id)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/connection.py", line 514, in get_connection_from_secrets
+    raise AirflowNotFoundException(f"The conn_id `{conn_id}` isn't defined")
+airflow.exceptions.AirflowNotFoundException: The conn_id `datahub_rest_default` isn't defined
+[2024-07-11T23:49:38.459+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:49:38.465+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data-ingestion.py took 0.038 seconds
+[2024-07-11T23:50:08.744+0000] {processor.py:161} INFO - Started process (PID=254) to work on /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:50:08.747+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data-ingestion.py for tasks to queue
+[2024-07-11T23:50:08.748+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:50:08.747+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:50:08.777+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:50:08.775+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/data-ingestion.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data-ingestion.py", line 131, in <module>
+    dag_object = generate_dag()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3955, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/data-ingestion.py", line 105, in generate_dag
+    datahub_conn = BaseHook.get_connection("datahub_rest_default")
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/hooks/base.py", line 82, in get_connection
+    conn = Connection.get_connection_from_secrets(conn_id)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/connection.py", line 514, in get_connection_from_secrets
+    raise AirflowNotFoundException(f"The conn_id `{conn_id}` isn't defined")
+airflow.exceptions.AirflowNotFoundException: The conn_id `datahub_rest_default` isn't defined
+[2024-07-11T23:50:08.777+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:50:08.784+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data-ingestion.py took 0.044 seconds
+[2024-07-11T23:50:39.006+0000] {processor.py:161} INFO - Started process (PID=259) to work on /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:50:39.008+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data-ingestion.py for tasks to queue
+[2024-07-11T23:50:39.010+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:50:39.009+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:50:39.051+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:50:39.045+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/data-ingestion.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data-ingestion.py", line 131, in <module>
+    dag_object = generate_dag()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3955, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/data-ingestion.py", line 105, in generate_dag
+    datahub_conn = BaseHook.get_connection("datahub_rest_default")
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/hooks/base.py", line 82, in get_connection
+    conn = Connection.get_connection_from_secrets(conn_id)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/connection.py", line 514, in get_connection_from_secrets
+    raise AirflowNotFoundException(f"The conn_id `{conn_id}` isn't defined")
+airflow.exceptions.AirflowNotFoundException: The conn_id `datahub_rest_default` isn't defined
+[2024-07-11T23:50:39.052+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:50:39.067+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data-ingestion.py took 0.066 seconds
+[2024-07-11T23:51:09.344+0000] {processor.py:161} INFO - Started process (PID=264) to work on /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:51:09.346+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data-ingestion.py for tasks to queue
+[2024-07-11T23:51:09.348+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:51:09.347+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:51:09.379+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:51:09.378+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/data-ingestion.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data-ingestion.py", line 131, in <module>
+    dag_object = generate_dag()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3955, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/data-ingestion.py", line 105, in generate_dag
+    datahub_conn = BaseHook.get_connection("datahub_rest_default")
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/hooks/base.py", line 82, in get_connection
+    conn = Connection.get_connection_from_secrets(conn_id)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/connection.py", line 514, in get_connection_from_secrets
+    raise AirflowNotFoundException(f"The conn_id `{conn_id}` isn't defined")
+airflow.exceptions.AirflowNotFoundException: The conn_id `datahub_rest_default` isn't defined
+[2024-07-11T23:51:09.380+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:51:09.387+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data-ingestion.py took 0.061 seconds
+[2024-07-11T23:51:39.640+0000] {processor.py:161} INFO - Started process (PID=269) to work on /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:51:39.641+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data-ingestion.py for tasks to queue
+[2024-07-11T23:51:39.642+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:51:39.642+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:51:39.687+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:51:39.686+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/data-ingestion.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data-ingestion.py", line 131, in <module>
+    dag_object = generate_dag()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3955, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/data-ingestion.py", line 105, in generate_dag
+    datahub_conn = BaseHook.get_connection("datahub_rest_default")
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/hooks/base.py", line 82, in get_connection
+    conn = Connection.get_connection_from_secrets(conn_id)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/connection.py", line 514, in get_connection_from_secrets
+    raise AirflowNotFoundException(f"The conn_id `{conn_id}` isn't defined")
+airflow.exceptions.AirflowNotFoundException: The conn_id `datahub_rest_default` isn't defined
+[2024-07-11T23:51:39.688+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:51:39.695+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data-ingestion.py took 0.058 seconds
+[2024-07-11T23:52:09.985+0000] {processor.py:161} INFO - Started process (PID=274) to work on /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:52:09.987+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data-ingestion.py for tasks to queue
+[2024-07-11T23:52:09.988+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:52:09.988+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:52:10.009+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:52:10.008+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/data-ingestion.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data-ingestion.py", line 131, in <module>
+    dag_object = generate_dag()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3955, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/data-ingestion.py", line 105, in generate_dag
+    datahub_conn = BaseHook.get_connection("datahub_rest_default")
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/hooks/base.py", line 82, in get_connection
+    conn = Connection.get_connection_from_secrets(conn_id)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/connection.py", line 514, in get_connection_from_secrets
+    raise AirflowNotFoundException(f"The conn_id `{conn_id}` isn't defined")
+airflow.exceptions.AirflowNotFoundException: The conn_id `datahub_rest_default` isn't defined
+[2024-07-11T23:52:10.010+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:52:10.016+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data-ingestion.py took 0.033 seconds
+[2024-07-11T23:52:17.061+0000] {processor.py:161} INFO - Started process (PID=279) to work on /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:52:17.062+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data-ingestion.py for tasks to queue
+[2024-07-11T23:52:17.063+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:52:17.062+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:52:17.086+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:52:17.084+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/data-ingestion.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data-ingestion.py", line 131, in <module>
+    dag_object = generate_dag()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3955, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/data-ingestion.py", line 105, in generate_dag
+    datahub_conn = BaseHook.get_connection("datahub_rest_default")
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/hooks/base.py", line 82, in get_connection
+    conn = Connection.get_connection_from_secrets(conn_id)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/connection.py", line 514, in get_connection_from_secrets
+    raise AirflowNotFoundException(f"The conn_id `{conn_id}` isn't defined")
+airflow.exceptions.AirflowNotFoundException: The conn_id `datahub_rest_default` isn't defined
+[2024-07-11T23:52:17.087+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:52:17.095+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data-ingestion.py took 0.036 seconds
+[2024-07-11T23:52:38.293+0000] {processor.py:161} INFO - Started process (PID=284) to work on /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:52:38.294+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data-ingestion.py for tasks to queue
+[2024-07-11T23:52:38.295+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:52:38.295+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:52:38.334+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:52:38.328+0000] {dagbag.py:350} ERROR - Failed to import: /opt/airflow/dags/data-ingestion.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dagbag.py", line 346, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/data-ingestion.py", line 130, in <module>
+    dag_object = generate_dag()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/dag.py", line 3955, in factory
+    f(**f_kwargs)
+  File "/opt/airflow/dags/data-ingestion.py", line 105, in generate_dag
+    datahub_conn = BaseHook.get_connection("datahub_rest_default")
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/hooks/base.py", line 82, in get_connection
+    conn = Connection.get_connection_from_secrets(conn_id)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/connection.py", line 514, in get_connection_from_secrets
+    raise AirflowNotFoundException(f"The conn_id `{conn_id}` isn't defined")
+airflow.exceptions.AirflowNotFoundException: The conn_id `datahub_rest_default` isn't defined
+[2024-07-11T23:52:38.334+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:52:38.342+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data-ingestion.py took 0.051 seconds
+[2024-07-11T23:52:58.488+0000] {processor.py:161} INFO - Started process (PID=289) to work on /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:52:58.490+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data-ingestion.py for tasks to queue
+[2024-07-11T23:52:58.491+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:52:58.490+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:52:58.530+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:52:58.530+0000] {base.py:83} INFO - Using connection ID 'datahub_rest_default' for task execution.
+[2024-07-11T23:52:58.545+0000] {processor.py:840} INFO - DAG(s) 'data-ingestion' retrieved from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:52:58.753+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:52:58.752+0000] {override.py:1769} INFO - Created Permission View: can delete on DAG:data-ingestion
+[2024-07-11T23:52:58.759+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:52:58.759+0000] {override.py:1769} INFO - Created Permission View: can edit on DAG:data-ingestion
+[2024-07-11T23:52:58.762+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:52:58.762+0000] {override.py:1769} INFO - Created Permission View: can read on DAG:data-ingestion
+[2024-07-11T23:52:58.762+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:52:58.762+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-07-11T23:52:58.768+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:52:58.768+0000] {dag.py:3069} INFO - Creating ORM DAG for data-ingestion
+[2024-07-11T23:52:58.769+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:52:58.769+0000] {dag.py:3834} INFO - Setting next_dagrun for data-ingestion to None, run_after=None
+[2024-07-11T23:52:58.783+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data-ingestion.py took 0.297 seconds
+[2024-07-11T23:53:29.075+0000] {processor.py:161} INFO - Started process (PID=294) to work on /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:53:29.078+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data-ingestion.py for tasks to queue
+[2024-07-11T23:53:29.079+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:53:29.078+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:53:29.109+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:53:29.109+0000] {base.py:83} INFO - Using connection ID 'datahub_rest_default' for task execution.
+[2024-07-11T23:53:29.113+0000] {processor.py:840} INFO - DAG(s) 'data-ingestion' retrieved from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:53:29.123+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:53:29.123+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-07-11T23:53:29.129+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:53:29.129+0000] {dag.py:3834} INFO - Setting next_dagrun for data-ingestion to None, run_after=None
+[2024-07-11T23:53:29.139+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data-ingestion.py took 0.070 seconds
+[2024-07-11T23:53:59.436+0000] {processor.py:161} INFO - Started process (PID=299) to work on /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:53:59.439+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data-ingestion.py for tasks to queue
+[2024-07-11T23:53:59.440+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:53:59.440+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:53:59.462+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:53:59.462+0000] {base.py:83} INFO - Using connection ID 'datahub_rest_default' for task execution.
+[2024-07-11T23:53:59.466+0000] {processor.py:840} INFO - DAG(s) 'data-ingestion' retrieved from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:53:59.490+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:53:59.490+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-07-11T23:53:59.498+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:53:59.498+0000] {dag.py:3834} INFO - Setting next_dagrun for data-ingestion to None, run_after=None
+[2024-07-11T23:53:59.508+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data-ingestion.py took 0.075 seconds
+[2024-07-11T23:54:29.747+0000] {processor.py:161} INFO - Started process (PID=304) to work on /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:54:29.749+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data-ingestion.py for tasks to queue
+[2024-07-11T23:54:29.751+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:54:29.751+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:54:29.803+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:54:29.803+0000] {base.py:83} INFO - Using connection ID 'datahub_rest_default' for task execution.
+[2024-07-11T23:54:29.807+0000] {processor.py:840} INFO - DAG(s) 'data-ingestion' retrieved from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:54:29.817+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:54:29.817+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-07-11T23:54:29.824+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:54:29.824+0000] {dag.py:3834} INFO - Setting next_dagrun for data-ingestion to None, run_after=None
+[2024-07-11T23:54:29.835+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data-ingestion.py took 0.093 seconds
+[2024-07-11T23:55:00.028+0000] {processor.py:161} INFO - Started process (PID=309) to work on /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:55:00.029+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data-ingestion.py for tasks to queue
+[2024-07-11T23:55:00.030+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:55:00.030+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:55:00.054+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:55:00.053+0000] {base.py:83} INFO - Using connection ID 'datahub_rest_default' for task execution.
+[2024-07-11T23:55:00.066+0000] {processor.py:840} INFO - DAG(s) 'data-ingestion' retrieved from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:55:00.082+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:55:00.082+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-07-11T23:55:00.090+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:55:00.089+0000] {dag.py:3834} INFO - Setting next_dagrun for data-ingestion to None, run_after=None
+[2024-07-11T23:55:00.101+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data-ingestion.py took 0.077 seconds
+[2024-07-11T23:55:30.315+0000] {processor.py:161} INFO - Started process (PID=314) to work on /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:55:30.320+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data-ingestion.py for tasks to queue
+[2024-07-11T23:55:30.322+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:55:30.321+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:55:30.365+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:55:30.364+0000] {base.py:83} INFO - Using connection ID 'datahub_rest_default' for task execution.
+[2024-07-11T23:55:30.368+0000] {processor.py:840} INFO - DAG(s) 'data-ingestion' retrieved from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:55:30.378+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:55:30.377+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-07-11T23:55:30.384+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:55:30.384+0000] {dag.py:3834} INFO - Setting next_dagrun for data-ingestion to None, run_after=None
+[2024-07-11T23:55:30.393+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data-ingestion.py took 0.090 seconds
+[2024-07-11T23:56:00.605+0000] {processor.py:161} INFO - Started process (PID=319) to work on /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:56:00.607+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data-ingestion.py for tasks to queue
+[2024-07-11T23:56:00.608+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:56:00.607+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:56:00.630+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:56:00.630+0000] {base.py:83} INFO - Using connection ID 'datahub_rest_default' for task execution.
+[2024-07-11T23:56:00.634+0000] {processor.py:840} INFO - DAG(s) 'data-ingestion' retrieved from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:56:00.643+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:56:00.643+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-07-11T23:56:00.649+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:56:00.649+0000] {dag.py:3834} INFO - Setting next_dagrun for data-ingestion to None, run_after=None
+[2024-07-11T23:56:00.659+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data-ingestion.py took 0.058 seconds
+[2024-07-11T23:56:30.905+0000] {processor.py:161} INFO - Started process (PID=324) to work on /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:56:30.913+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data-ingestion.py for tasks to queue
+[2024-07-11T23:56:30.915+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:56:30.915+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:56:30.947+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:56:30.947+0000] {base.py:83} INFO - Using connection ID 'datahub_rest_default' for task execution.
+[2024-07-11T23:56:30.951+0000] {processor.py:840} INFO - DAG(s) 'data-ingestion' retrieved from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:56:30.973+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:56:30.973+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-07-11T23:56:30.990+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:56:30.989+0000] {dag.py:3834} INFO - Setting next_dagrun for data-ingestion to None, run_after=None
+[2024-07-11T23:56:31.010+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data-ingestion.py took 0.117 seconds
+[2024-07-11T23:57:01.155+0000] {processor.py:161} INFO - Started process (PID=329) to work on /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:57:01.157+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data-ingestion.py for tasks to queue
+[2024-07-11T23:57:01.157+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:57:01.157+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:57:01.183+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:57:01.183+0000] {base.py:83} INFO - Using connection ID 'datahub_rest_default' for task execution.
+[2024-07-11T23:57:01.188+0000] {processor.py:840} INFO - DAG(s) 'data-ingestion' retrieved from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:57:01.199+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:57:01.199+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-07-11T23:57:01.206+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:57:01.206+0000] {dag.py:3834} INFO - Setting next_dagrun for data-ingestion to None, run_after=None
+[2024-07-11T23:57:01.218+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data-ingestion.py took 0.067 seconds
+[2024-07-11T23:57:31.515+0000] {processor.py:161} INFO - Started process (PID=334) to work on /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:57:31.517+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data-ingestion.py for tasks to queue
+[2024-07-11T23:57:31.518+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:57:31.517+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:57:31.540+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:57:31.540+0000] {base.py:83} INFO - Using connection ID 'datahub_rest_default' for task execution.
+[2024-07-11T23:57:31.543+0000] {processor.py:840} INFO - DAG(s) 'data-ingestion' retrieved from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:57:31.554+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:57:31.554+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-07-11T23:57:31.561+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:57:31.561+0000] {dag.py:3834} INFO - Setting next_dagrun for data-ingestion to None, run_after=None
+[2024-07-11T23:57:31.571+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data-ingestion.py took 0.060 seconds
+[2024-07-11T23:58:01.816+0000] {processor.py:161} INFO - Started process (PID=339) to work on /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:58:01.818+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data-ingestion.py for tasks to queue
+[2024-07-11T23:58:01.819+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:58:01.819+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:58:01.844+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:58:01.844+0000] {base.py:83} INFO - Using connection ID 'datahub_rest_default' for task execution.
+[2024-07-11T23:58:01.848+0000] {processor.py:840} INFO - DAG(s) 'data-ingestion' retrieved from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:58:01.857+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:58:01.857+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-07-11T23:58:01.864+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:58:01.864+0000] {dag.py:3834} INFO - Setting next_dagrun for data-ingestion to None, run_after=None
+[2024-07-11T23:58:01.875+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data-ingestion.py took 0.069 seconds
+[2024-07-11T23:58:32.069+0000] {processor.py:161} INFO - Started process (PID=344) to work on /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:58:32.076+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data-ingestion.py for tasks to queue
+[2024-07-11T23:58:32.077+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:58:32.077+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:58:32.101+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:58:32.101+0000] {base.py:83} INFO - Using connection ID 'datahub_rest_default' for task execution.
+[2024-07-11T23:58:32.105+0000] {processor.py:840} INFO - DAG(s) 'data-ingestion' retrieved from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:58:32.115+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:58:32.115+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-07-11T23:58:32.122+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:58:32.122+0000] {dag.py:3834} INFO - Setting next_dagrun for data-ingestion to None, run_after=None
+[2024-07-11T23:58:32.132+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data-ingestion.py took 0.078 seconds
+[2024-07-11T23:59:02.333+0000] {processor.py:161} INFO - Started process (PID=349) to work on /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:59:02.335+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data-ingestion.py for tasks to queue
+[2024-07-11T23:59:02.336+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:59:02.336+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:59:02.386+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:59:02.386+0000] {base.py:83} INFO - Using connection ID 'datahub_rest_default' for task execution.
+[2024-07-11T23:59:02.390+0000] {processor.py:840} INFO - DAG(s) 'data-ingestion' retrieved from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:59:02.401+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:59:02.401+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-07-11T23:59:02.408+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:59:02.408+0000] {dag.py:3834} INFO - Setting next_dagrun for data-ingestion to None, run_after=None
+[2024-07-11T23:59:02.417+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data-ingestion.py took 0.090 seconds
+[2024-07-11T23:59:32.675+0000] {processor.py:161} INFO - Started process (PID=354) to work on /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:59:32.676+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/data-ingestion.py for tasks to queue
+[2024-07-11T23:59:32.677+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:59:32.677+0000] {dagbag.py:540} INFO - Filling up the DagBag from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:59:32.700+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:59:32.699+0000] {base.py:83} INFO - Using connection ID 'datahub_rest_default' for task execution.
+[2024-07-11T23:59:32.713+0000] {processor.py:840} INFO - DAG(s) 'data-ingestion' retrieved from /opt/airflow/dags/data-ingestion.py
+[2024-07-11T23:59:32.732+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:59:32.731+0000] {dag.py:3047} INFO - Sync 1 DAGs
+[2024-07-11T23:59:32.748+0000] {logging_mixin.py:188} INFO - [2024-07-11T23:59:32.747+0000] {dag.py:3834} INFO - Setting next_dagrun for data-ingestion to None, run_after=None
+[2024-07-11T23:59:32.762+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/data-ingestion.py took 0.092 seconds

@@ -6,6 +6,7 @@ x-airflow-common:
   build:
     context: .
     dockerfile: ./airflow/Dockerfile
+  # image: ${AIRFLOW_IMAGE_NAME:-apache/airflow-new:2.9.2}
   image: ${AIRFLOW_IMAGE_NAME:-apache/airflow-new:2.9.2}
   environment:
     AIRFLOW__CORE__EXECUTOR: LocalExecutor
@@ -29,7 +30,7 @@ x-airflow-common:
 services:
   ############ DATAHUB ############
   zookeeper:
-    profiles: [ "datahub" ]
+    profiles: ["datahub"]
     image: confluentinc/cp-zookeeper:7.4.0
     hostname: zookeeper
     environment:
@@ -48,7 +49,7 @@ services:
     - zklogs:/var/lib/zookeeper/log
 
   broker:
-    profiles: [ "datahub" ]
+    profiles: ["datahub"]
     image: confluentinc/cp-kafka:7.4.0
     hostname: broker
     depends_on:
@@ -77,7 +78,7 @@ services:
     - broker:/var/lib/kafka/data/
 
   datahub-actions:
-    profiles: [ "datahub" ]
+    profiles: ["datahub"]
     image: ${DATAHUB_ACTIONS_IMAGE:-acryldata/datahub-actions}:${ACTIONS_VERSION:-head}
     hostname: actions
     depends_on:
@@ -98,7 +99,7 @@ services:
     - SCHEMA_REGISTRY_URL=http://schema-registry:8081
 
   datahub-frontend-react:
-    profiles: [ "datahub" ]
+    profiles: ["datahub"]
     image: ${DATAHUB_FRONTEND_IMAGE:-acryldata/datahub-frontend-react}:${DATAHUB_VERSION:-head}
     hostname: datahub-frontend-react
     depends_on:
@@ -122,7 +123,7 @@ services:
     - ${HOME}/.datahub/plugins:/etc/datahub/plugins
     
   datahub-gms:
-    profiles: [ "datahub" ]
+    profiles: ["datahub"]
     image: ${DATAHUB_GMS_IMAGE:-acryldata/datahub-gms}:${DATAHUB_VERSION:-head}  
     hostname: datahub-gms
     depends_on:
@@ -167,7 +168,7 @@ services:
     - ${HOME}/.datahub/plugins:/etc/datahub/plugins
 
   datahub-upgrade:
-    profiles: [ "datahub" ]
+    profiles: ["datahub"]
     image: ${DATAHUB_UPGRADE_IMAGE:-acryldata/datahub-upgrade}:${DATAHUB_VERSION:-head}
     hostname: datahub-upgrade
     command:
@@ -203,7 +204,7 @@ services:
       datahub_setup_job: true
 
   elasticsearch:
-    profiles: [ "datahub" ]
+    profiles: ["datahub"]
     image: ${DATAHUB_SEARCH_IMAGE:-elasticsearch}:${DATAHUB_SEARCH_TAG:-7.10.1}
     hostname: elasticsearch
     deploy:
@@ -227,7 +228,7 @@ services:
     - esdata:/usr/share/elasticsearch/data
 
   elasticsearch-setup:
-    profiles: [ "datahub" ]
+    profiles: ["datahub"]
     image: ${DATAHUB_ELASTIC_SETUP_IMAGE:-acryldata/datahub-elasticsearch-setup}:${DATAHUB_VERSION:-head}  
     hostname: elasticsearch-setup  
     depends_on:
@@ -243,7 +244,7 @@ services:
       datahub_setup_job: true
 
   kafka-setup:
-    profiles: [ "datahub" ]
+    profiles: ["datahub"]
     image: ${DATAHUB_KAFKA_SETUP_IMAGE:-acryldata/datahub-kafka-setup}:${DATAHUB_VERSION:-head}
     hostname: kafka-setup
     depends_on:
@@ -260,7 +261,7 @@ services:
       datahub_setup_job: true
 
   mysql:
-    profiles: [ "datahub" ]
+    profiles: ["datahub"]
     image: mariadb:10.5.8  
     hostname: mysql
     command: --character-set-server=utf8mb4 --collation-server=utf8mb4_bin --default-authentication-plugin=mysql_native_password
@@ -282,7 +283,7 @@ services:
     - mysqldata:/var/lib/mysql
 
   mysql-setup:
-    profiles: [ "datahub" ]
+    profiles: ["datahub"]
     image: ${DATAHUB_MYSQL_SETUP_IMAGE:-acryldata/datahub-mysql-setup}:${DATAHUB_VERSION:-head}
     hostname: mysql-setup
     depends_on:
@@ -298,7 +299,7 @@ services:
       datahub_setup_job: true
 
   schema-registry:
-    profiles: [ "datahub" ]
+    profiles: ["datahub"]
     image: confluentinc/cp-schema-registry:7.4.0  
     hostname: schema-registry
     depends_on:
@@ -321,7 +322,7 @@ services:
 
   ############ AIRFLOW ############
   airflow-mysql:
-    profiles: [ "airflow" ]
+    profiles: ["airflow"]
     image: mariadb:10.5.8
     hostname: airflow-mysql
     environment:
@@ -342,7 +343,7 @@ services:
 
   airflow-init:
     <<: *airflow-common
-    profiles: [ "airflow" ]
+    profiles: ["airflow"]
     entrypoint: /bin/bash
     command:
       - -c
@@ -352,7 +353,7 @@ services:
 
   airflow-webserver:
     <<: *airflow-common
-    profiles: [ "airflow" ]
+    profiles: ["airflow"]
     hostname: airflow-webserver
     ports:
       - "18080:8080"
@@ -368,7 +369,7 @@ services:
 
   airflow-scheduler:
     <<: *airflow-common
-    profiles: [ "airflow" ]
+    profiles: ["airflow"]
     hostname: airflow-scheduler
     entrypoint: /bin/bash
     command:
@@ -384,7 +385,6 @@ services:
         # pip install acryl-datahub
         # pip install acryl-datahub-airflow-plugin[plugin-v2]
         # pip install apache-airflow-providers-dbt
-
 
 volumes:
   broker:

@@ -1,0 +1,595 @@
+[2024-07-12T00:17:36.484+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_ingestion.ingest_task manual__2024-07-12T00:17:04.240558+00:00 [queued]>
+[2024-07-12T00:17:36.489+0000] {taskinstance.py:1979} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_ingestion.ingest_task manual__2024-07-12T00:17:04.240558+00:00 [queued]>
+[2024-07-12T00:17:36.489+0000] {taskinstance.py:2193} INFO - Starting attempt 2 of 3
+[2024-07-12T00:17:36.497+0000] {taskinstance.py:2217} INFO - Executing <Task(PythonVirtualenvOperator): ingest_task> on 2024-07-12 00:17:04.240558+00:00
+[2024-07-12T00:17:36.501+0000] {standard_task_runner.py:60} INFO - Started process 606 to run task
+[2024-07-12T00:17:36.504+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'data_ingestion', 'ingest_task', 'manual__2024-07-12T00:17:04.240558+00:00', '--job-id', '9', '--raw', '--subdir', 'DAGS_FOLDER/data_ingestion.py', '--cfg-path', '/tmp/tmpfex95o8g']
+[2024-07-12T00:17:36.506+0000] {standard_task_runner.py:88} INFO - Job 9: Subtask ingest_task
+[2024-07-12T00:17:36.526+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:194 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-07-12T00:17:36.554+0000] {task_command.py:423} INFO - Running <TaskInstance: data_ingestion.ingest_task manual__2024-07-12T00:17:04.240558+00:00 [running]> on host ***-scheduler
+[2024-07-12T00:17:36.585+0000] {taskinstance.py:2513} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='data_ingestion' AIRFLOW_CTX_TASK_ID='ingest_task' AIRFLOW_CTX_EXECUTION_DATE='2024-07-12T00:17:04.240558+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-07-12T00:17:04.240558+00:00'
+[2024-07-12T00:17:37.025+0000] {process_utils.py:182} INFO - Executing cmd: /usr/local/bin/python -m virtualenv /tmp/venvwwip8920 --system-site-packages --python=python
+[2024-07-12T00:17:37.033+0000] {process_utils.py:186} INFO - Output:
+[2024-07-12T00:17:37.435+0000] {process_utils.py:190} INFO - created virtual environment CPython3.8.19.final.0-64 in 136ms
+[2024-07-12T00:17:37.435+0000] {process_utils.py:190} INFO -   creator CPython3Posix(dest=/tmp/venvwwip8920, clear=False, no_vcs_ignore=False, global=True)
+[2024-07-12T00:17:37.436+0000] {process_utils.py:190} INFO -   seeder FromAppData(download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=/home/***/.local/share/virtualenv)
+[2024-07-12T00:17:37.436+0000] {process_utils.py:190} INFO -     added seed packages: pip==24.0, setuptools==69.1.0, wheel==0.42.0
+[2024-07-12T00:17:37.436+0000] {process_utils.py:190} INFO -   activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
+[2024-07-12T00:17:37.454+0000] {process_utils.py:182} INFO - Executing cmd: /tmp/venvwwip8920/bin/pip install -r /tmp/venvwwip8920/requirements.txt
+[2024-07-12T00:17:37.458+0000] {process_utils.py:186} INFO - Output:
+[2024-07-12T00:17:37.989+0000] {process_utils.py:190} INFO - Requirement already satisfied: acryl-datahub==0.12.1.5 in /home/***/.local/lib/python3.8/site-packages (from -r /tmp/venvwwip8920/requirements.txt (line 1)) (0.12.1.5)
+[2024-07-12T00:17:39.808+0000] {process_utils.py:190} INFO - Requirement already satisfied: tabulate in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 1)) (0.9.0)
+[2024-07-12T00:17:39.809+0000] {process_utils.py:190} INFO - Requirement already satisfied: progressbar2 in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 1)) (4.4.2)
+[2024-07-12T00:17:39.809+0000] {process_utils.py:190} INFO - Requirement already satisfied: termcolor>=1.0.0 in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 1)) (2.4.0)
+[2024-07-12T00:17:39.809+0000] {process_utils.py:190} INFO - Requirement already satisfied: jsonref in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 1)) (1.1.0)
+[2024-07-12T00:17:39.809+0000] {process_utils.py:190} INFO - Requirement already satisfied: psutil>=5.8.0 in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 1)) (5.9.8)
+[2024-07-12T00:17:39.810+0000] {process_utils.py:190} INFO - Requirement already satisfied: Deprecated in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 1)) (1.2.14)
+[2024-07-12T00:17:39.810+0000] {process_utils.py:190} INFO - Requirement already satisfied: cached-property in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 1)) (1.5.2)
+[2024-07-12T00:17:39.810+0000] {process_utils.py:190} INFO - Requirement already satisfied: PyYAML in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 1)) (6.0.1)
+[2024-07-12T00:17:39.810+0000] {process_utils.py:190} INFO - Requirement already satisfied: pydantic!=1.10.3,>=1.10.0 in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 1)) (2.8.2)
+[2024-07-12T00:17:39.811+0000] {process_utils.py:190} INFO - Requirement already satisfied: requests-file in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 1)) (2.1.0)
+[2024-07-12T00:17:39.811+0000] {process_utils.py:190} INFO - Requirement already satisfied: avro<1.12,>=1.11.3 in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 1)) (1.11.3)
+[2024-07-12T00:17:39.811+0000] {process_utils.py:190} INFO - Requirement already satisfied: packaging in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 1)) (24.0)
+[2024-07-12T00:17:39.811+0000] {process_utils.py:190} INFO - Requirement already satisfied: ijson in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 1)) (3.2.3)
+[2024-07-12T00:17:39.812+0000] {process_utils.py:190} INFO - Requirement already satisfied: docker in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 1)) (7.0.0)
+[2024-07-12T00:17:39.812+0000] {process_utils.py:190} INFO - Requirement already satisfied: sentry-sdk in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 1)) (2.9.0)
+[2024-07-12T00:17:39.812+0000] {process_utils.py:190} INFO - Requirement already satisfied: click-spinner in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 1)) (0.1.10)
+[2024-07-12T00:17:39.812+0000] {process_utils.py:190} INFO - Requirement already satisfied: mixpanel>=4.9.0 in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 1)) (4.10.1)
+[2024-07-12T00:17:39.813+0000] {process_utils.py:190} INFO - Requirement already satisfied: typing-inspect in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 1)) (0.9.0)
+[2024-07-12T00:17:39.813+0000] {process_utils.py:190} INFO - Requirement already satisfied: toml>=0.10.0 in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 1)) (0.10.2)
+[2024-07-12T00:17:39.814+0000] {process_utils.py:190} INFO - Requirement already satisfied: click>=7.1.2 in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 1)) (8.1.7)
+[2024-07-12T00:17:39.814+0000] {process_utils.py:190} INFO - Requirement already satisfied: python-dateutil>=2.8.0 in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 1)) (2.9.0.post0)
+[2024-07-12T00:17:39.814+0000] {process_utils.py:190} INFO - Requirement already satisfied: humanfriendly in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 1)) (10.0)
+[2024-07-12T00:17:39.814+0000] {process_utils.py:190} INFO - Requirement already satisfied: click-default-group in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 1)) (1.2.4)
+[2024-07-12T00:17:39.815+0000] {process_utils.py:190} INFO - Requirement already satisfied: typing-extensions>=3.7.4.3 in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 1)) (4.10.0)
+[2024-07-12T00:17:39.815+0000] {process_utils.py:190} INFO - Requirement already satisfied: expandvars>=0.6.5 in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 1)) (0.12.0)
+[2024-07-12T00:17:39.815+0000] {process_utils.py:190} INFO - Requirement already satisfied: aiohttp<4 in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 1)) (3.9.3)
+[2024-07-12T00:17:39.815+0000] {process_utils.py:190} INFO - Requirement already satisfied: ruamel.yaml in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 1)) (0.18.6)
+[2024-07-12T00:17:39.816+0000] {process_utils.py:190} INFO - Requirement already satisfied: jsonschema in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 1)) (4.21.1)
+[2024-07-12T00:17:39.816+0000] {process_utils.py:190} INFO - Requirement already satisfied: avro-gen3==0.7.11 in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 1)) (0.7.11)
+[2024-07-12T00:17:39.816+0000] {process_utils.py:190} INFO - Requirement already satisfied: importlib-metadata>=4.0.0 in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 1)) (6.11.0)
+[2024-07-12T00:17:39.832+0000] {process_utils.py:190} INFO - Requirement already satisfied: greenlet in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2)) (3.0.3)
+[2024-07-12T00:17:39.892+0000] {process_utils.py:190} INFO - Collecting traitlets<5.2.2 (from acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:39.947+0000] {process_utils.py:190} INFO -   Downloading traitlets-5.2.1.post0-py3-none-any.whl.metadata (10 kB)
+[2024-07-12T00:17:40.057+0000] {process_utils.py:190} INFO - Collecting scipy>=1.7.2 (from acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:40.070+0000] {process_utils.py:190} INFO -   Downloading scipy-1.10.1-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (58 kB)
+[2024-07-12T00:17:40.085+0000] {process_utils.py:190} INFO -      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 58.9/58.9 kB 3.9 MB/s eta 0:00:00
+[2024-07-12T00:17:40.087+0000] {process_utils.py:190} INFO - Requirement already satisfied: sqlalchemy<2,>=1.4.39 in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2)) (1.4.52)
+[2024-07-12T00:17:40.352+0000] {process_utils.py:190} INFO - Collecting great-expectations<=0.15.50,>=0.15.12 (from acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:40.363+0000] {process_utils.py:190} INFO -   Downloading great_expectations-0.15.50-py3-none-any.whl.metadata (10 kB)
+[2024-07-12T00:17:40.454+0000] {process_utils.py:190} INFO - Collecting pydantic!=1.10.3,>=1.10.0 (from acryl-datahub==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 1))
+[2024-07-12T00:17:40.466+0000] {process_utils.py:190} INFO -   Downloading pydantic-1.10.17-py3-none-any.whl.metadata (151 kB)
+[2024-07-12T00:17:40.475+0000] {process_utils.py:190} INFO -      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 19.0 MB/s eta 0:00:00
+[2024-07-12T00:17:40.494+0000] {process_utils.py:190} INFO - Collecting pymysql>=1.0.2 (from acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:40.500+0000] {process_utils.py:190} INFO -   Downloading PyMySQL-1.1.1-py3-none-any.whl.metadata (4.4 kB)
+[2024-07-12T00:17:40.502+0000] {process_utils.py:190} INFO - Requirement already satisfied: sqlparse in /home/***/.local/lib/python3.8/site-packages (from acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2)) (0.4.4)
+[2024-07-12T00:17:40.745+0000] {process_utils.py:190} INFO - Collecting acryl-sqlglot==20.4.1.dev14 (from acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:40.752+0000] {process_utils.py:190} INFO -   Downloading acryl_sqlglot-20.4.1.dev14-py3-none-any.whl.metadata (16 kB)
+[2024-07-12T00:17:40.772+0000] {process_utils.py:190} INFO - Requirement already satisfied: six in /home/***/.local/lib/python3.8/site-packages (from avro-gen3==0.7.11->acryl-datahub==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 1)) (1.16.0)
+[2024-07-12T00:17:40.780+0000] {process_utils.py:190} INFO - Requirement already satisfied: aiosignal>=1.1.2 in /home/***/.local/lib/python3.8/site-packages (from aiohttp<4->acryl-datahub==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 1)) (1.3.1)
+[2024-07-12T00:17:40.780+0000] {process_utils.py:190} INFO - Requirement already satisfied: attrs>=17.3.0 in /home/***/.local/lib/python3.8/site-packages (from aiohttp<4->acryl-datahub==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 1)) (23.2.0)
+[2024-07-12T00:17:40.781+0000] {process_utils.py:190} INFO - Requirement already satisfied: frozenlist>=1.1.1 in /home/***/.local/lib/python3.8/site-packages (from aiohttp<4->acryl-datahub==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 1)) (1.4.1)
+[2024-07-12T00:17:40.781+0000] {process_utils.py:190} INFO - Requirement already satisfied: multidict<7.0,>=4.5 in /home/***/.local/lib/python3.8/site-packages (from aiohttp<4->acryl-datahub==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 1)) (6.0.5)
+[2024-07-12T00:17:40.782+0000] {process_utils.py:190} INFO - Requirement already satisfied: yarl<2.0,>=1.0 in /home/***/.local/lib/python3.8/site-packages (from aiohttp<4->acryl-datahub==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 1)) (1.9.4)
+[2024-07-12T00:17:40.783+0000] {process_utils.py:190} INFO - Requirement already satisfied: async-timeout<5.0,>=4.0 in /home/***/.local/lib/python3.8/site-packages (from aiohttp<4->acryl-datahub==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 1)) (4.0.3)
+[2024-07-12T00:17:40.908+0000] {process_utils.py:190} INFO - Collecting altair<4.2.1,>=4.0.0 (from great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:40.918+0000] {process_utils.py:190} INFO -   Downloading altair-4.2.0-py3-none-any.whl.metadata (13 kB)
+[2024-07-12T00:17:40.923+0000] {process_utils.py:190} INFO - Requirement already satisfied: colorama>=0.4.3 in /home/***/.local/lib/python3.8/site-packages (from great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2)) (0.4.6)
+[2024-07-12T00:17:40.923+0000] {process_utils.py:190} INFO - Requirement already satisfied: cryptography>=3.2 in /home/***/.local/lib/python3.8/site-packages (from great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2)) (41.0.7)
+[2024-07-12T00:17:40.963+0000] {process_utils.py:190} INFO - Collecting Ipython>=7.16.3 (from great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:40.972+0000] {process_utils.py:190} INFO -   Downloading ipython-8.12.3-py3-none-any.whl.metadata (5.7 kB)
+[2024-07-12T00:17:41.001+0000] {process_utils.py:190} INFO - Collecting ipywidgets>=7.5.1 (from great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:41.011+0000] {process_utils.py:190} INFO -   Downloading ipywidgets-8.1.3-py3-none-any.whl.metadata (2.4 kB)
+[2024-07-12T00:17:41.013+0000] {process_utils.py:190} INFO - Requirement already satisfied: jinja2>=2.10 in /home/***/.local/lib/python3.8/site-packages (from great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2)) (3.1.3)
+[2024-07-12T00:17:41.031+0000] {process_utils.py:190} INFO - Collecting jsonpatch>=1.22 (from great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:41.037+0000] {process_utils.py:190} INFO -   Downloading jsonpatch-1.33-py2.py3-none-any.whl.metadata (3.0 kB)
+[2024-07-12T00:17:41.059+0000] {process_utils.py:190} INFO - Collecting makefun<2,>=1.7.0 (from great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:41.067+0000] {process_utils.py:190} INFO -   Downloading makefun-1.15.3-py2.py3-none-any.whl.metadata (3.2 kB)
+[2024-07-12T00:17:41.070+0000] {process_utils.py:190} INFO - Requirement already satisfied: marshmallow<4.0.0,>=3.7.1 in /home/***/.local/lib/python3.8/site-packages (from great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2)) (3.21.1)
+[2024-07-12T00:17:41.096+0000] {process_utils.py:190} INFO - Collecting mistune>=0.8.4 (from great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:41.105+0000] {process_utils.py:190} INFO -   Downloading mistune-3.0.2-py3-none-any.whl.metadata (1.7 kB)
+[2024-07-12T00:17:41.159+0000] {process_utils.py:190} INFO - Collecting nbformat>=5.0 (from great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:41.187+0000] {process_utils.py:190} INFO -   Downloading nbformat-5.10.4-py3-none-any.whl.metadata (3.6 kB)
+[2024-07-12T00:17:41.222+0000] {process_utils.py:190} INFO - Collecting notebook>=6.4.10 (from great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:41.229+0000] {process_utils.py:190} INFO -   Downloading notebook-7.2.1-py3-none-any.whl.metadata (10 kB)
+[2024-07-12T00:17:41.240+0000] {process_utils.py:190} INFO - Requirement already satisfied: pyparsing>=2.4 in /home/***/.local/lib/python3.8/site-packages (from great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2)) (3.1.2)
+[2024-07-12T00:17:41.242+0000] {process_utils.py:190} INFO - Requirement already satisfied: pytz>=2021.3 in /home/***/.local/lib/python3.8/site-packages (from great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2)) (2024.1)
+[2024-07-12T00:17:41.242+0000] {process_utils.py:190} INFO - Requirement already satisfied: requests>=2.20 in /home/***/.local/lib/python3.8/site-packages (from great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2)) (2.31.0)
+[2024-07-12T00:17:41.408+0000] {process_utils.py:190} INFO - Collecting ruamel.yaml (from acryl-datahub==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 1))
+[2024-07-12T00:17:41.418+0000] {process_utils.py:190} INFO -   Downloading ruamel.yaml-0.17.17-py3-none-any.whl.metadata (12 kB)
+[2024-07-12T00:17:41.470+0000] {process_utils.py:190} INFO - Collecting tqdm>=4.59.0 (from great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:41.509+0000] {process_utils.py:190} INFO -   Downloading tqdm-4.66.4-py3-none-any.whl.metadata (57 kB)
+[2024-07-12T00:17:41.513+0000] {process_utils.py:190} INFO -      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.6/57.6 kB 16.6 MB/s eta 0:00:00
+[2024-07-12T00:17:41.545+0000] {process_utils.py:190} INFO - Collecting tzlocal>=1.2 (from great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:41.552+0000] {process_utils.py:190} INFO -   Downloading tzlocal-5.2-py3-none-any.whl.metadata (7.8 kB)
+[2024-07-12T00:17:41.555+0000] {process_utils.py:190} INFO - Requirement already satisfied: urllib3<1.27,>=1.25.4 in /home/***/.local/lib/python3.8/site-packages (from great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2)) (1.26.18)
+[2024-07-12T00:17:41.555+0000] {process_utils.py:190} INFO - Requirement already satisfied: pandas>=1.1.0 in /home/***/.local/lib/python3.8/site-packages (from great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2)) (2.0.3)
+[2024-07-12T00:17:41.556+0000] {process_utils.py:190} INFO - Requirement already satisfied: numpy>=1.19.5 in /home/***/.local/lib/python3.8/site-packages (from great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2)) (1.24.4)
+[2024-07-12T00:17:41.566+0000] {process_utils.py:190} INFO - Requirement already satisfied: zipp>=0.5 in /home/***/.local/lib/python3.8/site-packages (from importlib-metadata>=4.0.0->acryl-datahub==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 1)) (3.18.1)
+[2024-07-12T00:17:41.575+0000] {process_utils.py:190} INFO - Requirement already satisfied: importlib-resources>=1.4.0 in /home/***/.local/lib/python3.8/site-packages (from jsonschema->acryl-datahub==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 1)) (5.13.0)
+[2024-07-12T00:17:41.576+0000] {process_utils.py:190} INFO - Requirement already satisfied: jsonschema-specifications>=2023.03.6 in /home/***/.local/lib/python3.8/site-packages (from jsonschema->acryl-datahub==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 1)) (2023.12.1)
+[2024-07-12T00:17:41.576+0000] {process_utils.py:190} INFO - Requirement already satisfied: pkgutil-resolve-name>=1.3.10 in /home/***/.local/lib/python3.8/site-packages (from jsonschema->acryl-datahub==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 1)) (1.3.10)
+[2024-07-12T00:17:41.576+0000] {process_utils.py:190} INFO - Requirement already satisfied: referencing>=0.28.4 in /home/***/.local/lib/python3.8/site-packages (from jsonschema->acryl-datahub==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 1)) (0.34.0)
+[2024-07-12T00:17:41.577+0000] {process_utils.py:190} INFO - Requirement already satisfied: rpds-py>=0.7.1 in /home/***/.local/lib/python3.8/site-packages (from jsonschema->acryl-datahub==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 1)) (0.18.0)
+[2024-07-12T00:17:41.660+0000] {process_utils.py:190} INFO - Requirement already satisfied: ruamel.yaml.clib>=0.1.2 in /home/***/.local/lib/python3.8/site-packages (from ruamel.yaml->acryl-datahub==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 1)) (0.2.8)
+[2024-07-12T00:17:41.726+0000] {process_utils.py:190} INFO - Requirement already satisfied: wrapt<2,>=1.10 in /home/***/.local/lib/python3.8/site-packages (from Deprecated->acryl-datahub==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 1)) (1.16.0)
+[2024-07-12T00:17:41.746+0000] {process_utils.py:190} INFO - Requirement already satisfied: python-utils>=3.8.1 in /home/***/.local/lib/python3.8/site-packages (from progressbar2->acryl-datahub==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 1)) (3.8.2)
+[2024-07-12T00:17:41.793+0000] {process_utils.py:190} INFO - Requirement already satisfied: certifi in /home/***/.local/lib/python3.8/site-packages (from sentry-sdk->acryl-datahub==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 1)) (2024.2.2)
+[2024-07-12T00:17:41.804+0000] {process_utils.py:190} INFO - Requirement already satisfied: mypy-extensions>=0.3.0 in /home/***/.local/lib/python3.8/site-packages (from typing-inspect->acryl-datahub==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 1)) (1.0.0)
+[2024-07-12T00:17:41.842+0000] {process_utils.py:190} INFO - Collecting entrypoints (from altair<4.2.1,>=4.0.0->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:41.847+0000] {process_utils.py:190} INFO -   Downloading entrypoints-0.4-py3-none-any.whl.metadata (2.6 kB)
+[2024-07-12T00:17:41.861+0000] {process_utils.py:190} INFO - Collecting toolz (from altair<4.2.1,>=4.0.0->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:41.867+0000] {process_utils.py:190} INFO -   Downloading toolz-0.12.1-py3-none-any.whl.metadata (5.1 kB)
+[2024-07-12T00:17:41.895+0000] {process_utils.py:190} INFO - Requirement already satisfied: cffi>=1.12 in /home/***/.local/lib/python3.8/site-packages (from cryptography>=3.2->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2)) (1.16.0)
+[2024-07-12T00:17:41.944+0000] {process_utils.py:190} INFO - Collecting backcall (from Ipython>=7.16.3->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:41.949+0000] {process_utils.py:190} INFO -   Downloading backcall-0.2.0-py2.py3-none-any.whl.metadata (2.0 kB)
+[2024-07-12T00:17:41.951+0000] {process_utils.py:190} INFO - Requirement already satisfied: decorator in /home/***/.local/lib/python3.8/site-packages (from Ipython>=7.16.3->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2)) (5.1.1)
+[2024-07-12T00:17:41.969+0000] {process_utils.py:190} INFO - Collecting jedi>=0.16 (from Ipython>=7.16.3->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:41.987+0000] {process_utils.py:190} INFO -   Downloading jedi-0.19.1-py2.py3-none-any.whl.metadata (22 kB)
+[2024-07-12T00:17:42.009+0000] {process_utils.py:190} INFO - Collecting matplotlib-inline (from Ipython>=7.16.3->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:42.015+0000] {process_utils.py:190} INFO -   Downloading matplotlib_inline-0.1.7-py3-none-any.whl.metadata (3.9 kB)
+[2024-07-12T00:17:42.029+0000] {process_utils.py:190} INFO - Collecting pickleshare (from Ipython>=7.16.3->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:42.035+0000] {process_utils.py:190} INFO -   Downloading pickleshare-0.7.5-py2.py3-none-any.whl.metadata (1.5 kB)
+[2024-07-12T00:17:42.037+0000] {process_utils.py:190} INFO - Requirement already satisfied: prompt-toolkit!=3.0.37,<3.1.0,>=3.0.30 in /home/***/.local/lib/python3.8/site-packages (from Ipython>=7.16.3->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2)) (3.0.43)
+[2024-07-12T00:17:42.037+0000] {process_utils.py:190} INFO - Requirement already satisfied: pygments>=2.4.0 in /home/***/.local/lib/python3.8/site-packages (from Ipython>=7.16.3->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2)) (2.17.2)
+[2024-07-12T00:17:42.051+0000] {process_utils.py:190} INFO - Collecting stack-data (from Ipython>=7.16.3->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:42.057+0000] {process_utils.py:190} INFO -   Downloading stack_data-0.6.3-py3-none-any.whl.metadata (18 kB)
+[2024-07-12T00:17:42.075+0000] {process_utils.py:190} INFO - Collecting pexpect>4.3 (from Ipython>=7.16.3->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:42.081+0000] {process_utils.py:190} INFO -   Downloading pexpect-4.9.0-py2.py3-none-any.whl.metadata (2.5 kB)
+[2024-07-12T00:17:42.103+0000] {process_utils.py:190} INFO - Collecting comm>=0.1.3 (from ipywidgets>=7.5.1->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:42.109+0000] {process_utils.py:190} INFO -   Downloading comm-0.2.2-py3-none-any.whl.metadata (3.7 kB)
+[2024-07-12T00:17:42.148+0000] {process_utils.py:190} INFO - Collecting widgetsnbextension~=4.0.11 (from ipywidgets>=7.5.1->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:42.157+0000] {process_utils.py:190} INFO -   Downloading widgetsnbextension-4.0.11-py3-none-any.whl.metadata (1.6 kB)
+[2024-07-12T00:17:42.183+0000] {process_utils.py:190} INFO - Collecting jupyterlab-widgets~=3.0.11 (from ipywidgets>=7.5.1->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:42.190+0000] {process_utils.py:190} INFO -   Downloading jupyterlab_widgets-3.0.11-py3-none-any.whl.metadata (4.1 kB)
+[2024-07-12T00:17:42.197+0000] {process_utils.py:190} INFO - Requirement already satisfied: MarkupSafe>=2.0 in /home/***/.local/lib/python3.8/site-packages (from jinja2>=2.10->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2)) (2.1.5)
+[2024-07-12T00:17:42.217+0000] {process_utils.py:190} INFO - Collecting jsonpointer>=1.9 (from jsonpatch>=1.22->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:42.223+0000] {process_utils.py:190} INFO -   Downloading jsonpointer-3.0.0-py2.py3-none-any.whl.metadata (2.3 kB)
+[2024-07-12T00:17:42.271+0000] {process_utils.py:190} INFO - Collecting fastjsonschema>=2.15 (from nbformat>=5.0->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:42.276+0000] {process_utils.py:190} INFO -   Downloading fastjsonschema-2.20.0-py3-none-any.whl.metadata (2.1 kB)
+[2024-07-12T00:17:42.298+0000] {process_utils.py:190} INFO - Collecting jupyter-core!=5.0.*,>=4.12 (from nbformat>=5.0->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:42.306+0000] {process_utils.py:190} INFO -   Downloading jupyter_core-5.7.2-py3-none-any.whl.metadata (3.4 kB)
+[2024-07-12T00:17:42.375+0000] {process_utils.py:190} INFO - Collecting jupyter-server<3,>=2.4.0 (from notebook>=6.4.10->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:42.383+0000] {process_utils.py:190} INFO -   Downloading jupyter_server-2.14.1-py3-none-any.whl.metadata (8.4 kB)
+[2024-07-12T00:17:42.416+0000] {process_utils.py:190} INFO - Collecting jupyterlab-server<3,>=2.27.1 (from notebook>=6.4.10->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:42.423+0000] {process_utils.py:190} INFO -   Downloading jupyterlab_server-2.27.2-py3-none-any.whl.metadata (5.9 kB)
+[2024-07-12T00:17:42.519+0000] {process_utils.py:190} INFO - Collecting jupyterlab<4.3,>=4.2.0 (from notebook>=6.4.10->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:42.526+0000] {process_utils.py:190} INFO -   Downloading jupyterlab-4.2.3-py3-none-any.whl.metadata (16 kB)
+[2024-07-12T00:17:42.547+0000] {process_utils.py:190} INFO - Collecting notebook-shim<0.3,>=0.2 (from notebook>=6.4.10->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:42.553+0000] {process_utils.py:190} INFO -   Downloading notebook_shim-0.2.4-py3-none-any.whl.metadata (4.0 kB)
+[2024-07-12T00:17:42.555+0000] {process_utils.py:190} INFO - Requirement already satisfied: tornado>=6.2.0 in /home/***/.local/lib/python3.8/site-packages (from notebook>=6.4.10->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2)) (6.4)
+[2024-07-12T00:17:42.599+0000] {process_utils.py:190} INFO - Requirement already satisfied: tzdata>=2022.1 in /home/***/.local/lib/python3.8/site-packages (from pandas>=1.1.0->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2)) (2024.1)
+[2024-07-12T00:17:42.664+0000] {process_utils.py:190} INFO - Requirement already satisfied: charset-normalizer<4,>=2 in /home/***/.local/lib/python3.8/site-packages (from requests>=2.20->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2)) (3.3.2)
+[2024-07-12T00:17:42.664+0000] {process_utils.py:190} INFO - Requirement already satisfied: idna<4,>=2.5 in /home/***/.local/lib/python3.8/site-packages (from requests>=2.20->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2)) (3.6)
+[2024-07-12T00:17:42.695+0000] {process_utils.py:190} INFO - Requirement already satisfied: backports.zoneinfo in /home/***/.local/lib/python3.8/site-packages (from tzlocal>=1.2->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2)) (0.2.1)
+[2024-07-12T00:17:42.732+0000] {process_utils.py:190} INFO - Requirement already satisfied: pycparser in /home/***/.local/lib/python3.8/site-packages (from cffi>=1.12->cryptography>=3.2->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2)) (2.21)
+[2024-07-12T00:17:42.797+0000] {process_utils.py:190} INFO - Collecting parso<0.9.0,>=0.8.3 (from jedi>=0.16->Ipython>=7.16.3->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:42.807+0000] {process_utils.py:190} INFO -   Downloading parso-0.8.4-py2.py3-none-any.whl.metadata (7.7 kB)
+[2024-07-12T00:17:42.825+0000] {process_utils.py:190} INFO - Requirement already satisfied: platformdirs>=2.5 in /home/***/.local/lib/python3.8/site-packages (from jupyter-core!=5.0.*,>=4.12->nbformat>=5.0->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2)) (3.11.0)
+[2024-07-12T00:17:42.829+0000] {process_utils.py:190} INFO - INFO: pip is looking at multiple versions of jupyter-core to determine which version is compatible with other requirements. This could take a while.
+[2024-07-12T00:17:42.831+0000] {process_utils.py:190} INFO - Collecting jupyter-core!=5.0.*,>=4.12 (from nbformat>=5.0->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:42.838+0000] {process_utils.py:190} INFO -   Downloading jupyter_core-5.7.1-py3-none-any.whl.metadata (3.4 kB)
+[2024-07-12T00:17:42.853+0000] {process_utils.py:190} INFO -   Downloading jupyter_core-5.7.0-py3-none-any.whl.metadata (3.4 kB)
+[2024-07-12T00:17:42.868+0000] {process_utils.py:190} INFO -   Downloading jupyter_core-5.6.1-py3-none-any.whl.metadata (3.4 kB)
+[2024-07-12T00:17:42.883+0000] {process_utils.py:190} INFO -   Downloading jupyter_core-5.5.1-py3-none-any.whl.metadata (3.4 kB)
+[2024-07-12T00:17:42.901+0000] {process_utils.py:190} INFO -   Downloading jupyter_core-5.5.0-py3-none-any.whl.metadata (3.4 kB)
+[2024-07-12T00:17:42.916+0000] {process_utils.py:190} INFO -   Downloading jupyter_core-5.4.0-py3-none-any.whl.metadata (3.4 kB)
+[2024-07-12T00:17:42.929+0000] {process_utils.py:190} INFO -   Downloading jupyter_core-5.3.2-py3-none-any.whl.metadata (3.4 kB)
+[2024-07-12T00:17:42.935+0000] {process_utils.py:190} INFO - INFO: pip is still looking at multiple versions of jupyter-core to determine which version is compatible with other requirements. This could take a while.
+[2024-07-12T00:17:42.944+0000] {process_utils.py:190} INFO -   Downloading jupyter_core-5.3.1-py3-none-any.whl.metadata (3.4 kB)
+[2024-07-12T00:17:42.958+0000] {process_utils.py:190} INFO -   Downloading jupyter_core-5.3.0-py3-none-any.whl.metadata (3.4 kB)
+[2024-07-12T00:17:42.973+0000] {process_utils.py:190} INFO -   Downloading jupyter_core-5.2.0-py3-none-any.whl.metadata (5.1 kB)
+[2024-07-12T00:17:42.988+0000] {process_utils.py:190} INFO -   Downloading jupyter_core-5.1.5-py3-none-any.whl.metadata (5.1 kB)
+[2024-07-12T00:17:43.006+0000] {process_utils.py:190} INFO -   Downloading jupyter_core-5.1.4-py3-none-any.whl.metadata (5.1 kB)
+[2024-07-12T00:17:43.012+0000] {process_utils.py:190} INFO - INFO: This is taking longer than usual. You might need to provide the dependency resolver with stricter constraints to reduce runtime. See https://pip.pypa.io/warnings/backtracking for guidance. If you want to abort this run, press Ctrl + C.
+[2024-07-12T00:17:43.022+0000] {process_utils.py:190} INFO -   Downloading jupyter_core-5.1.3-py3-none-any.whl.metadata (5.1 kB)
+[2024-07-12T00:17:43.037+0000] {process_utils.py:190} INFO -   Downloading jupyter_core-5.1.2-py3-none-any.whl.metadata (5.1 kB)
+[2024-07-12T00:17:43.050+0000] {process_utils.py:190} INFO -   Downloading jupyter_core-5.1.1-py3-none-any.whl.metadata (4.9 kB)
+[2024-07-12T00:17:43.066+0000] {process_utils.py:190} INFO -   Downloading jupyter_core-5.1.0-py3-none-any.whl.metadata (4.9 kB)
+[2024-07-12T00:17:43.081+0000] {process_utils.py:190} INFO -   Downloading jupyter_core-4.12.0-py3-none-any.whl.metadata (4.7 kB)
+[2024-07-12T00:17:43.104+0000] {process_utils.py:190} INFO - Requirement already satisfied: anyio>=3.1.0 in /home/***/.local/lib/python3.8/site-packages (from jupyter-server<3,>=2.4.0->notebook>=6.4.10->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2)) (4.3.0)
+[2024-07-12T00:17:43.127+0000] {process_utils.py:190} INFO - Collecting argon2-cffi>=21.1 (from jupyter-server<3,>=2.4.0->notebook>=6.4.10->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:43.133+0000] {process_utils.py:190} INFO -   Downloading argon2_cffi-23.1.0-py3-none-any.whl.metadata (5.2 kB)
+[2024-07-12T00:17:43.162+0000] {process_utils.py:190} INFO - Collecting jupyter-client>=7.4.4 (from jupyter-server<3,>=2.4.0->notebook>=6.4.10->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:43.169+0000] {process_utils.py:190} INFO -   Downloading jupyter_client-8.6.2-py3-none-any.whl.metadata (8.3 kB)
+[2024-07-12T00:17:43.191+0000] {process_utils.py:190} INFO - Collecting jupyter-events>=0.9.0 (from jupyter-server<3,>=2.4.0->notebook>=6.4.10->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:43.198+0000] {process_utils.py:190} INFO -   Downloading jupyter_events-0.10.0-py3-none-any.whl.metadata (5.9 kB)
+[2024-07-12T00:17:43.222+0000] {process_utils.py:190} INFO - Collecting jupyter-server-terminals>=0.4.4 (from jupyter-server<3,>=2.4.0->notebook>=6.4.10->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:43.230+0000] {process_utils.py:190} INFO -   Downloading jupyter_server_terminals-0.5.3-py3-none-any.whl.metadata (5.6 kB)
+[2024-07-12T00:17:43.264+0000] {process_utils.py:190} INFO - Collecting nbconvert>=6.4.4 (from jupyter-server<3,>=2.4.0->notebook>=6.4.10->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:43.271+0000] {process_utils.py:190} INFO -   Downloading nbconvert-7.16.4-py3-none-any.whl.metadata (8.5 kB)
+[2024-07-12T00:17:43.292+0000] {process_utils.py:190} INFO - Collecting overrides>=5.0 (from jupyter-server<3,>=2.4.0->notebook>=6.4.10->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:43.297+0000] {process_utils.py:190} INFO -   Downloading overrides-7.7.0-py3-none-any.whl.metadata (5.8 kB)
+[2024-07-12T00:17:43.300+0000] {process_utils.py:190} INFO - Requirement already satisfied: prometheus-client>=0.9 in /home/***/.local/lib/python3.8/site-packages (from jupyter-server<3,>=2.4.0->notebook>=6.4.10->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2)) (0.20.0)
+[2024-07-12T00:17:43.586+0000] {process_utils.py:190} INFO - Collecting pyzmq>=24 (from jupyter-server<3,>=2.4.0->notebook>=6.4.10->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:43.596+0000] {process_utils.py:190} INFO -   Downloading pyzmq-26.0.3-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (6.1 kB)
+[2024-07-12T00:17:43.611+0000] {process_utils.py:190} INFO - Collecting send2trash>=1.8.2 (from jupyter-server<3,>=2.4.0->notebook>=6.4.10->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:43.617+0000] {process_utils.py:190} INFO -   Downloading Send2Trash-1.8.3-py3-none-any.whl.metadata (4.0 kB)
+[2024-07-12T00:17:43.635+0000] {process_utils.py:190} INFO - Collecting terminado>=0.8.3 (from jupyter-server<3,>=2.4.0->notebook>=6.4.10->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:43.643+0000] {process_utils.py:190} INFO -   Downloading terminado-0.18.1-py3-none-any.whl.metadata (5.8 kB)
+[2024-07-12T00:17:43.649+0000] {process_utils.py:190} INFO - INFO: pip is looking at multiple versions of jupyter-server to determine which version is compatible with other requirements. This could take a while.
+[2024-07-12T00:17:43.651+0000] {process_utils.py:190} INFO - Collecting jupyter-server<3,>=2.4.0 (from notebook>=6.4.10->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:43.658+0000] {process_utils.py:190} INFO -   Downloading jupyter_server-2.14.0-py3-none-any.whl.metadata (8.4 kB)
+[2024-07-12T00:17:43.681+0000] {process_utils.py:190} INFO -   Downloading jupyter_server-2.13.0-py3-none-any.whl.metadata (8.4 kB)
+[2024-07-12T00:17:43.715+0000] {process_utils.py:190} INFO -   Downloading jupyter_server-2.12.5-py3-none-any.whl.metadata (8.4 kB)
+[2024-07-12T00:17:43.748+0000] {process_utils.py:190} INFO -   Downloading jupyter_server-2.12.4-py3-none-any.whl.metadata (8.4 kB)
+[2024-07-12T00:17:43.771+0000] {process_utils.py:190} INFO -   Downloading jupyter_server-2.12.3-py3-none-any.whl.metadata (8.4 kB)
+[2024-07-12T00:17:43.792+0000] {process_utils.py:190} INFO -   Downloading jupyter_server-2.12.2-py3-none-any.whl.metadata (8.4 kB)
+[2024-07-12T00:17:43.815+0000] {process_utils.py:190} INFO -   Downloading jupyter_server-2.12.1-py3-none-any.whl.metadata (8.4 kB)
+[2024-07-12T00:17:43.828+0000] {process_utils.py:190} INFO - INFO: pip is still looking at multiple versions of jupyter-server to determine which version is compatible with other requirements. This could take a while.
+[2024-07-12T00:17:43.836+0000] {process_utils.py:190} INFO -   Downloading jupyter_server-2.12.0-py3-none-any.whl.metadata (8.4 kB)
+[2024-07-12T00:17:43.901+0000] {process_utils.py:190} INFO -   Downloading jupyter_server-2.11.2-py3-none-any.whl.metadata (8.4 kB)
+[2024-07-12T00:17:43.927+0000] {process_utils.py:190} INFO -   Downloading jupyter_server-2.11.1-py3-none-any.whl.metadata (8.4 kB)
+[2024-07-12T00:17:43.950+0000] {process_utils.py:190} INFO -   Downloading jupyter_server-2.10.1-py3-none-any.whl.metadata (8.4 kB)
+[2024-07-12T00:17:43.973+0000] {process_utils.py:190} INFO -   Downloading jupyter_server-2.10.0-py3-none-any.whl.metadata (8.4 kB)
+[2024-07-12T00:17:43.988+0000] {process_utils.py:190} INFO - INFO: This is taking longer than usual. You might need to provide the dependency resolver with stricter constraints to reduce runtime. See https://pip.pypa.io/warnings/backtracking for guidance. If you want to abort this run, press Ctrl + C.
+[2024-07-12T00:17:43.999+0000] {process_utils.py:190} INFO -   Downloading jupyter_server-2.9.1-py3-none-any.whl.metadata (8.6 kB)
+[2024-07-12T00:17:44.025+0000] {process_utils.py:190} INFO -   Downloading jupyter_server-2.9.0-py3-none-any.whl.metadata (8.6 kB)
+[2024-07-12T00:17:44.049+0000] {process_utils.py:190} INFO -   Downloading jupyter_server-2.8.0-py3-none-any.whl.metadata (8.6 kB)
+[2024-07-12T00:17:44.072+0000] {process_utils.py:190} INFO -   Downloading jupyter_server-2.7.3-py3-none-any.whl.metadata (8.6 kB)
+[2024-07-12T00:17:44.094+0000] {process_utils.py:190} INFO -   Downloading jupyter_server-2.7.2-py3-none-any.whl.metadata (8.6 kB)
+[2024-07-12T00:17:44.119+0000] {process_utils.py:190} INFO -   Downloading jupyter_server-2.7.1-py3-none-any.whl.metadata (8.6 kB)
+[2024-07-12T00:17:44.161+0000] {process_utils.py:190} INFO -   Downloading jupyter_server-2.7.0-py3-none-any.whl.metadata (8.6 kB)
+[2024-07-12T00:17:44.193+0000] {process_utils.py:190} INFO -   Downloading jupyter_server-2.6.0-py3-none-any.whl.metadata (8.5 kB)
+[2024-07-12T00:17:44.217+0000] {process_utils.py:190} INFO -   Downloading jupyter_server-2.5.0-py3-none-any.whl.metadata (8.7 kB)
+[2024-07-12T00:17:44.243+0000] {process_utils.py:190} INFO -   Downloading jupyter_server-2.4.0-py3-none-any.whl.metadata (8.7 kB)
+[2024-07-12T00:17:44.269+0000] {process_utils.py:190} INFO - Collecting comm>=0.1.3 (from ipywidgets>=7.5.1->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:44.278+0000] {process_utils.py:190} INFO -   Downloading comm-0.2.1-py3-none-any.whl.metadata (3.7 kB)
+[2024-07-12T00:17:44.364+0000] {process_utils.py:190} INFO -   Downloading comm-0.2.0-py3-none-any.whl.metadata (3.7 kB)
+[2024-07-12T00:17:44.460+0000] {process_utils.py:190} INFO -   Downloading comm-0.1.4-py3-none-any.whl.metadata (4.2 kB)
+[2024-07-12T00:17:44.553+0000] {process_utils.py:190} INFO -   Downloading comm-0.1.3-py3-none-any.whl.metadata (4.2 kB)
+[2024-07-12T00:17:44.565+0000] {process_utils.py:190} INFO - INFO: pip is looking at multiple versions of comm to determine which version is compatible with other requirements. This could take a while.
+[2024-07-12T00:17:44.569+0000] {process_utils.py:190} INFO - Collecting nbformat>=5.0 (from great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:44.578+0000] {process_utils.py:190} INFO -   Downloading nbformat-5.10.3-py3-none-any.whl.metadata (3.6 kB)
+[2024-07-12T00:17:44.725+0000] {process_utils.py:190} INFO - Collecting notebook>=6.4.10 (from great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:44.736+0000] {process_utils.py:190} INFO -   Downloading notebook-7.2.0-py3-none-any.whl.metadata (10 kB)
+[2024-07-12T00:17:44.786+0000] {process_utils.py:190} INFO -   Downloading notebook-7.1.3-py3-none-any.whl.metadata (10 kB)
+[2024-07-12T00:17:44.820+0000] {process_utils.py:190} INFO - Collecting jupyterlab<4.2,>=4.1.1 (from notebook>=6.4.10->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:44.826+0000] {process_utils.py:190} INFO -   Downloading jupyterlab-4.1.8-py3-none-any.whl.metadata (16 kB)
+[2024-07-12T00:17:44.857+0000] {process_utils.py:190} INFO - Collecting notebook>=6.4.10 (from great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:44.865+0000] {process_utils.py:190} INFO -   Downloading notebook-7.1.2-py3-none-any.whl.metadata (10 kB)
+[2024-07-12T00:17:44.914+0000] {process_utils.py:190} INFO -   Downloading notebook-7.1.1-py3-none-any.whl.metadata (10 kB)
+[2024-07-12T00:17:44.968+0000] {process_utils.py:190} INFO -   Downloading notebook-7.1.0-py3-none-any.whl.metadata (10 kB)
+[2024-07-12T00:17:45.017+0000] {process_utils.py:190} INFO -   Downloading notebook-7.0.8-py3-none-any.whl.metadata (10 kB)
+[2024-07-12T00:17:45.052+0000] {process_utils.py:190} INFO - Collecting jupyterlab<4.1,>=4.0.2 (from notebook>=6.4.10->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:45.058+0000] {process_utils.py:190} INFO -   Downloading jupyterlab-4.0.13-py3-none-any.whl.metadata (15 kB)
+[2024-07-12T00:17:45.089+0000] {process_utils.py:190} INFO - Collecting notebook>=6.4.10 (from great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:45.100+0000] {process_utils.py:190} INFO -   Downloading notebook-7.0.7-py3-none-any.whl.metadata (10 kB)
+[2024-07-12T00:17:45.167+0000] {process_utils.py:190} INFO -   Downloading notebook-7.0.6-py3-none-any.whl.metadata (10 kB)
+[2024-07-12T00:17:45.220+0000] {process_utils.py:190} INFO -   Downloading notebook-7.0.5-py3-none-any.whl.metadata (10 kB)
+[2024-07-12T00:17:45.275+0000] {process_utils.py:190} INFO -   Downloading notebook-7.0.4-py3-none-any.whl.metadata (10 kB)
+[2024-07-12T00:17:45.326+0000] {process_utils.py:190} INFO -   Downloading notebook-7.0.3-py3-none-any.whl.metadata (10 kB)
+[2024-07-12T00:17:45.376+0000] {process_utils.py:190} INFO -   Downloading notebook-7.0.2-py3-none-any.whl.metadata (10 kB)
+[2024-07-12T00:17:45.470+0000] {process_utils.py:190} INFO -   Downloading notebook-7.0.1-py3-none-any.whl.metadata (10 kB)
+[2024-07-12T00:17:45.523+0000] {process_utils.py:190} INFO -   Downloading notebook-7.0.0-py3-none-any.whl.metadata (10 kB)
+[2024-07-12T00:17:45.594+0000] {process_utils.py:190} INFO -   Downloading notebook-6.5.7-py3-none-any.whl.metadata (2.5 kB)
+[2024-07-12T00:17:45.640+0000] {process_utils.py:190} INFO - Collecting jupyter-client<8,>=5.3.4 (from notebook>=6.4.10->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:45.649+0000] {process_utils.py:190} INFO -   Downloading jupyter_client-7.4.9-py3-none-any.whl.metadata (8.5 kB)
+[2024-07-12T00:17:45.662+0000] {process_utils.py:190} INFO - Collecting ipython-genutils (from notebook>=6.4.10->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:45.667+0000] {process_utils.py:190} INFO -   Downloading ipython_genutils-0.2.0-py2.py3-none-any.whl.metadata (755 bytes)
+[2024-07-12T00:17:45.692+0000] {process_utils.py:190} INFO - Collecting nest-asyncio>=1.5 (from notebook>=6.4.10->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:45.700+0000] {process_utils.py:190} INFO -   Downloading nest_asyncio-1.6.0-py3-none-any.whl.metadata (2.8 kB)
+[2024-07-12T00:17:45.732+0000] {process_utils.py:190} INFO - Collecting ipykernel (from notebook>=6.4.10->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:45.738+0000] {process_utils.py:190} INFO -   Downloading ipykernel-6.29.5-py3-none-any.whl.metadata (6.3 kB)
+[2024-07-12T00:17:45.762+0000] {process_utils.py:190} INFO - Collecting nbclassic>=0.4.7 (from notebook>=6.4.10->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:45.767+0000] {process_utils.py:190} INFO -   Downloading nbclassic-1.1.0-py3-none-any.whl.metadata (3.6 kB)
+[2024-07-12T00:17:46.008+0000] {process_utils.py:190} INFO - Collecting jupyter-core (from nbformat>=5.0->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:46.019+0000] {process_utils.py:190} INFO -   Downloading jupyter_core-5.0.0-py3-none-any.whl.metadata (4.8 kB)
+[2024-07-12T00:17:46.078+0000] {process_utils.py:190} INFO - Requirement already satisfied: beautifulsoup4 in /home/***/.local/lib/python3.8/site-packages (from nbconvert>=6.4.4->jupyter-server<3,>=2.4.0->notebook>=6.4.10->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2)) (4.12.3)
+[2024-07-12T00:17:46.100+0000] {process_utils.py:190} INFO - Collecting bleach!=5.0.0 (from nbconvert>=6.4.4->jupyter-server<3,>=2.4.0->notebook>=6.4.10->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:46.106+0000] {process_utils.py:190} INFO -   Downloading bleach-6.1.0-py3-none-any.whl.metadata (30 kB)
+[2024-07-12T00:17:46.125+0000] {process_utils.py:190} INFO - Collecting defusedxml (from nbconvert>=6.4.4->jupyter-server<3,>=2.4.0->notebook>=6.4.10->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:46.131+0000] {process_utils.py:190} INFO -   Downloading defusedxml-0.7.1-py2.py3-none-any.whl.metadata (32 kB)
+[2024-07-12T00:17:46.149+0000] {process_utils.py:190} INFO - Collecting jupyterlab-pygments (from nbconvert>=6.4.4->jupyter-server<3,>=2.4.0->notebook>=6.4.10->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:46.155+0000] {process_utils.py:190} INFO -   Downloading jupyterlab_pygments-0.3.0-py3-none-any.whl.metadata (4.4 kB)
+[2024-07-12T00:17:46.185+0000] {process_utils.py:190} INFO - Collecting nbclient>=0.5.0 (from nbconvert>=6.4.4->jupyter-server<3,>=2.4.0->notebook>=6.4.10->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:46.193+0000] {process_utils.py:190} INFO -   Downloading nbclient-0.10.0-py3-none-any.whl.metadata (7.8 kB)
+[2024-07-12T00:17:46.210+0000] {process_utils.py:190} INFO - Collecting pandocfilters>=1.4.1 (from nbconvert>=6.4.4->jupyter-server<3,>=2.4.0->notebook>=6.4.10->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:46.216+0000] {process_utils.py:190} INFO -   Downloading pandocfilters-1.5.1-py2.py3-none-any.whl.metadata (9.0 kB)
+[2024-07-12T00:17:46.232+0000] {process_utils.py:190} INFO - Collecting tinycss2 (from nbconvert>=6.4.4->jupyter-server<3,>=2.4.0->notebook>=6.4.10->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:46.238+0000] {process_utils.py:190} INFO -   Downloading tinycss2-1.3.0-py3-none-any.whl.metadata (3.0 kB)
+[2024-07-12T00:17:46.276+0000] {process_utils.py:190} INFO - Collecting ptyprocess>=0.5 (from pexpect>4.3->Ipython>=7.16.3->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:46.283+0000] {process_utils.py:190} INFO -   Downloading ptyprocess-0.7.0-py2.py3-none-any.whl.metadata (1.3 kB)
+[2024-07-12T00:17:46.295+0000] {process_utils.py:190} INFO - Requirement already satisfied: wcwidth in /home/***/.local/lib/python3.8/site-packages (from prompt-toolkit!=3.0.37,<3.1.0,>=3.0.30->Ipython>=7.16.3->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2)) (0.2.13)
+[2024-07-12T00:17:46.411+0000] {process_utils.py:190} INFO - Collecting argon2-cffi-bindings (from argon2-cffi>=21.1->jupyter-server<3,>=2.4.0->notebook>=6.4.10->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:46.418+0000] {process_utils.py:190} INFO -   Downloading argon2_cffi_bindings-21.2.0-cp36-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl.metadata (6.7 kB)
+[2024-07-12T00:17:46.632+0000] {process_utils.py:190} INFO - Collecting debugpy>=1.6.5 (from ipykernel->notebook>=6.4.10->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:46.638+0000] {process_utils.py:190} INFO -   Downloading debugpy-1.8.2-py2.py3-none-any.whl.metadata (1.1 kB)
+[2024-07-12T00:17:46.667+0000] {process_utils.py:190} INFO - INFO: pip is looking at multiple versions of ipykernel to determine which version is compatible with other requirements. This could take a while.
+[2024-07-12T00:17:46.669+0000] {process_utils.py:190} INFO - Collecting ipykernel (from notebook>=6.4.10->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:46.678+0000] {process_utils.py:190} INFO -   Downloading ipykernel-6.29.4-py3-none-any.whl.metadata (6.3 kB)
+[2024-07-12T00:17:46.703+0000] {process_utils.py:190} INFO -   Downloading ipykernel-6.29.3-py3-none-any.whl.metadata (6.3 kB)
+[2024-07-12T00:17:46.724+0000] {process_utils.py:190} INFO -   Downloading ipykernel-6.29.2-py3-none-any.whl.metadata (6.0 kB)
+[2024-07-12T00:17:46.745+0000] {process_utils.py:190} INFO -   Downloading ipykernel-6.29.1-py3-none-any.whl.metadata (6.0 kB)
+[2024-07-12T00:17:46.765+0000] {process_utils.py:190} INFO -   Downloading ipykernel-6.29.0-py3-none-any.whl.metadata (6.0 kB)
+[2024-07-12T00:17:46.787+0000] {process_utils.py:190} INFO -   Downloading ipykernel-6.28.0-py3-none-any.whl.metadata (6.0 kB)
+[2024-07-12T00:17:46.815+0000] {process_utils.py:190} INFO -   Downloading ipykernel-6.27.1-py3-none-any.whl.metadata (6.3 kB)
+[2024-07-12T00:17:46.831+0000] {process_utils.py:190} INFO - INFO: pip is still looking at multiple versions of ipykernel to determine which version is compatible with other requirements. This could take a while.
+[2024-07-12T00:17:46.842+0000] {process_utils.py:190} INFO -   Downloading ipykernel-6.26.0-py3-none-any.whl.metadata (6.3 kB)
+[2024-07-12T00:17:46.862+0000] {process_utils.py:190} INFO -   Downloading ipykernel-6.25.2-py3-none-any.whl.metadata (6.3 kB)
+[2024-07-12T00:17:46.882+0000] {process_utils.py:190} INFO -   Downloading ipykernel-6.25.1-py3-none-any.whl.metadata (6.3 kB)
+[2024-07-12T00:17:46.901+0000] {process_utils.py:190} INFO -   Downloading ipykernel-6.25.0-py3-none-any.whl.metadata (6.3 kB)
+[2024-07-12T00:17:46.923+0000] {process_utils.py:190} INFO -   Downloading ipykernel-6.24.0-py3-none-any.whl.metadata (6.3 kB)
+[2024-07-12T00:17:46.935+0000] {process_utils.py:190} INFO - INFO: This is taking longer than usual. You might need to provide the dependency resolver with stricter constraints to reduce runtime. See https://pip.pypa.io/warnings/backtracking for guidance. If you want to abort this run, press Ctrl + C.
+[2024-07-12T00:17:46.944+0000] {process_utils.py:190} INFO -   Downloading ipykernel-6.23.3-py3-none-any.whl.metadata (6.3 kB)
+[2024-07-12T00:17:46.964+0000] {process_utils.py:190} INFO -   Downloading ipykernel-6.23.2-py3-none-any.whl.metadata (6.3 kB)
+[2024-07-12T00:17:46.985+0000] {process_utils.py:190} INFO -   Downloading ipykernel-6.23.1-py3-none-any.whl.metadata (6.3 kB)
+[2024-07-12T00:17:47.009+0000] {process_utils.py:190} INFO -   Downloading ipykernel-6.23.0-py3-none-any.whl.metadata (6.3 kB)
+[2024-07-12T00:17:47.030+0000] {process_utils.py:190} INFO -   Downloading ipykernel-6.22.0-py3-none-any.whl.metadata (6.4 kB)
+[2024-07-12T00:17:47.052+0000] {process_utils.py:190} INFO -   Downloading ipykernel-6.21.3-py3-none-any.whl.metadata (6.4 kB)
+[2024-07-12T00:17:47.071+0000] {process_utils.py:190} INFO -   Downloading ipykernel-6.21.2-py3-none-any.whl.metadata (6.8 kB)
+[2024-07-12T00:17:47.090+0000] {process_utils.py:190} INFO -   Downloading ipykernel-6.21.1-py3-none-any.whl.metadata (6.8 kB)
+[2024-07-12T00:17:47.112+0000] {process_utils.py:190} INFO -   Downloading ipykernel-6.20.2-py3-none-any.whl.metadata (6.7 kB)
+[2024-07-12T00:17:47.138+0000] {process_utils.py:190} INFO -   Downloading ipykernel-6.20.1-py3-none-any.whl.metadata (6.7 kB)
+[2024-07-12T00:17:47.160+0000] {process_utils.py:190} INFO -   Downloading ipykernel-6.19.4-py3-none-any.whl.metadata (6.4 kB)
+[2024-07-12T00:17:47.179+0000] {process_utils.py:190} INFO -   Downloading ipykernel-6.19.3-py3-none-any.whl.metadata (6.4 kB)
+[2024-07-12T00:17:47.197+0000] {process_utils.py:190} INFO -   Downloading ipykernel-6.19.2-py3-none-any.whl.metadata (6.7 kB)
+[2024-07-12T00:17:47.218+0000] {process_utils.py:190} INFO -   Downloading ipykernel-6.19.1-py3-none-any.whl.metadata (6.7 kB)
+[2024-07-12T00:17:47.241+0000] {process_utils.py:190} INFO -   Downloading ipykernel-6.17.1-py3-none-any.whl.metadata (5.6 kB)
+[2024-07-12T00:17:47.311+0000] {process_utils.py:190} INFO - Collecting executing>=1.2.0 (from stack-data->Ipython>=7.16.3->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:47.319+0000] {process_utils.py:190} INFO -   Downloading executing-2.0.1-py2.py3-none-any.whl.metadata (9.0 kB)
+[2024-07-12T00:17:47.336+0000] {process_utils.py:190} INFO - Collecting asttokens>=2.1.0 (from stack-data->Ipython>=7.16.3->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:47.345+0000] {process_utils.py:190} INFO -   Downloading asttokens-2.4.1-py2.py3-none-any.whl.metadata (5.2 kB)
+[2024-07-12T00:17:47.358+0000] {process_utils.py:190} INFO - Collecting pure-eval (from stack-data->Ipython>=7.16.3->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:47.367+0000] {process_utils.py:190} INFO -   Downloading pure_eval-0.2.2-py3-none-any.whl.metadata (6.2 kB)
+[2024-07-12T00:17:47.411+0000] {process_utils.py:190} INFO - Collecting webencodings (from bleach!=5.0.0->nbconvert>=6.4.4->jupyter-server<3,>=2.4.0->notebook>=6.4.10->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:47.416+0000] {process_utils.py:190} INFO -   Downloading webencodings-0.5.1-py2.py3-none-any.whl.metadata (2.1 kB)
+[2024-07-12T00:17:47.456+0000] {process_utils.py:190} INFO - INFO: pip is looking at multiple versions of nbclient to determine which version is compatible with other requirements. This could take a while.
+[2024-07-12T00:17:47.458+0000] {process_utils.py:190} INFO - Collecting nbclient>=0.5.0 (from nbconvert>=6.4.4->jupyter-server<3,>=2.4.0->notebook>=6.4.10->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:47.468+0000] {process_utils.py:190} INFO -   Downloading nbclient-0.9.1-py3-none-any.whl.metadata (7.8 kB)
+[2024-07-12T00:17:47.491+0000] {process_utils.py:190} INFO -   Downloading nbclient-0.9.0-py3-none-any.whl.metadata (7.8 kB)
+[2024-07-12T00:17:47.509+0000] {process_utils.py:190} INFO -   Downloading nbclient-0.8.0-py3-none-any.whl.metadata (7.8 kB)
+[2024-07-12T00:17:47.531+0000] {process_utils.py:190} INFO -   Downloading nbclient-0.7.4-py3-none-any.whl.metadata (7.9 kB)
+[2024-07-12T00:17:47.549+0000] {process_utils.py:190} INFO -   Downloading nbclient-0.7.3-py3-none-any.whl.metadata (8.0 kB)
+[2024-07-12T00:17:47.577+0000] {process_utils.py:190} INFO -   Downloading nbclient-0.7.2-py3-none-any.whl.metadata (8.2 kB)
+[2024-07-12T00:17:47.595+0000] {process_utils.py:190} INFO -   Downloading nbclient-0.7.1-py3-none-any.whl.metadata (8.1 kB)
+[2024-07-12T00:17:47.617+0000] {process_utils.py:190} INFO - INFO: pip is still looking at multiple versions of nbclient to determine which version is compatible with other requirements. This could take a while.
+[2024-07-12T00:17:47.628+0000] {process_utils.py:190} INFO -   Downloading nbclient-0.7.0-py3-none-any.whl.metadata (5.1 kB)
+[2024-07-12T00:17:47.659+0000] {process_utils.py:190} INFO -   Downloading nbclient-0.6.8-py3-none-any.whl.metadata (5.1 kB)
+[2024-07-12T00:17:47.686+0000] {process_utils.py:190} INFO -   Downloading nbclient-0.6.7-py3-none-any.whl.metadata (5.1 kB)
+[2024-07-12T00:17:47.705+0000] {process_utils.py:190} INFO -   Downloading nbclient-0.6.6-py3-none-any.whl.metadata (5.1 kB)
+[2024-07-12T00:17:47.727+0000] {process_utils.py:190} INFO -   Downloading nbclient-0.6.5-py3-none-any.whl.metadata (5.1 kB)
+[2024-07-12T00:17:47.737+0000] {process_utils.py:190} INFO - INFO: This is taking longer than usual. You might need to provide the dependency resolver with stricter constraints to reduce runtime. See https://pip.pypa.io/warnings/backtracking for guidance. If you want to abort this run, press Ctrl + C.
+[2024-07-12T00:17:47.746+0000] {process_utils.py:190} INFO -   Downloading nbclient-0.6.4-py3-none-any.whl.metadata (5.1 kB)
+[2024-07-12T00:17:47.763+0000] {process_utils.py:190} INFO -   Downloading nbclient-0.6.3-py3-none-any.whl.metadata (5.1 kB)
+[2024-07-12T00:17:47.852+0000] {process_utils.py:190} INFO - Collecting jupyter-server<3,>=1.8 (from notebook-shim<0.3,>=0.2->notebook>=6.4.10->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:47.879+0000] {process_utils.py:190} INFO -   Downloading jupyter_server-2.3.0-py3-none-any.whl.metadata (9.1 kB)
+[2024-07-12T00:17:47.903+0000] {process_utils.py:190} INFO -   Downloading jupyter_server-2.2.1-py3-none-any.whl.metadata (9.1 kB)
+[2024-07-12T00:17:47.925+0000] {process_utils.py:190} INFO -   Downloading jupyter_server-2.2.0-py3-none-any.whl.metadata (9.1 kB)
+[2024-07-12T00:17:47.958+0000] {process_utils.py:190} INFO - Collecting anyio<4,>=3.1.0 (from jupyter-server<3,>=1.8->notebook-shim<0.3,>=0.2->notebook>=6.4.10->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:47.967+0000] {process_utils.py:190} INFO -   Downloading anyio-3.7.1-py3-none-any.whl.metadata (4.7 kB)
+[2024-07-12T00:17:47.972+0000] {process_utils.py:190} INFO - Collecting jupyter-server<3,>=1.8 (from notebook-shim<0.3,>=0.2->notebook>=6.4.10->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2))
+[2024-07-12T00:17:47.981+0000] {process_utils.py:190} INFO -   Downloading jupyter_server-2.1.0-py3-none-any.whl.metadata (9.1 kB)
+[2024-07-12T00:17:48.003+0000] {process_utils.py:190} INFO -   Downloading jupyter_server-2.0.6-py3-none-any.whl.metadata (9.0 kB)
+[2024-07-12T00:17:48.024+0000] {process_utils.py:190} INFO -   Downloading jupyter_server-2.0.5-py3-none-any.whl.metadata (9.0 kB)
+[2024-07-12T00:17:48.046+0000] {process_utils.py:190} INFO -   Downloading jupyter_server-2.0.4-py3-none-any.whl.metadata (9.0 kB)
+[2024-07-12T00:17:48.067+0000] {process_utils.py:190} INFO -   Downloading jupyter_server-2.0.3-py3-none-any.whl.metadata (9.0 kB)
+[2024-07-12T00:17:48.091+0000] {process_utils.py:190} INFO -   Downloading jupyter_server-2.0.2-py3-none-any.whl.metadata (9.0 kB)
+[2024-07-12T00:17:48.112+0000] {process_utils.py:190} INFO -   Downloading jupyter_server-2.0.1-py3-none-any.whl.metadata (9.2 kB)
+[2024-07-12T00:17:48.134+0000] {process_utils.py:190} INFO -   Downloading jupyter_server-1.24.0-py3-none-any.whl.metadata (4.4 kB)
+[2024-07-12T00:17:48.145+0000] {process_utils.py:190} INFO - Requirement already satisfied: websocket-client in /home/***/.local/lib/python3.8/site-packages (from jupyter-server<3,>=1.8->notebook-shim<0.3,>=0.2->notebook>=6.4.10->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2)) (1.7.0)
+[2024-07-12T00:17:48.211+0000] {process_utils.py:190} INFO - Requirement already satisfied: soupsieve>1.2 in /home/***/.local/lib/python3.8/site-packages (from beautifulsoup4->nbconvert>=6.4.4->jupyter-server<3,>=2.4.0->notebook>=6.4.10->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2)) (2.5)
+[2024-07-12T00:17:48.293+0000] {process_utils.py:190} INFO - Requirement already satisfied: sniffio>=1.1 in /home/***/.local/lib/python3.8/site-packages (from anyio<4,>=3.1.0->jupyter-server<3,>=1.8->notebook-shim<0.3,>=0.2->notebook>=6.4.10->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2)) (1.3.1)
+[2024-07-12T00:17:48.293+0000] {process_utils.py:190} INFO - Requirement already satisfied: exceptiongroup in /home/***/.local/lib/python3.8/site-packages (from anyio<4,>=3.1.0->jupyter-server<3,>=1.8->notebook-shim<0.3,>=0.2->notebook>=6.4.10->great-expectations<=0.15.50,>=0.15.12->acryl-datahub[mariadb]==0.12.1.5->-r /tmp/venvwwip8920/requirements.txt (line 2)) (1.2.0)
+[2024-07-12T00:17:48.350+0000] {process_utils.py:190} INFO - Downloading acryl_sqlglot-20.4.1.dev14-py3-none-any.whl (343 kB)
+[2024-07-12T00:17:48.395+0000] {process_utils.py:190} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 343.3/343.3 kB 8.5 MB/s eta 0:00:00
+[2024-07-12T00:17:48.403+0000] {process_utils.py:190} INFO - Downloading great_expectations-0.15.50-py3-none-any.whl (5.3 MB)
+[2024-07-12T00:17:49.355+0000] {process_utils.py:190} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.3/5.3 MB 5.6 MB/s eta 0:00:00
+[2024-07-12T00:17:49.363+0000] {process_utils.py:190} INFO - Downloading pydantic-1.10.17-py3-none-any.whl (165 kB)
+[2024-07-12T00:17:49.378+0000] {process_utils.py:190} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 165.5/165.5 kB 12.0 MB/s eta 0:00:00
+[2024-07-12T00:17:49.386+0000] {process_utils.py:190} INFO - Downloading PyMySQL-1.1.1-py3-none-any.whl (44 kB)
+[2024-07-12T00:17:49.390+0000] {process_utils.py:190} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.0/45.0 kB 16.9 MB/s eta 0:00:00
+[2024-07-12T00:17:49.396+0000] {process_utils.py:190} INFO - Downloading ruamel.yaml-0.17.17-py3-none-any.whl (109 kB)
+[2024-07-12T00:17:49.406+0000] {process_utils.py:190} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 109.1/109.1 kB 12.2 MB/s eta 0:00:00
+[2024-07-12T00:17:49.413+0000] {process_utils.py:190} INFO - Downloading scipy-1.10.1-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (31.0 MB)
+[2024-07-12T00:17:53.414+0000] {process_utils.py:190} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 31.0/31.0 MB 10.1 MB/s eta 0:00:00
+[2024-07-12T00:17:53.425+0000] {process_utils.py:190} INFO - Downloading traitlets-5.2.1.post0-py3-none-any.whl (106 kB)
+[2024-07-12T00:17:53.434+0000] {process_utils.py:190} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 106.6/106.6 kB 17.0 MB/s eta 0:00:00
+[2024-07-12T00:17:53.443+0000] {process_utils.py:190} INFO - Downloading altair-4.2.0-py3-none-any.whl (812 kB)
+[2024-07-12T00:17:53.765+0000] {process_utils.py:190} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 812.8/812.8 kB 2.5 MB/s eta 0:00:00
+[2024-07-12T00:17:53.790+0000] {process_utils.py:190} INFO - Downloading ipython-8.12.3-py3-none-any.whl (798 kB)
+[2024-07-12T00:17:53.862+0000] {process_utils.py:190} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 798.3/798.3 kB 11.2 MB/s eta 0:00:00
+[2024-07-12T00:17:53.871+0000] {process_utils.py:190} INFO - Downloading ipywidgets-8.1.3-py3-none-any.whl (139 kB)
+[2024-07-12T00:17:53.882+0000] {process_utils.py:190} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 139.4/139.4 kB 12.9 MB/s eta 0:00:00
+[2024-07-12T00:17:53.889+0000] {process_utils.py:190} INFO - Downloading jsonpatch-1.33-py2.py3-none-any.whl (12 kB)
+[2024-07-12T00:17:53.899+0000] {process_utils.py:190} INFO - Downloading makefun-1.15.3-py2.py3-none-any.whl (23 kB)
+[2024-07-12T00:17:53.909+0000] {process_utils.py:190} INFO - Downloading mistune-3.0.2-py3-none-any.whl (47 kB)
+[2024-07-12T00:17:53.914+0000] {process_utils.py:190} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 48.0/48.0 kB 11.2 MB/s eta 0:00:00
+[2024-07-12T00:17:53.921+0000] {process_utils.py:190} INFO - Downloading nbformat-5.10.3-py3-none-any.whl (78 kB)
+[2024-07-12T00:17:53.927+0000] {process_utils.py:190} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.4/78.4 kB 14.8 MB/s eta 0:00:00
+[2024-07-12T00:17:53.932+0000] {process_utils.py:190} INFO - Downloading comm-0.2.2-py3-none-any.whl (7.2 kB)
+[2024-07-12T00:17:53.941+0000] {process_utils.py:190} INFO - Downloading notebook-6.5.7-py3-none-any.whl (529 kB)
+[2024-07-12T00:17:54.066+0000] {process_utils.py:190} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 529.8/529.8 kB 4.2 MB/s eta 0:00:00
+[2024-07-12T00:17:54.074+0000] {process_utils.py:190} INFO - Downloading tqdm-4.66.4-py3-none-any.whl (78 kB)
+[2024-07-12T00:17:54.081+0000] {process_utils.py:190} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.3/78.3 kB 13.3 MB/s eta 0:00:00
+[2024-07-12T00:17:54.089+0000] {process_utils.py:190} INFO - Downloading tzlocal-5.2-py3-none-any.whl (17 kB)
+[2024-07-12T00:17:54.099+0000] {process_utils.py:190} INFO - Downloading jedi-0.19.1-py2.py3-none-any.whl (1.6 MB)
+[2024-07-12T00:17:54.211+0000] {process_utils.py:190} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 14.2 MB/s eta 0:00:00
+[2024-07-12T00:17:54.217+0000] {process_utils.py:190} INFO - Downloading jsonpointer-3.0.0-py2.py3-none-any.whl (7.6 kB)
+[2024-07-12T00:17:54.225+0000] {process_utils.py:190} INFO - Downloading jupyter_client-7.4.9-py3-none-any.whl (133 kB)
+[2024-07-12T00:17:54.287+0000] {process_utils.py:190} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 133.5/133.5 kB 2.1 MB/s eta 0:00:00
+[2024-07-12T00:17:54.304+0000] {process_utils.py:190} INFO - Downloading jupyterlab_widgets-3.0.11-py3-none-any.whl (214 kB)
+[2024-07-12T00:17:54.323+0000] {process_utils.py:190} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 214.4/214.4 kB 12.3 MB/s eta 0:00:00
+[2024-07-12T00:17:54.330+0000] {process_utils.py:190} INFO - Downloading nbclassic-1.1.0-py3-none-any.whl (10.0 MB)
+[2024-07-12T00:17:56.336+0000] {process_utils.py:190} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.0/10.0 MB 5.0 MB/s eta 0:00:00
+[2024-07-12T00:17:56.345+0000] {process_utils.py:190} INFO - Downloading nbconvert-7.16.4-py3-none-any.whl (257 kB)
+[2024-07-12T00:17:56.371+0000] {process_utils.py:190} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 257.4/257.4 kB 10.0 MB/s eta 0:00:00
+[2024-07-12T00:17:56.379+0000] {process_utils.py:190} INFO - Downloading nest_asyncio-1.6.0-py3-none-any.whl (5.2 kB)
+[2024-07-12T00:17:56.389+0000] {process_utils.py:190} INFO - Downloading pexpect-4.9.0-py2.py3-none-any.whl (63 kB)
+[2024-07-12T00:17:56.393+0000] {process_utils.py:190} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.8/63.8 kB 22.2 MB/s eta 0:00:00
+[2024-07-12T00:17:56.399+0000] {process_utils.py:190} INFO - Downloading pyzmq-26.0.3-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (724 kB)
+[2024-07-12T00:17:56.471+0000] {process_utils.py:190} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 724.6/724.6 kB 10.3 MB/s eta 0:00:00
+[2024-07-12T00:17:56.479+0000] {process_utils.py:190} INFO - Downloading Send2Trash-1.8.3-py3-none-any.whl (18 kB)
+[2024-07-12T00:17:56.489+0000] {process_utils.py:190} INFO - Downloading terminado-0.18.1-py3-none-any.whl (14 kB)
+[2024-07-12T00:17:56.501+0000] {process_utils.py:190} INFO - Downloading widgetsnbextension-4.0.11-py3-none-any.whl (2.3 MB)
+[2024-07-12T00:17:56.673+0000] {process_utils.py:190} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 13.6 MB/s eta 0:00:00
+[2024-07-12T00:17:56.682+0000] {process_utils.py:190} INFO - Downloading argon2_cffi-23.1.0-py3-none-any.whl (15 kB)
+[2024-07-12T00:17:56.691+0000] {process_utils.py:190} INFO - Downloading backcall-0.2.0-py2.py3-none-any.whl (11 kB)
+[2024-07-12T00:17:56.700+0000] {process_utils.py:190} INFO - Downloading entrypoints-0.4-py3-none-any.whl (5.3 kB)
+[2024-07-12T00:17:56.710+0000] {process_utils.py:190} INFO - Downloading fastjsonschema-2.20.0-py3-none-any.whl (23 kB)
+[2024-07-12T00:17:56.719+0000] {process_utils.py:190} INFO - Downloading ipykernel-6.17.1-py3-none-any.whl (138 kB)
+[2024-07-12T00:17:56.733+0000] {process_utils.py:190} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 138.6/138.6 kB 11.2 MB/s eta 0:00:00
+[2024-07-12T00:17:56.741+0000] {process_utils.py:190} INFO - Downloading matplotlib_inline-0.1.7-py3-none-any.whl (9.9 kB)
+[2024-07-12T00:17:56.753+0000] {process_utils.py:190} INFO - Downloading ipython_genutils-0.2.0-py2.py3-none-any.whl (26 kB)
+[2024-07-12T00:17:56.762+0000] {process_utils.py:190} INFO - Downloading pickleshare-0.7.5-py2.py3-none-any.whl (6.9 kB)
+[2024-07-12T00:17:56.771+0000] {process_utils.py:190} INFO - Downloading stack_data-0.6.3-py3-none-any.whl (24 kB)
+[2024-07-12T00:17:56.779+0000] {process_utils.py:190} INFO - Downloading toolz-0.12.1-py3-none-any.whl (56 kB)
+[2024-07-12T00:17:56.784+0000] {process_utils.py:190} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.1/56.1 kB 13.7 MB/s eta 0:00:00
+[2024-07-12T00:17:56.790+0000] {process_utils.py:190} INFO - Downloading asttokens-2.4.1-py2.py3-none-any.whl (27 kB)
+[2024-07-12T00:17:56.797+0000] {process_utils.py:190} INFO - Downloading bleach-6.1.0-py3-none-any.whl (162 kB)
+[2024-07-12T00:17:56.809+0000] {process_utils.py:190} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 162.8/162.8 kB 13.7 MB/s eta 0:00:00
+[2024-07-12T00:17:56.816+0000] {process_utils.py:190} INFO - Downloading debugpy-1.8.2-py2.py3-none-any.whl (4.8 MB)
+[2024-07-12T00:17:57.101+0000] {process_utils.py:190} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.8/4.8 MB 17.0 MB/s eta 0:00:00
+[2024-07-12T00:17:57.113+0000] {process_utils.py:190} INFO - Downloading executing-2.0.1-py2.py3-none-any.whl (24 kB)
+[2024-07-12T00:17:57.124+0000] {process_utils.py:190} INFO - Downloading nbclient-0.6.3-py3-none-any.whl (71 kB)
+[2024-07-12T00:17:57.130+0000] {process_utils.py:190} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.5/71.5 kB 14.1 MB/s eta 0:00:00
+[2024-07-12T00:17:57.138+0000] {process_utils.py:190} INFO - Downloading notebook_shim-0.2.4-py3-none-any.whl (13 kB)
+[2024-07-12T00:17:57.149+0000] {process_utils.py:190} INFO - Downloading jupyter_server-1.24.0-py3-none-any.whl (347 kB)
+[2024-07-12T00:17:57.172+0000] {process_utils.py:190} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 347.5/347.5 kB 15.8 MB/s eta 0:00:00
+[2024-07-12T00:17:57.179+0000] {process_utils.py:190} INFO - Downloading jupyter_core-4.12.0-py3-none-any.whl (89 kB)
+[2024-07-12T00:17:57.184+0000] {process_utils.py:190} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 89.9/89.9 kB 23.6 MB/s eta 0:00:00
+[2024-07-12T00:17:57.192+0000] {process_utils.py:190} INFO - Downloading pandocfilters-1.5.1-py2.py3-none-any.whl (8.7 kB)
+[2024-07-12T00:17:57.200+0000] {process_utils.py:190} INFO - Downloading parso-0.8.4-py2.py3-none-any.whl (103 kB)
+[2024-07-12T00:17:57.206+0000] {process_utils.py:190} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.7/103.7 kB 20.5 MB/s eta 0:00:00
+[2024-07-12T00:17:57.212+0000] {process_utils.py:190} INFO - Downloading ptyprocess-0.7.0-py2.py3-none-any.whl (13 kB)
+[2024-07-12T00:17:57.221+0000] {process_utils.py:190} INFO - Downloading argon2_cffi_bindings-21.2.0-cp36-abi3-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (80 kB)
+[2024-07-12T00:17:57.224+0000] {process_utils.py:190} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 80.6/80.6 kB 31.3 MB/s eta 0:00:00
+[2024-07-12T00:17:57.231+0000] {process_utils.py:190} INFO - Downloading defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+[2024-07-12T00:17:57.238+0000] {process_utils.py:190} INFO - Downloading jupyterlab_pygments-0.3.0-py3-none-any.whl (15 kB)
+[2024-07-12T00:17:57.245+0000] {process_utils.py:190} INFO - Downloading pure_eval-0.2.2-py3-none-any.whl (11 kB)
+[2024-07-12T00:17:57.255+0000] {process_utils.py:190} INFO - Downloading tinycss2-1.3.0-py3-none-any.whl (22 kB)
+[2024-07-12T00:17:57.263+0000] {process_utils.py:190} INFO - Downloading webencodings-0.5.1-py2.py3-none-any.whl (11 kB)
+[2024-07-12T00:17:57.270+0000] {process_utils.py:190} INFO - Downloading anyio-3.7.1-py3-none-any.whl (80 kB)
+[2024-07-12T00:17:57.275+0000] {process_utils.py:190} INFO -    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 80.9/80.9 kB 19.6 MB/s eta 0:00:00
+[2024-07-12T00:17:59.156+0000] {process_utils.py:190} INFO - Installing collected packages: webencodings, pure-eval, ptyprocess, pickleshare, makefun, ipython-genutils, fastjsonschema, backcall, widgetsnbextension, tzlocal, traitlets, tqdm, toolz, tinycss2, terminado, send2trash, scipy, ruamel.yaml, pyzmq, pymysql, pydantic, pexpect, parso, pandocfilters, nest-asyncio, mistune, jupyterlab-widgets, jupyterlab-pygments, jsonpointer, executing, entrypoints, defusedxml, debugpy, bleach, asttokens, anyio, acryl-sqlglot, stack-data, matplotlib-inline, jupyter-core, jsonpatch, jedi, comm, argon2-cffi-bindings, jupyter-client, Ipython, argon2-cffi, nbformat, ipywidgets, ipykernel, altair, nbclient, nbconvert, jupyter-server, notebook-shim, nbclassic, notebook, great-expectations
+[2024-07-12T00:18:01.368+0000] {process_utils.py:190} INFO -   Attempting uninstall: ruamel.yaml
+[2024-07-12T00:18:01.370+0000] {process_utils.py:190} INFO -     Found existing installation: ruamel.yaml 0.18.6
+[2024-07-12T00:18:01.370+0000] {process_utils.py:190} INFO -     Not uninstalling ruamel-yaml at /home/***/.local/lib/python3.8/site-packages, outside environment /tmp/venvwwip8920
+[2024-07-12T00:18:01.371+0000] {process_utils.py:190} INFO -     Can't uninstall 'ruamel.yaml'. No files were found to uninstall.
+[2024-07-12T00:18:01.507+0000] {process_utils.py:190} INFO -   Attempting uninstall: pydantic
+[2024-07-12T00:18:01.509+0000] {process_utils.py:190} INFO -     Found existing installation: pydantic 2.8.2
+[2024-07-12T00:18:01.509+0000] {process_utils.py:190} INFO -     Not uninstalling pydantic at /home/***/.local/lib/python3.8/site-packages, outside environment /tmp/venvwwip8920
+[2024-07-12T00:18:01.509+0000] {process_utils.py:190} INFO -     Can't uninstall 'pydantic'. No files were found to uninstall.
+[2024-07-12T00:18:02.174+0000] {process_utils.py:190} INFO -   Attempting uninstall: anyio
+[2024-07-12T00:18:02.175+0000] {process_utils.py:190} INFO -     Found existing installation: anyio 4.3.0
+[2024-07-12T00:18:02.175+0000] {process_utils.py:190} INFO -     Not uninstalling anyio at /home/***/.local/lib/python3.8/site-packages, outside environment /tmp/venvwwip8920
+[2024-07-12T00:18:02.175+0000] {process_utils.py:190} INFO -     Can't uninstall 'anyio'. No files were found to uninstall.
+[2024-07-12T00:18:02.208+0000] {process_utils.py:190} INFO -   Attempting uninstall: acryl-sqlglot
+[2024-07-12T00:18:02.209+0000] {process_utils.py:190} INFO -     Found existing installation: acryl-sqlglot 25.3.1.dev3
+[2024-07-12T00:18:02.209+0000] {process_utils.py:190} INFO -     Not uninstalling acryl-sqlglot at /home/***/.local/lib/python3.8/site-packages, outside environment /tmp/venvwwip8920
+[2024-07-12T00:18:02.209+0000] {process_utils.py:190} INFO -     Can't uninstall 'acryl-sqlglot'. No files were found to uninstall.
+[2024-07-12T00:18:04.413+0000] {process_utils.py:190} INFO - ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+[2024-07-12T00:18:04.414+0000] {process_utils.py:190} INFO - acryl-datahub-***-plugin 0.13.3.2 requires acryl-datahub[datahub-rest]==0.13.3.2, but you have acryl-datahub 0.12.1.5 which is incompatible.
+[2024-07-12T00:18:04.414+0000] {process_utils.py:190} INFO - Successfully installed Ipython-8.12.3 acryl-sqlglot-20.4.1.dev14 altair-4.2.0 anyio-3.7.1 argon2-cffi-23.1.0 argon2-cffi-bindings-21.2.0 asttokens-2.4.1 backcall-0.2.0 bleach-6.1.0 comm-0.2.2 debugpy-1.8.2 defusedxml-0.7.1 entrypoints-0.4 executing-2.0.1 fastjsonschema-2.20.0 great-expectations-0.15.50 ipykernel-6.17.1 ipython-genutils-0.2.0 ipywidgets-8.1.3 jedi-0.19.1 jsonpatch-1.33 jsonpointer-3.0.0 jupyter-client-7.4.9 jupyter-core-4.12.0 jupyter-server-1.24.0 jupyterlab-pygments-0.3.0 jupyterlab-widgets-3.0.11 makefun-1.15.3 matplotlib-inline-0.1.7 mistune-3.0.2 nbclassic-1.1.0 nbclient-0.6.3 nbconvert-7.16.4 nbformat-5.10.3 nest-asyncio-1.6.0 notebook-6.5.7 notebook-shim-0.2.4 pandocfilters-1.5.1 parso-0.8.4 pexpect-4.9.0 pickleshare-0.7.5 ptyprocess-0.7.0 pure-eval-0.2.2 pydantic-1.10.17 pymysql-1.1.1 pyzmq-26.0.3 ruamel.yaml-0.17.17 scipy-1.10.1 send2trash-1.8.3 stack-data-0.6.3 terminado-0.18.1 tinycss2-1.3.0 toolz-0.12.1 tqdm-4.66.4 traitlets-5.2.1.post0 tzlocal-5.2 webencodings-0.5.1 widgetsnbextension-4.0.11
+[2024-07-12T00:18:04.478+0000] {process_utils.py:190} INFO - 
+[2024-07-12T00:18:04.481+0000] {process_utils.py:190} INFO - [notice] A new release of pip is available: 24.0 -> 24.1.2
+[2024-07-12T00:18:04.481+0000] {process_utils.py:190} INFO - [notice] To update, run: python -m pip install --upgrade pip
+[2024-07-12T00:18:04.972+0000] {process_utils.py:182} INFO - Executing cmd: /tmp/venvwwip8920/bin/python /tmp/venv-calld1bwwwka/script.py /tmp/venv-calld1bwwwka/script.in /tmp/venv-calld1bwwwka/script.out /tmp/venv-calld1bwwwka/string_args.txt /tmp/venv-calld1bwwwka/termination.log
+[2024-07-12T00:18:04.978+0000] {process_utils.py:186} INFO - Output:
+[2024-07-12T00:18:05.507+0000] {process_utils.py:190} INFO - /home/***/.local/lib/python3.8/site-packages/***/configuration.py:812 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-07-12T00:18:05.508+0000] {process_utils.py:190} INFO - /home/***/.local/lib/python3.8/site-packages/***/configuration.py:738 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-07-12T00:18:05.509+0000] {process_utils.py:190} INFO - /home/***/.local/lib/python3.8/site-packages/***/settings.py:194 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-07-12T00:18:05.771+0000] {process_utils.py:190} INFO - [[34m2024-07-12T00:18:05.770+0000[0m] {[34m__init__.py:[0m24} WARNING[0m -
+[2024-07-12T00:18:05.772+0000] {process_utils.py:190} INFO -         OpenLineage support for Airflow version 2.8.4 is REMOVED.
+[2024-07-12T00:18:05.772+0000] {process_utils.py:190} INFO -         For Airflow 2.7 and later, use the native Airflow Openlineage provider package.
+[2024-07-12T00:18:05.772+0000] {process_utils.py:190} INFO -         Documentation can be found at https://***.apache.org/docs/apache-***-providers-openlineage
+[2024-07-12T00:18:05.772+0000] {process_utils.py:190} INFO -         [0m
+[2024-07-12T00:18:05.776+0000] {process_utils.py:190} INFO - /home/***/.local/lib/python3.8/site-packages/***/models/base.py:71 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2024-07-12T00:18:06.161+0000] {process_utils.py:190} INFO - [[34m2024-07-12T00:18:06.160+0000[0m] {[34mutils.py:[0m434} WARNING[0m - No module named '***.providers.dbt'[0m
+[2024-07-12T00:18:06.298+0000] {process_utils.py:190} INFO - [[34m2024-07-12T00:18:06.296+0000[0m] {[34mdatahub_plugin.py:[0m70} WARNING[0m - Failed to load the DataHub plugin's event listener: TokenizerSettings.__new__() missing 1 required positional argument: 'heredoc_tag_is_identifier'[0m
+[2024-07-12T00:18:06.298+0000] {process_utils.py:190} INFO - Traceback (most recent call last):
+[2024-07-12T00:18:06.299+0000] {process_utils.py:190} INFO -   File "/home/***/.local/lib/python3.8/site-packages/datahub_***_plugin/datahub_plugin.py", line 55, in DatahubPlugin
+[2024-07-12T00:18:06.299+0000] {process_utils.py:190} INFO -     from datahub_***_plugin.datahub_listener import (  # type: ignore[misc]
+[2024-07-12T00:18:06.299+0000] {process_utils.py:190} INFO -   File "/home/***/.local/lib/python3.8/site-packages/datahub_***_plugin/datahub_listener.py", line 30, in <module>
+[2024-07-12T00:18:06.299+0000] {process_utils.py:190} INFO -     from datahub.sql_parsing.sqlglot_lineage import SqlParsingResult
+[2024-07-12T00:18:06.299+0000] {process_utils.py:190} INFO -   File "/home/***/.local/lib/python3.8/site-packages/datahub/sql_parsing/sqlglot_lineage.py", line 10, in <module>
+[2024-07-12T00:18:06.300+0000] {process_utils.py:190} INFO -     import sqlglot
+[2024-07-12T00:18:06.300+0000] {process_utils.py:190} INFO -   File "/home/***/.local/lib/python3.8/site-packages/sqlglot/__init__.py", line 12, in <module>
+[2024-07-12T00:18:06.300+0000] {process_utils.py:190} INFO -     from sqlglot import expressions as exp
+[2024-07-12T00:18:06.300+0000] {process_utils.py:190} INFO -   File "/home/***/.local/lib/python3.8/site-packages/sqlglot/expressions.py", line 35, in <module>
+[2024-07-12T00:18:06.300+0000] {process_utils.py:190} INFO -     from sqlglot.tokens import Token
+[2024-07-12T00:18:06.300+0000] {process_utils.py:190} INFO -   File "/home/***/.local/lib/python3.8/site-packages/sqlglot/tokens.py", line 521, in <module>
+[2024-07-12T00:18:06.301+0000] {process_utils.py:190} INFO -     class Tokenizer(metaclass=_Tokenizer):
+[2024-07-12T00:18:06.301+0000] {process_utils.py:190} INFO -   File "/home/***/.local/lib/python3.8/site-packages/sqlglot/tokens.py", line 479, in __new__
+[2024-07-12T00:18:06.301+0000] {process_utils.py:190} INFO -     settings = RsTokenizerSettings(
+[2024-07-12T00:18:06.301+0000] {process_utils.py:190} INFO - TypeError: TokenizerSettings.__new__() missing 1 required positional argument: 'heredoc_tag_is_identifier'
+[2024-07-12T00:18:06.338+0000] {process_utils.py:190} INFO - [[34m2024-07-12T00:18:06.338+0000[0m] {[34mpipeline.py:[0m238} INFO[0m - Sink configured successfully. DataHubRestEmitter: configured to talk to http://datahub-gms:8080[0m
+[2024-07-12T00:18:06.400+0000] {process_utils.py:190} INFO - Traceback (most recent call last):
+[2024-07-12T00:18:06.401+0000] {process_utils.py:190} INFO -   File "/home/***/.local/lib/python3.8/site-packages/datahub/ingestion/api/registry.py", line 126, in _ensure_not_lazy
+[2024-07-12T00:18:06.401+0000] {process_utils.py:190} INFO -     plugin_class = import_path(path)
+[2024-07-12T00:18:06.401+0000] {process_utils.py:190} INFO -   File "/home/***/.local/lib/python3.8/site-packages/datahub/ingestion/api/registry.py", line 56, in import_path
+[2024-07-12T00:18:06.401+0000] {process_utils.py:190} INFO -     item = importlib.import_module(module_name)
+[2024-07-12T00:18:06.402+0000] {process_utils.py:190} INFO -   File "/usr/local/lib/python3.8/importlib/__init__.py", line 127, in import_module
+[2024-07-12T00:18:06.402+0000] {process_utils.py:190} INFO -     return _bootstrap._gcd_import(name[level:], package, level)
+[2024-07-12T00:18:06.402+0000] {process_utils.py:190} INFO -   File "<frozen importlib._bootstrap>", line 1014, in _gcd_import
+[2024-07-12T00:18:06.402+0000] {process_utils.py:190} INFO -   File "<frozen importlib._bootstrap>", line 991, in _find_and_load
+[2024-07-12T00:18:06.402+0000] {process_utils.py:190} INFO -   File "<frozen importlib._bootstrap>", line 975, in _find_and_load_unlocked
+[2024-07-12T00:18:06.403+0000] {process_utils.py:190} INFO -   File "<frozen importlib._bootstrap>", line 671, in _load_unlocked
+[2024-07-12T00:18:06.403+0000] {process_utils.py:190} INFO -   File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+[2024-07-12T00:18:06.403+0000] {process_utils.py:190} INFO -   File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+[2024-07-12T00:18:06.403+0000] {process_utils.py:190} INFO -   File "/home/***/.local/lib/python3.8/site-packages/datahub/ingestion/source/sql/mysql.py", line 18, in <module>
+[2024-07-12T00:18:06.403+0000] {process_utils.py:190} INFO -     from datahub.ingestion.source.sql.sql_common import (
+[2024-07-12T00:18:06.403+0000] {process_utils.py:190} INFO -   File "/home/***/.local/lib/python3.8/site-packages/datahub/ingestion/source/sql/sql_common.py", line 36, in <module>
+[2024-07-12T00:18:06.404+0000] {process_utils.py:190} INFO -     from datahub.emitter.sql_parsing_builder import SqlParsingBuilder
+[2024-07-12T00:18:06.404+0000] {process_utils.py:190} INFO -   File "/home/***/.local/lib/python3.8/site-packages/datahub/emitter/sql_parsing_builder.py", line 24, in <module>
+[2024-07-12T00:18:06.404+0000] {process_utils.py:190} INFO -     from datahub.utilities.sqlglot_lineage import ColumnLineageInfo, SqlParsingResult
+[2024-07-12T00:18:06.404+0000] {process_utils.py:190} INFO -   File "/home/***/.local/lib/python3.8/site-packages/datahub/utilities/sqlglot_lineage.py", line 11, in <module>
+[2024-07-12T00:18:06.404+0000] {process_utils.py:190} INFO -     import sqlglot
+[2024-07-12T00:18:06.404+0000] {process_utils.py:190} INFO -   File "/home/***/.local/lib/python3.8/site-packages/sqlglot/__init__.py", line 12, in <module>
+[2024-07-12T00:18:06.405+0000] {process_utils.py:190} INFO -     from sqlglot import expressions as exp
+[2024-07-12T00:18:06.405+0000] {process_utils.py:190} INFO -   File "/home/***/.local/lib/python3.8/site-packages/sqlglot/expressions.py", line 35, in <module>
+[2024-07-12T00:18:06.405+0000] {process_utils.py:190} INFO -     from sqlglot.tokens import Token
+[2024-07-12T00:18:06.405+0000] {process_utils.py:190} INFO -   File "/home/***/.local/lib/python3.8/site-packages/sqlglot/tokens.py", line 521, in <module>
+[2024-07-12T00:18:06.405+0000] {process_utils.py:190} INFO -     class Tokenizer(metaclass=_Tokenizer):
+[2024-07-12T00:18:06.405+0000] {process_utils.py:190} INFO -   File "/home/***/.local/lib/python3.8/site-packages/sqlglot/tokens.py", line 479, in __new__
+[2024-07-12T00:18:06.406+0000] {process_utils.py:190} INFO -     settings = RsTokenizerSettings(
+[2024-07-12T00:18:06.406+0000] {process_utils.py:190} INFO - TypeError: TokenizerSettings.__new__() missing 1 required positional argument: 'heredoc_tag_is_identifier'
+[2024-07-12T00:18:06.406+0000] {process_utils.py:190} INFO - 
+[2024-07-12T00:18:06.406+0000] {process_utils.py:190} INFO - The above exception was the direct cause of the following exception:
+[2024-07-12T00:18:06.406+0000] {process_utils.py:190} INFO - 
+[2024-07-12T00:18:06.406+0000] {process_utils.py:190} INFO - Traceback (most recent call last):
+[2024-07-12T00:18:06.407+0000] {process_utils.py:190} INFO -   File "/home/***/.local/lib/python3.8/site-packages/datahub/ingestion/run/pipeline.py", line 121, in _add_init_error_context
+[2024-07-12T00:18:06.407+0000] {process_utils.py:190} INFO -     yield
+[2024-07-12T00:18:06.407+0000] {process_utils.py:190} INFO -   File "/home/***/.local/lib/python3.8/site-packages/datahub/ingestion/run/pipeline.py", line 248, in __init__
+[2024-07-12T00:18:06.407+0000] {process_utils.py:190} INFO -     source_class = source_registry.get(source_type)
+[2024-07-12T00:18:06.407+0000] {process_utils.py:190} INFO -   File "/home/***/.local/lib/python3.8/site-packages/datahub/ingestion/api/registry.py", line 180, in get
+[2024-07-12T00:18:06.407+0000] {process_utils.py:190} INFO -     raise ConfigurationError(
+[2024-07-12T00:18:06.408+0000] {process_utils.py:190} INFO - datahub.configuration.common.ConfigurationError: mysql is disabled due to an error in initialization
+[2024-07-12T00:18:06.408+0000] {process_utils.py:190} INFO - 
+[2024-07-12T00:18:06.408+0000] {process_utils.py:190} INFO - The above exception was the direct cause of the following exception:
+[2024-07-12T00:18:06.408+0000] {process_utils.py:190} INFO - 
+[2024-07-12T00:18:06.408+0000] {process_utils.py:190} INFO - Traceback (most recent call last):
+[2024-07-12T00:18:06.408+0000] {process_utils.py:190} INFO -   File "/tmp/venv-calld1bwwwka/script.py", line 69, in <module>
+[2024-07-12T00:18:06.408+0000] {process_utils.py:190} INFO -     res = ingest_from_mysql(*arg_dict["args"], **arg_dict["kwargs"])
+[2024-07-12T00:18:06.409+0000] {process_utils.py:190} INFO -   File "/tmp/venv-calld1bwwwka/script.py", line 19, in ingest_from_mysql
+[2024-07-12T00:18:06.409+0000] {process_utils.py:190} INFO -     pipeline = Pipeline.create(
+[2024-07-12T00:18:06.409+0000] {process_utils.py:190} INFO -   File "/home/***/.local/lib/python3.8/site-packages/datahub/ingestion/run/pipeline.py", line 362, in create
+[2024-07-12T00:18:06.409+0000] {process_utils.py:190} INFO -     return cls(
+[2024-07-12T00:18:06.409+0000] {process_utils.py:190} INFO -   File "/home/***/.local/lib/python3.8/site-packages/datahub/ingestion/run/pipeline.py", line 248, in __init__
+[2024-07-12T00:18:06.410+0000] {process_utils.py:190} INFO -     source_class = source_registry.get(source_type)
+[2024-07-12T00:18:06.410+0000] {process_utils.py:190} INFO -   File "/usr/local/lib/python3.8/contextlib.py", line 131, in __exit__
+[2024-07-12T00:18:06.410+0000] {process_utils.py:190} INFO -     self.gen.throw(type, value, traceback)
+[2024-07-12T00:18:06.410+0000] {process_utils.py:190} INFO -   File "/home/***/.local/lib/python3.8/site-packages/datahub/ingestion/run/pipeline.py", line 123, in _add_init_error_context
+[2024-07-12T00:18:06.410+0000] {process_utils.py:190} INFO -     raise PipelineInitError(f"Failed to {step}: {e}") from e
+[2024-07-12T00:18:06.411+0000] {process_utils.py:190} INFO - datahub.ingestion.run.pipeline.PipelineInitError: Failed to find a registered source for type mysql: mysql is disabled due to an error in initialization
+[2024-07-12T00:18:06.803+0000] {taskinstance.py:2731} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 444, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/models/taskinstance.py", line 414, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 401, in execute
+    return super().execute(context=serializable_context)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 200, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 723, in execute_callable
+    result = self._execute_python_callable_in_subprocess(python_path)
+  File "/home/airflow/.local/lib/python3.8/site-packages/airflow/operators/python.py", line 478, in _execute_python_callable_in_subprocess
+    raise AirflowException(error_msg) from None
+airflow.exceptions.AirflowException: Process returned non-zero exit status 1.
+Failed to find a registered source for type mysql: mysql is disabled due to an error in initialization
+[2024-07-12T00:18:06.809+0000] {taskinstance.py:1149} INFO - Marking task as UP_FOR_RETRY. dag_id=data_ingestion, task_id=ingest_task, execution_date=20240712T001704, start_date=20240712T001736, end_date=20240712T001806
+[2024-07-12T00:18:06.818+0000] {standard_task_runner.py:107} ERROR - Failed to execute job 9 for task ingest_task (Process returned non-zero exit status 1.
+Failed to find a registered source for type mysql: mysql is disabled due to an error in initialization; 606)
+[2024-07-12T00:18:06.862+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 1
+[2024-07-12T00:18:06.883+0000] {taskinstance.py:3312} INFO - 0 downstream tasks scheduled from follow-on schedule check
